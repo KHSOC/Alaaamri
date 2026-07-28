@@ -81,3 +81,11 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added complete Open Graph and X/Twitter card metadata.
 - Added a 1200x630 social preview image: `social-preview.png`.
 - Updated cache version to v14.
+
+## Version 15
+- Added bilingual Command Center pages.
+- Added 100 original command-reference entries across 7 platforms.
+- Added search, platform filters, A-Z filtering, favorites, copy buttons, examples, and risk labels.
+- Platforms: Windows CMD, PowerShell, Linux/Bash, Cisco IOS, FortiGate CLI, Docker CLI, and Git.
+- Added links from the site navigation and Tech Hub.
+- Added `commands.js` and updated cache version to v15.

@@ -1,0 +1,2978 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="مرجع منظم لأوامر Windows وPowerShell وLinux وCisco وFortiGate وDocker وGit.">
+  <meta name="theme-color" content="#090a09">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="مركز خالد للأوامر التقنية">
+  <meta property="og:description" content="مرجع منظم لأوامر Windows وPowerShell وLinux وCisco وFortiGate وDocker وGit.">
+  <meta property="og:url" content="https://alaaamri.com/command-center-ar.html">
+  <meta property="og:image" content="https://alaaamri.com/social-preview.png?v=14">
+  <meta property="og:site_name" content="Khalid Tech Hub">
+  <title>مركز خالد للأوامر التقنية</title>
+  <link rel="canonical" href="https://alaaamri.com/command-center-ar.html">
+  <link rel="alternate" hreflang="en" href="https://alaaamri.com/command-center-en.html">
+  <link rel="alternate" hreflang="ar" href="https://alaaamri.com/command-center-ar.html">
+  <link rel="alternate" hreflang="x-default" href="https://alaaamri.com/command-center-en.html">
+  <link rel="icon" href="/favicon-olive.svg?v=7" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/style.css?v=15">
+</head>
+<body>
+<a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/ar.html"><span class="logo">K</span><span>Khalid</span></a>
+    <div class="nav-actions">
+      <nav class="nav-links" id="main-navigation" data-nav aria-label="التنقل الرئيسي">
+        <a href="/ar.html">الملف المهني</a>
+        <a href="/projects-ar.html">المشاريع</a>
+        <a href="/tech-hub-ar.html">الدليل التقني</a>
+        <a href="/command-center-ar.html" aria-current="page">مركز الأوامر</a>
+        <a href="/Khalid-Al-Amri-CV.pdf" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
+      </nav>
+      <a class="language-link" href="/command-center-en.html" hreflang="en">English</a>
+      <button class="menu-btn" type="button" data-menu aria-controls="main-navigation" aria-expanded="false"
+              aria-label="فتح قائمة التنقل">القائمة</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="command-hero">
+    <div class="container command-hero-grid">
+      <div>
+        <span class="eyebrow">مرجع أوامر ثنائي اللغة</span>
+        <h1>مركز خالد <span class="gradient-text">للأوامر التقنية</span></h1>
+        <p class="lead">مرجع منظم لأوامر Windows وPowerShell وLinux وCisco وFortiGate وDocker وGit.</p>
+        <div class="command-stats">
+          <div><strong>100</strong><span>أمرًا</span></div>
+          <div><strong>7</strong><span>منصات</span></div>
+          <div><strong>A–Z</strong><span>فهرس سريع</span></div>
+        </div>
+      </div>
+      <div class="terminal-preview" aria-hidden="true">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code>$ ping alaaamri.com
+$ Get-NetIPAddress
+$ show ip interface brief
+$ get system status
+$ docker ps
+$ git status</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-compact">
+    <div class="container">
+      <div class="notice command-warning">الأوامر هنا مرجع سريع للتعلم والعمل. راجع الصيغة والتوثيق الرسمي وخذ نسخة احتياطية قبل أي أمر يغيّر الإعدادات أو يحذف بيانات.</div>
+
+      <div class="command-category-grid">
+        
+        <article class="command-category-card">
+          <div class="category-abbr">CMD</div>
+          <h3>أوامر Windows CMD</h3>
+          <p>14 أمرًا</p>
+          <a href="https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">PS</div>
+          <h3>PowerShell</h3>
+          <p>14 أمرًا</p>
+          <a href="https://learn.microsoft.com/powershell/" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">LX</div>
+          <h3>Linux وBash</h3>
+          <p>16 أمرًا</p>
+          <a href="https://www.gnu.org/software/bash/manual/" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">CI</div>
+          <h3>Cisco IOS</h3>
+          <p>14 أمرًا</p>
+          <a href="https://www.cisco.com/c/en/us/support/ios-nx-os-software/ios-software-releases-12-4-mainline/products-command-reference-list.html" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">FG</div>
+          <h3>أوامر FortiGate</h3>
+          <p>14 أمرًا</p>
+          <a href="https://docs.fortinet.com/product/fortigate/7.6" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">DK</div>
+          <h3>أوامر Docker</h3>
+          <p>14 أمرًا</p>
+          <a href="https://docs.docker.com/reference/cli/docker/" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+        <article class="command-category-card">
+          <div class="category-abbr">GT</div>
+          <h3>أوامر Git</h3>
+          <p>14 أمرًا</p>
+          <a href="https://git-scm.com/docs" target="_blank" rel="noopener noreferrer external">التوثيق الرسمي ↗</a>
+        </article>
+        
+      </div>
+
+      <div class="command-dashboard">
+        <aside class="command-sidebar">
+          <h2>تصفية المنصة</h2>
+          <div class="command-filter-list">
+            <button class="command-filter active" type="button" data-command-filter="all" aria-pressed="true"><span>الكل</span><strong>100</strong></button><button class="command-filter" type="button" data-command-filter="cmd" aria-pressed="false"><span>أوامر Windows CMD</span><strong>14</strong></button><button class="command-filter" type="button" data-command-filter="powershell" aria-pressed="false"><span>PowerShell</span><strong>14</strong></button><button class="command-filter" type="button" data-command-filter="linux" aria-pressed="false"><span>Linux وBash</span><strong>16</strong></button><button class="command-filter" type="button" data-command-filter="cisco" aria-pressed="false"><span>Cisco IOS</span><strong>14</strong></button><button class="command-filter" type="button" data-command-filter="fortigate" aria-pressed="false"><span>أوامر FortiGate</span><strong>14</strong></button><button class="command-filter" type="button" data-command-filter="docker" aria-pressed="false"><span>أوامر Docker</span><strong>14</strong></button><button class="command-filter" type="button" data-command-filter="git" aria-pressed="false"><span>أوامر Git</span><strong>14</strong></button>
+          </div>
+        </aside>
+
+        <div class="command-content">
+          <div class="command-search-row">
+            <input class="search" type="search" data-command-search
+                   placeholder="ابحث عن أمر أو وظيفة مثل DNS أو VLAN..."
+                   aria-label="البحث في الأوامر"
+                   autocomplete="off" spellcheck="false">
+            <button class="favorites-toggle" type="button" data-favorites-filter aria-pressed="false">★ المفضلة</button>
+          </div>
+
+          <div class="letter-index" aria-label="الفهرس الأبجدي">
+            <button class="letter-filter active" type="button" data-letter-filter="all" aria-pressed="true">الكل</button><button class="letter-filter" type="button" data-letter-filter="A" aria-pressed="false">A</button><button class="letter-filter" type="button" data-letter-filter="C" aria-pressed="false">C</button><button class="letter-filter" type="button" data-letter-filter="D" aria-pressed="false">D</button><button class="letter-filter" type="button" data-letter-filter="E" aria-pressed="false">E</button><button class="letter-filter" type="button" data-letter-filter="F" aria-pressed="false">F</button><button class="letter-filter" type="button" data-letter-filter="G" aria-pressed="false">G</button><button class="letter-filter" type="button" data-letter-filter="I" aria-pressed="false">I</button><button class="letter-filter" type="button" data-letter-filter="J" aria-pressed="false">J</button><button class="letter-filter" type="button" data-letter-filter="L" aria-pressed="false">L</button><button class="letter-filter" type="button" data-letter-filter="N" aria-pressed="false">N</button><button class="letter-filter" type="button" data-letter-filter="P" aria-pressed="false">P</button><button class="letter-filter" type="button" data-letter-filter="R" aria-pressed="false">R</button><button class="letter-filter" type="button" data-letter-filter="S" aria-pressed="false">S</button><button class="letter-filter" type="button" data-letter-filter="T" aria-pressed="false">T</button>
+          </div>
+
+          <div class="command-summary">
+            <span data-command-count>100 أمرًا معروضًا</span>
+            <span>اضغط على التفاصيل لعرض الصيغة والمثال</span>
+          </div>
+
+          <div class="command-grid">
+            
+<article class="command-card" id="cmd-cmd-1" data-command-card
+         data-platform="cmd" data-letter="A"
+         data-search="arp عرض ذاكرة arp أو تعديلها.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>arp</code></h3>
+  <p>عرض ذاكرة ARP أو تعديلها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="arp -a"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>arp -a</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="arp -a"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>arp -a</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-2" data-command-card
+         data-platform="cmd" data-letter="C"
+         data-search="chkdsk فحص القرص وعرض أخطاء نظام الملفات.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>chkdsk</code></h3>
+  <p>فحص القرص وعرض أخطاء نظام الملفات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="chkdsk C:"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>chkdsk C:</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="chkdsk C: /scan"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>chkdsk C: /scan</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-3" data-command-card
+         data-platform="cmd" data-letter="D"
+         data-search="dism صيانة صور windows وإصلاحها.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>dism</code></h3>
+  <p>صيانة صور Windows وإصلاحها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="DISM /Online /Cleanup-Image /CheckHealth"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>DISM /Online /Cleanup-Image /CheckHealth</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="DISM /Online /Cleanup-Image /RestoreHealth"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>DISM /Online /Cleanup-Image /RestoreHealth</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-4" data-command-card
+         data-platform="cmd" data-letter="D"
+         data-search="driverquery عرض تعريفات الأجهزة المثبتة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>driverquery</code></h3>
+  <p>عرض تعريفات الأجهزة المثبتة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="driverquery"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>driverquery</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="driverquery /v"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>driverquery /v</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-5" data-command-card
+         data-platform="cmd" data-letter="I"
+         data-search="ipconfig عرض إعدادات ip وإدارتها.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>ipconfig</code></h3>
+  <p>عرض إعدادات IP وإدارتها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ipconfig"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ipconfig</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ipconfig /all"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ipconfig /all</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-6" data-command-card
+         data-platform="cmd" data-letter="N"
+         data-search="netstat عرض الاتصالات النشطة والمنافذ المستمعة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>netstat</code></h3>
+  <p>عرض الاتصالات النشطة والمنافذ المستمعة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="netstat -ano"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>netstat -ano</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="netstat -ano | findstr LISTENING"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>netstat -ano | findstr LISTENING</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-7" data-command-card
+         data-platform="cmd" data-letter="N"
+         data-search="nslookup الاستعلام عن خوادم dns والسجلات.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>nslookup</code></h3>
+  <p>الاستعلام عن خوادم DNS والسجلات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="nslookup &lt;domain&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>nslookup &lt;domain&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="nslookup alaaamri.com"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>nslookup alaaamri.com</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-8" data-command-card
+         data-platform="cmd" data-letter="P"
+         data-search="pathping قياس فقدان الحزم عبر المسار.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>pathping</code></h3>
+  <p>قياس فقدان الحزم عبر المسار.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="pathping &lt;host&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>pathping &lt;host&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="pathping 1.1.1.1"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>pathping 1.1.1.1</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-9" data-command-card
+         data-platform="cmd" data-letter="P"
+         data-search="ping اختبار الوصول الأساسي عبر ip.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>ping</code></h3>
+  <p>اختبار الوصول الأساسي عبر IP.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ping &lt;host&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ping &lt;host&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ping 8.8.8.8 -t"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ping 8.8.8.8 -t</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-10" data-command-card
+         data-platform="cmd" data-letter="R"
+         data-search="route عرض جدول التوجيه المحلي أو تعديله.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>route</code></h3>
+  <p>عرض جدول التوجيه المحلي أو تعديله.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="route print"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>route print</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="route print -4"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>route print -4</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-11" data-command-card
+         data-platform="cmd" data-letter="S"
+         data-search="sfc فحص ملفات نظام windows المحمية.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>sfc</code></h3>
+  <p>فحص ملفات نظام Windows المحمية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="sfc /scannow"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>sfc /scannow</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="sfc /verifyonly"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>sfc /verifyonly</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-12" data-command-card
+         data-platform="cmd" data-letter="S"
+         data-search="systeminfo عرض تفاصيل نظام التشغيل والعتاد.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>systeminfo</code></h3>
+  <p>عرض تفاصيل نظام التشغيل والعتاد.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="systeminfo"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>systeminfo</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="systeminfo | findstr /B /C:&quot;OS Name&quot; /C:&quot;OS Version&quot;"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>systeminfo | findstr /B /C:&quot;OS Name&quot; /C:&quot;OS Version&quot;</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-13" data-command-card
+         data-platform="cmd" data-letter="T"
+         data-search="tasklist عرض العمليات قيد التشغيل.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>tasklist</code></h3>
+  <p>عرض العمليات قيد التشغيل.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="tasklist"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>tasklist</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="tasklist /svc"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>tasklist /svc</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cmd-14" data-command-card
+         data-platform="cmd" data-letter="T"
+         data-search="tracert تتبع مسار الشبكة إلى الوجهة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CMD</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>tracert</code></h3>
+  <p>تتبع مسار الشبكة إلى الوجهة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="tracert &lt;host&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>tracert &lt;host&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="tracert alaaamri.com"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>tracert alaaamri.com</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-15" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-childitem عرض الملفات والمجلدات ومفاتيح السجل وعناصر المزودات.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-ChildItem</code></h3>
+  <p>عرض الملفات والمجلدات ومفاتيح السجل وعناصر المزودات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-ChildItem &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-ChildItem &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-ChildItem C:\Logs -Recurse"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-ChildItem C:\Logs -Recurse</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-16" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-command اكتشاف الأوامر وcmdlets المتاحة.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-Command</code></h3>
+  <p>اكتشاف الأوامر وCmdlets المتاحة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-Command &lt;name&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-Command &lt;name&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-Command *Net*"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-Command *Net*</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-17" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-computerinfo عرض معلومات مفصلة عن الجهاز ونظام التشغيل.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-ComputerInfo</code></h3>
+  <p>عرض معلومات مفصلة عن الجهاز ونظام التشغيل.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-ComputerInfo"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-ComputerInfo</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-18" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-help قراءة المساعدة المحلية لأمر معين.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-Help</code></h3>
+  <p>قراءة المساعدة المحلية لأمر معين.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-Help &lt;command&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-Help &lt;command&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-Help Get-Service -Examples"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-Help Get-Service -Examples</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-19" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-netipaddress عرض عناوين ip المعيّنة للواجهات.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-NetIPAddress</code></h3>
+  <p>عرض عناوين IP المعيّنة للواجهات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-NetIPAddress"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-NetIPAddress</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-NetIPAddress -AddressFamily IPv4"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-NetIPAddress -AddressFamily IPv4</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-20" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-process عرض العمليات قيد التشغيل أو فحصها.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-Process</code></h3>
+  <p>عرض العمليات قيد التشغيل أو فحصها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-Process"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-Process</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-Process | Sort-Object CPU -Descending | Select-Object -First 10"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-Process | Sort-Object CPU -Descending | Select-Object -First 10</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-21" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-service عرض خدمات windows وحالتها.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-Service</code></h3>
+  <p>عرض خدمات Windows وحالتها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-Service"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-Service</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-Service | Where-Object Status -eq &#x27;Running&#x27;"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-Service | Where-Object Status -eq &#x27;Running&#x27;</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-22" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-winevent قراءة سجلات أحداث windows.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-WinEvent</code></h3>
+  <p>قراءة سجلات أحداث Windows.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-WinEvent -LogName &lt;log&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-WinEvent -LogName &lt;log&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-WinEvent -LogName System -MaxEvents 20"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-WinEvent -LogName System -MaxEvents 20</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-23" data-command-card
+         data-platform="powershell" data-letter="I"
+         data-search="invoke-webrequest إرسال طلبات http أو تنزيل محتوى.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Invoke-WebRequest</code></h3>
+  <p>إرسال طلبات HTTP أو تنزيل محتوى.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Invoke-WebRequest -Uri &lt;url&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Invoke-WebRequest -Uri &lt;url&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Invoke-WebRequest -Uri https://alaaamri.com -UseBasicParsing"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Invoke-WebRequest -Uri https://alaaamri.com -UseBasicParsing</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-24" data-command-card
+         data-platform="powershell" data-letter="R"
+         data-search="resolve-dnsname حل سجلات dns مع مخرجات تفصيلية.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Resolve-DnsName</code></h3>
+  <p>حل سجلات DNS مع مخرجات تفصيلية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Resolve-DnsName &lt;domain&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Resolve-DnsName &lt;domain&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Resolve-DnsName alaaamri.com -Type A"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Resolve-DnsName alaaamri.com -Type A</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-25" data-command-card
+         data-platform="powershell" data-letter="R"
+         data-search="restart-service إعادة تشغيل خدمة في windows.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>Restart-Service</code></h3>
+  <p>إعادة تشغيل خدمة في Windows.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Restart-Service -Name &lt;service&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Restart-Service -Name &lt;service&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Restart-Service -Name Spooler"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Restart-Service -Name Spooler</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-26" data-command-card
+         data-platform="powershell" data-letter="T"
+         data-search="test-netconnection اختبار اتصال tcp وping ومعلومات المسار.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Test-NetConnection</code></h3>
+  <p>اختبار اتصال TCP وPing ومعلومات المسار.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Test-NetConnection &lt;host&gt; -Port &lt;port&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Test-NetConnection &lt;host&gt; -Port &lt;port&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Test-NetConnection alaaamri.com -Port 443"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Test-NetConnection alaaamri.com -Port 443</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-27" data-command-card
+         data-platform="powershell" data-letter="G"
+         data-search="get-filehash حساب بصمة تشفيرية لملف.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>Get-FileHash</code></h3>
+  <p>حساب بصمة تشفيرية لملف.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Get-FileHash &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Get-FileHash &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Get-FileHash .\installer.exe -Algorithm SHA256"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Get-FileHash .\installer.exe -Algorithm SHA256</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-powershell-28" data-command-card
+         data-platform="powershell" data-letter="S"
+         data-search="set-executionpolicy تغيير سياسة تشغيل سكربتات powershell.">
+  <div class="command-card-top">
+    <span class="platform-chip">PS</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>Set-ExecutionPolicy</code></h3>
+  <p>تغيير سياسة تشغيل سكربتات PowerShell.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="Set-ExecutionPolicy &lt;policy&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>Set-ExecutionPolicy &lt;policy&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="Set-ExecutionPolicy RemoteSigned -Scope CurrentUser"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-29" data-command-card
+         data-platform="linux" data-letter="C"
+         data-search="chmod تغيير صلاحيات ملف أو مجلد.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>chmod</code></h3>
+  <p>تغيير صلاحيات ملف أو مجلد.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="chmod &lt;mode&gt; &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>chmod &lt;mode&gt; &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="chmod 640 config.conf"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>chmod 640 config.conf</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-30" data-command-card
+         data-platform="linux" data-letter="C"
+         data-search="chown تغيير مالك الملف والمجموعة.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>chown</code></h3>
+  <p>تغيير مالك الملف والمجموعة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="chown &lt;user&gt;:&lt;group&gt; &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>chown &lt;user&gt;:&lt;group&gt; &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="sudo chown root:root /etc/app.conf"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>sudo chown root:root /etc/app.conf</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-31" data-command-card
+         data-platform="linux" data-letter="C"
+         data-search="curl نقل البيانات من رابط أو إليه.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>curl</code></h3>
+  <p>نقل البيانات من رابط أو إليه.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="curl [options] &lt;url&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>curl [options] &lt;url&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="curl -I https://alaaamri.com"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>curl -I https://alaaamri.com</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-32" data-command-card
+         data-platform="linux" data-letter="D"
+         data-search="df عرض استخدام مساحة أنظمة الملفات.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>df</code></h3>
+  <p>عرض استخدام مساحة أنظمة الملفات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="df [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>df [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="df -h"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>df -h</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-33" data-command-card
+         data-platform="linux" data-letter="D"
+         data-search="dig الاستعلام عن سجلات dns.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>dig</code></h3>
+  <p>الاستعلام عن سجلات DNS.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="dig &lt;domain&gt; &lt;type&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>dig &lt;domain&gt; &lt;type&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="dig alaaamri.com A +short"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>dig alaaamri.com A +short</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-34" data-command-card
+         data-platform="linux" data-letter="D"
+         data-search="du حساب استخدام مساحة الملفات والمجلدات.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>du</code></h3>
+  <p>حساب استخدام مساحة الملفات والمجلدات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="du [options] &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>du [options] &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="du -sh /var/log"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>du -sh /var/log</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-35" data-command-card
+         data-platform="linux" data-letter="F"
+         data-search="find البحث عن الملفات والمجلدات.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>find</code></h3>
+  <p>البحث عن الملفات والمجلدات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="find &lt;path&gt; &lt;expression&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>find &lt;path&gt; &lt;expression&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="find /var/log -type f -name &#x27;*.log&#x27;"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>find /var/log -type f -name &#x27;*.log&#x27;</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-36" data-command-card
+         data-platform="linux" data-letter="G"
+         data-search="grep البحث داخل النصوص باستخدام أنماط.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>grep</code></h3>
+  <p>البحث داخل النصوص باستخدام أنماط.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="grep [options] &lt;pattern&gt; &lt;file&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>grep [options] &lt;pattern&gt; &lt;file&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="grep -Rin &#x27;error&#x27; /var/log/app"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>grep -Rin &#x27;error&#x27; /var/log/app</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-37" data-command-card
+         data-platform="linux" data-letter="I"
+         data-search="ip فحص الواجهات والعناوين والمسارات وإعدادها.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>ip</code></h3>
+  <p>فحص الواجهات والعناوين والمسارات وإعدادها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ip &lt;object&gt; &lt;command&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ip &lt;object&gt; &lt;command&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ip addr show"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ip addr show</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-38" data-command-card
+         data-platform="linux" data-letter="J"
+         data-search="journalctl الاستعلام عن سجلات systemd.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>journalctl</code></h3>
+  <p>الاستعلام عن سجلات systemd.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="journalctl [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>journalctl [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="journalctl -u ssh --since today"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>journalctl -u ssh --since today</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-39" data-command-card
+         data-platform="linux" data-letter="L"
+         data-search="ls عرض محتويات المجلد.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>ls</code></h3>
+  <p>عرض محتويات المجلد.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ls [options] [path]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ls [options] [path]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ls -lah /etc"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ls -lah /etc</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-40" data-command-card
+         data-platform="linux" data-letter="P"
+         data-search="ps عرض معلومات العمليات.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>ps</code></h3>
+  <p>عرض معلومات العمليات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ps [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ps [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ps aux --sort=-%mem | head"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ps aux --sort=-%mem | head</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-41" data-command-card
+         data-platform="linux" data-letter="S"
+         data-search="ss عرض إحصاءات المقابس والاتصالات.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>ss</code></h3>
+  <p>عرض إحصاءات المقابس والاتصالات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="ss [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>ss [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="ss -tulpn"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>ss -tulpn</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-42" data-command-card
+         data-platform="linux" data-letter="S"
+         data-search="systemctl إدارة خدمات ووحدات systemd.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>systemctl</code></h3>
+  <p>إدارة خدمات ووحدات systemd.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="systemctl &lt;action&gt; &lt;unit&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>systemctl &lt;action&gt; &lt;unit&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="sudo systemctl status docker"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>sudo systemctl status docker</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-43" data-command-card
+         data-platform="linux" data-letter="T"
+         data-search="tar إنشاء الملفات المضغوطة أو فكها.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>tar</code></h3>
+  <p>إنشاء الملفات المضغوطة أو فكها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="tar [options] &lt;archive&gt; &lt;files&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>tar [options] &lt;archive&gt; &lt;files&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="tar -czf backup.tar.gz /etc/app"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>tar -czf backup.tar.gz /etc/app</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-linux-44" data-command-card
+         data-platform="linux" data-letter="T"
+         data-search="top مراقبة العمليات وموارد النظام بشكل تفاعلي.">
+  <div class="command-card-top">
+    <span class="platform-chip">LX</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>top</code></h3>
+  <p>مراقبة العمليات وموارد النظام بشكل تفاعلي.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="top"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>top</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="top"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>top</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-45" data-command-card
+         data-platform="cisco" data-letter="C"
+         data-search="configure terminal الدخول إلى وضع الإعداد العام.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>configure terminal</code></h3>
+  <p>الدخول إلى وضع الإعداد العام.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="configure terminal"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>configure terminal</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="configure terminal"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>configure terminal</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-46" data-command-card
+         data-platform="cisco" data-letter="C"
+         data-search="copy running-config startup-config حفظ الإعدادات الحالية.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>copy running-config startup-config</code></h3>
+  <p>حفظ الإعدادات الحالية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="copy running-config startup-config"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>copy running-config startup-config</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="copy running-config startup-config"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>copy running-config startup-config</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-47" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show cdp neighbors detail عرض معلومات تفصيلية عن أجهزة cisco المجاورة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show cdp neighbors detail</code></h3>
+  <p>عرض معلومات تفصيلية عن أجهزة Cisco المجاورة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show cdp neighbors detail"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show cdp neighbors detail</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show cdp neighbors detail"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show cdp neighbors detail</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-48" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show interfaces status تلخيص حالة المنافذ وvlan والازدواجية والسرعة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show interfaces status</code></h3>
+  <p>تلخيص حالة المنافذ وVLAN والازدواجية والسرعة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show interfaces status"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show interfaces status</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show interfaces status"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show interfaces status</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-49" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show ip interface brief عرض عناوين الواجهات وحالتها التشغيلية.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show ip interface brief</code></h3>
+  <p>عرض عناوين الواجهات وحالتها التشغيلية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show ip interface brief"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show ip interface brief</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show ip interface brief"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show ip interface brief</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-50" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show ip route عرض جدول توجيه ipv4.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show ip route</code></h3>
+  <p>عرض جدول توجيه IPv4.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show ip route"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show ip route</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show ip route"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show ip route</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-51" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show logging عرض سجلات الجهاز المخزنة.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show logging</code></h3>
+  <p>عرض سجلات الجهاز المخزنة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show logging"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show logging</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show logging"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show logging</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-52" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show mac address-table عرض عناوين mac المتعلمة والمنافذ.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show mac address-table</code></h3>
+  <p>عرض عناوين MAC المتعلمة والمنافذ.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show mac address-table"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show mac address-table</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show mac address-table dynamic"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show mac address-table dynamic</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-53" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show running-config عرض الإعدادات الفعالة الحالية.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show running-config</code></h3>
+  <p>عرض الإعدادات الفعالة الحالية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show running-config"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show running-config</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show running-config | section interface"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show running-config | section interface</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-54" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show spanning-tree عرض حالة وبنية spanning tree.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show spanning-tree</code></h3>
+  <p>عرض حالة وبنية Spanning Tree.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show spanning-tree"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show spanning-tree</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show spanning-tree vlan 10"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show spanning-tree vlan 10</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-55" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show vlan brief عرض vlan وعضوية منافذ access.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show vlan brief</code></h3>
+  <p>عرض VLAN وعضوية منافذ Access.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show vlan brief"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show vlan brief</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show vlan brief"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show vlan brief</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-56" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="show version عرض إصدار ios ومدة التشغيل والعتاد وملف النظام.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show version</code></h3>
+  <p>عرض إصدار IOS ومدة التشغيل والعتاد وملف النظام.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show version"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show version</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show version"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show version</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-57" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="shutdown تعطيل الواجهة إداريًا.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
+  </div>
+  <h3><code>shutdown</code></h3>
+  <p>تعطيل الواجهة إداريًا.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="shutdown"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>shutdown</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="interface GigabitEthernet1/0/10
+ shutdown"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>interface GigabitEthernet1/0/10
+ shutdown</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-cisco-58" data-command-card
+         data-platform="cisco" data-letter="S"
+         data-search="switchport access vlan تعيين منفذ access إلى vlan.">
+  <div class="command-card-top">
+    <span class="platform-chip">CI</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>switchport access vlan</code></h3>
+  <p>تعيين منفذ Access إلى VLAN.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="switchport access vlan &lt;id&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>switchport access vlan &lt;id&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="switchport access vlan 20"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>switchport access vlan 20</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-59" data-command-card
+         data-platform="fortigate" data-letter="D"
+         data-search="diagnose debug flow تتبع قرارات الجدار الناري وتدفق الحزم.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>diagnose debug flow</code></h3>
+  <p>تتبع قرارات الجدار الناري وتدفق الحزم.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="diagnose debug flow &lt;options&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>diagnose debug flow &lt;options&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="diagnose debug flow filter addr 192.168.1.10"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>diagnose debug flow filter addr 192.168.1.10</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-60" data-command-card
+         data-platform="fortigate" data-letter="D"
+         data-search="diagnose ip address list عرض عناوين ip المهيأة على الواجهات.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>diagnose ip address list</code></h3>
+  <p>عرض عناوين IP المهيأة على الواجهات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="diagnose ip address list"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>diagnose ip address list</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="diagnose ip address list"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>diagnose ip address list</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-61" data-command-card
+         data-platform="fortigate" data-letter="D"
+         data-search="diagnose sniffer packet التقاط الحزم من واجهة أوامر fortigate.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>diagnose sniffer packet</code></h3>
+  <p>التقاط الحزم من واجهة أوامر FortiGate.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="diagnose sniffer packet &lt;interface&gt; &#x27;&lt;filter&gt;&#x27; &lt;verbosity&gt; &lt;count&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>diagnose sniffer packet &lt;interface&gt; &#x27;&lt;filter&gt;&#x27; &lt;verbosity&gt; &lt;count&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="diagnose sniffer packet any &#x27;host 8.8.8.8&#x27; 4 20"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>diagnose sniffer packet any &#x27;host 8.8.8.8&#x27; 4 20</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-62" data-command-card
+         data-platform="fortigate" data-letter="D"
+         data-search="diagnose sys top عرض استخدام العمليات والموارد في الوقت الفعلي.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>diagnose sys top</code></h3>
+  <p>عرض استخدام العمليات والموارد في الوقت الفعلي.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="diagnose sys top"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>diagnose sys top</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="diagnose sys top 1 20"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>diagnose sys top 1 20</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-63" data-command-card
+         data-platform="fortigate" data-letter="D"
+         data-search="diagnose vpn tunnel list عرض حالة أنفاق ipsec والمحددات.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>diagnose vpn tunnel list</code></h3>
+  <p>عرض حالة أنفاق IPsec والمحددات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="diagnose vpn tunnel list"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>diagnose vpn tunnel list</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="diagnose vpn tunnel list"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>diagnose vpn tunnel list</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-64" data-command-card
+         data-platform="fortigate" data-letter="E"
+         data-search="execute ping إرسال طلبات icmp من الجدار الناري.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>execute ping</code></h3>
+  <p>إرسال طلبات ICMP من الجدار الناري.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="execute ping &lt;host&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>execute ping &lt;host&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="execute ping 8.8.8.8"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>execute ping 8.8.8.8</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-65" data-command-card
+         data-platform="fortigate" data-letter="E"
+         data-search="execute traceroute تتبع المسار من الجدار الناري إلى الوجهة.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>execute traceroute</code></h3>
+  <p>تتبع المسار من الجدار الناري إلى الوجهة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="execute traceroute &lt;host&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>execute traceroute &lt;host&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="execute traceroute alaaamri.com"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>execute traceroute alaaamri.com</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-66" data-command-card
+         data-platform="fortigate" data-letter="G"
+         data-search="get router info routing-table all عرض جدول التوجيه الفعال.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>get router info routing-table all</code></h3>
+  <p>عرض جدول التوجيه الفعال.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="get router info routing-table all"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>get router info routing-table all</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="get router info routing-table all"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>get router info routing-table all</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-67" data-command-card
+         data-platform="fortigate" data-letter="G"
+         data-search="get system interface physical عرض معلومات ربط الواجهات الفعلية.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>get system interface physical</code></h3>
+  <p>عرض معلومات ربط الواجهات الفعلية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="get system interface physical"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>get system interface physical</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="get system interface physical"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>get system interface physical</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-68" data-command-card
+         data-platform="fortigate" data-letter="G"
+         data-search="get system performance status عرض المعالج والذاكرة والجلسات ومدة التشغيل.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>get system performance status</code></h3>
+  <p>عرض المعالج والذاكرة والجلسات ومدة التشغيل.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="get system performance status"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>get system performance status</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="get system performance status"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>get system performance status</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-69" data-command-card
+         data-platform="fortigate" data-letter="G"
+         data-search="get system status عرض النظام والبرنامج الثابت والرقم التسلسلي والحالة.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>get system status</code></h3>
+  <p>عرض النظام والبرنامج الثابت والرقم التسلسلي والحالة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="get system status"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>get system status</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="get system status"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>get system status</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-70" data-command-card
+         data-platform="fortigate" data-letter="S"
+         data-search="show firewall policy عرض إعدادات سياسات الجدار الناري.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show firewall policy</code></h3>
+  <p>عرض إعدادات سياسات الجدار الناري.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show firewall policy"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show firewall policy</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show firewall policy"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show firewall policy</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-71" data-command-card
+         data-platform="fortigate" data-letter="S"
+         data-search="show system interface عرض إعدادات الواجهات.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show system interface</code></h3>
+  <p>عرض إعدادات الواجهات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show system interface"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show system interface</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show system interface"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show system interface</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-fortigate-72" data-command-card
+         data-platform="fortigate" data-letter="S"
+         data-search="show full-configuration عرض الإعدادات كاملة بما فيها القيم الافتراضية.">
+  <div class="command-card-top">
+    <span class="platform-chip">FG</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>show full-configuration</code></h3>
+  <p>عرض الإعدادات كاملة بما فيها القيم الافتراضية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="show full-configuration"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>show full-configuration</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="show full-configuration system dns"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>show full-configuration system dns</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-73" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker build بناء image من dockerfile.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker build</code></h3>
+  <p>بناء Image من Dockerfile.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker build [options] &lt;context&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker build [options] &lt;context&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker build -t myapp:1.0 ."
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker build -t myapp:1.0 .</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-74" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker compose down إيقاف تطبيق compose وإزالة موارده.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>docker compose down</code></h3>
+  <p>إيقاف تطبيق Compose وإزالة موارده.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker compose down"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker compose down</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker compose down"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker compose down</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-75" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker compose up إنشاء تطبيق compose وتشغيله.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker compose up</code></h3>
+  <p>إنشاء تطبيق Compose وتشغيله.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker compose up [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker compose up [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker compose up -d"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker compose up -d</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-76" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker exec تشغيل أمر داخل حاوية تعمل.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>docker exec</code></h3>
+  <p>تشغيل أمر داخل حاوية تعمل.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker exec [options] &lt;container&gt; &lt;command&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker exec [options] &lt;container&gt; &lt;command&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker exec -it web /bin/bash"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker exec -it web /bin/bash</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-77" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker images عرض images المحلية.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker images</code></h3>
+  <p>عرض Images المحلية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker images"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker images</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker images"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker images</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-78" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker inspect عرض معلومات تفصيلية عن عنصر docker.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker inspect</code></h3>
+  <p>عرض معلومات تفصيلية عن عنصر Docker.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker inspect &lt;object&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker inspect &lt;object&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker inspect web"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker inspect web</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-79" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker logs قراءة سجلات الحاوية.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker logs</code></h3>
+  <p>قراءة سجلات الحاوية.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker logs [options] &lt;container&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker logs [options] &lt;container&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker logs -f --tail 100 web"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker logs -f --tail 100 web</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-80" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker ps عرض الحاويات قيد التشغيل.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker ps</code></h3>
+  <p>عرض الحاويات قيد التشغيل.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker ps [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker ps [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker ps -a"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker ps -a</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-81" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker pull تنزيل image من registry.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker pull</code></h3>
+  <p>تنزيل Image من Registry.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker pull &lt;image&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker pull &lt;image&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker pull ubuntu:24.04"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker pull ubuntu:24.04</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-82" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker rm إزالة حاوية أو أكثر.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
+  </div>
+  <h3><code>docker rm</code></h3>
+  <p>إزالة حاوية أو أكثر.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker rm [options] &lt;container&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker rm [options] &lt;container&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker rm old-web"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker rm old-web</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-83" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker run إنشاء حاوية جديدة وتشغيلها.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>docker run</code></h3>
+  <p>إنشاء حاوية جديدة وتشغيلها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker run [options] &lt;image&gt; [command]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker run [options] &lt;image&gt; [command]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker run -d --name web -p 8080:80 nginx"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker run -d --name web -p 8080:80 nginx</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-84" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker stop إيقاف الحاويات العاملة بشكل منظم.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>docker stop</code></h3>
+  <p>إيقاف الحاويات العاملة بشكل منظم.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker stop &lt;container&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker stop &lt;container&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker stop web"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker stop web</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-85" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker system df عرض استخدام docker لمساحة التخزين.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>docker system df</code></h3>
+  <p>عرض استخدام Docker لمساحة التخزين.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker system df"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker system df</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker system df"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker system df</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-docker-86" data-command-card
+         data-platform="docker" data-letter="D"
+         data-search="docker system prune إزالة بيانات docker غير المستخدمة.">
+  <div class="command-card-top">
+    <span class="platform-chip">DK</span>
+    <span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
+  </div>
+  <h3><code>docker system prune</code></h3>
+  <p>إزالة بيانات Docker غير المستخدمة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="docker system prune [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>docker system prune [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="docker system prune -a"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>docker system prune -a</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-87" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git add إضافة تغييرات الملفات إلى منطقة stage.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git add</code></h3>
+  <p>إضافة تغييرات الملفات إلى منطقة Stage.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git add &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git add &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git add ."
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git add .</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-88" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git branch عرض الفروع أو إنشاؤها أو حذفها.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>git branch</code></h3>
+  <p>عرض الفروع أو إنشاؤها أو حذفها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git branch [options] [name]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git branch [options] [name]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git branch -a"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git branch -a</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-89" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git clone إنشاء نسخة محلية من مستودع.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git clone</code></h3>
+  <p>إنشاء نسخة محلية من مستودع.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git clone &lt;repository&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git clone &lt;repository&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git clone https://github.com/user/repo.git"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git clone https://github.com/user/repo.git</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-90" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git commit إنشاء commit من التغييرات المضافة.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git commit</code></h3>
+  <p>إنشاء Commit من التغييرات المضافة.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git commit -m &lt;message&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git commit -m &lt;message&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git commit -m &quot;Update command center&quot;"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git commit -m &quot;Update command center&quot;</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-91" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git diff عرض الفروقات بين الإصدارات أو الملفات.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git diff</code></h3>
+  <p>عرض الفروقات بين الإصدارات أو الملفات.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git diff [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git diff [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git diff --staged"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git diff --staged</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-92" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git fetch تنزيل تغييرات المستودع البعيد دون دمج.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git fetch</code></h3>
+  <p>تنزيل تغييرات المستودع البعيد دون دمج.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git fetch [remote]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git fetch [remote]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git fetch origin"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git fetch origin</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-93" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git init تهيئة مستودع git جديد.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git init</code></h3>
+  <p>تهيئة مستودع Git جديد.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git init [directory]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git init [directory]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git init"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git init</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-94" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git log عرض سجل commits.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git log</code></h3>
+  <p>عرض سجل Commits.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git log [options]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git log [options]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git log --oneline --graph --decorate --all"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git log --oneline --graph --decorate --all</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-95" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git merge دمج فرع آخر مع الفرع الحالي.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>git merge</code></h3>
+  <p>دمج فرع آخر مع الفرع الحالي.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git merge &lt;branch&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git merge &lt;branch&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git merge feature/homepage"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git merge feature/homepage</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-96" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git pull تنزيل تغييرات المستودع البعيد ودمجها.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>git pull</code></h3>
+  <p>تنزيل تغييرات المستودع البعيد ودمجها.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git pull [remote] [branch]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git pull [remote] [branch]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git pull origin main"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git pull origin main</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-97" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git push رفع commits المحلية إلى المستودع البعيد.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>git push</code></h3>
+  <p>رفع Commits المحلية إلى المستودع البعيد.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git push [remote] [branch]"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git push [remote] [branch]</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git push origin main"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git push origin main</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-98" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git restore استعادة ملفات العمل أو stage.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+  </div>
+  <h3><code>git restore</code></h3>
+  <p>استعادة ملفات العمل أو Stage.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git restore [options] &lt;path&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git restore [options] &lt;path&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git restore --staged index.html"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git restore --staged index.html</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-99" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git status عرض الحالة الحالية للمستودع.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git status</code></h3>
+  <p>عرض الحالة الحالية للمستودع.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git status"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git status</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git status"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git status</code></pre>
+    </div>
+  </details>
+</article>
+
+<article class="command-card" id="cmd-git-100" data-command-card
+         data-platform="git" data-letter="G"
+         data-search="git switch التبديل بين الفروع أو إنشاء فرع.">
+  <div class="command-card-top">
+    <span class="platform-chip">GT</span>
+    <span class="risk-badge risk-safe">منخفض الخطورة</span>
+  </div>
+  <h3><code>git switch</code></h3>
+  <p>التبديل بين الفروع أو إنشاء فرع.</p>
+  <details class="command-details">
+    <summary>عرض التفاصيل</summary>
+    <div class="command-code-block">
+      <div class="code-heading"><span>الصيغة</span>
+        <button type="button" data-copy-command="git switch [options] &lt;branch&gt;"
+                data-copy-default="نسخ الصيغة" data-copy-success="تم النسخ">نسخ الصيغة</button>
+      </div>
+      <pre><code>git switch [options] &lt;branch&gt;</code></pre>
+    </div>
+    <div class="command-code-block">
+      <div class="code-heading"><span>مثال</span>
+        <button type="button" data-copy-command="git switch -c feature/commands"
+                data-copy-default="نسخ المثال" data-copy-success="تم النسخ">نسخ المثال</button>
+      </div>
+      <pre><code>git switch -c feature/commands</code></pre>
+    </div>
+  </details>
+</article>
+
+          </div>
+
+          <div class="empty-state" data-command-empty hidden>
+            <strong>لا توجد نتائج</strong>
+            <span>جرّب كلمة أو تصنيفًا مختلفًا.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-row">
+    <span>© 2026 Khalid — alaaamri.com</span>
+    <span>مرجع تعليمي مختصر — راجع التوثيق الرسمي قبل التنفيذ.</span>
+  </div>
+</footer>
+<script src="/app.js?v=15" defer></script>
+<script src="/commands.js?v=15" defer></script>
+</body>
+</html>

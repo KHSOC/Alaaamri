@@ -34,4 +34,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/tech-hub-en.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/tech-hub-ar.html"/>
   </url>
+
+  <url>
+    <loc>https://alaaamri.com/command-center-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/command-center-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/command-center-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/command-center-ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/command-center-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/command-center-ar.html"/>
+  </url>
 </urlset>

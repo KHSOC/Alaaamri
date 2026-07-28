@@ -1,11 +1,11 @@
 
 "use strict";
-const CACHE_NAME = "khalid-tech-hub-v14";
+const CACHE_NAME = "khalid-tech-hub-v15";
 const CORE_ASSETS = [
   "/", "/index.html", "/en.html", "/ar.html",
   "/projects-en.html", "/projects-ar.html",
-  "/tech-hub-en.html", "/tech-hub-ar.html",
-  "/404.html", "/style.css?v=14", "/app.js?v=14",
+  "/tech-hub-en.html", "/tech-hub-ar.html", "/command-center-en.html", "/command-center-ar.html",
+  "/404.html", "/style.css?v=15", "/app.js?v=15", "/commands.js?v=15",
   "/favicon-olive.svg?v=7", "/manifest.webmanifest", "/social-preview.png?v=14"
 ];
 

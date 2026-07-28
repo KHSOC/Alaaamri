@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=14");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=15");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);
