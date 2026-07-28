@@ -32,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const languageCards = [...document.querySelectorAll("[data-language-choice]")];
   let savedLanguage = "";
+
   try {
     savedLanguage = localStorage.getItem("siteLanguage") || "";
   } catch (_) {}
 
   languageCards.forEach((card) => {
     const language = card.dataset.languageChoice;
+
     if (language === savedLanguage) {
       card.classList.add("recommended");
       card.setAttribute("aria-describedby", "saved-language-note");
@@ -51,124 +53,196 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const searchInput = document.querySelector("[data-tool-search]");
-  const mainFilterButtons = [...document.querySelectorAll("[data-main-filter]")];
-  const aiSubfilterButtons = [...document.querySelectorAll("[data-ai-subfilter]")];
-  const aiSubfilterPanel = document.querySelector("[data-ai-subfilters]");
-  const toolCards = [...document.querySelectorAll("[data-tool]")];
-  const toolGroups = [...document.querySelectorAll("[data-tool-group]")];
-  const directorySections = [...document.querySelectorAll("[data-directory-section]")];
-  const resultCount = document.querySelector("[data-result-count]");
-  const pageLanguage = document.documentElement.lang === "ar" ? "ar" : "en";
 
-  let activeMainFilter = "all";
-  let activeAiSubfilter = "all";
+  const clockWidgets = [...document.querySelectorAll("[data-clock]")];
 
-  const updateCount = (visible) => {
-    if (!resultCount) return;
-    resultCount.textContent = pageLanguage === "ar"
-      ? `${visible} أداة معروضة`
-      : `${visible} tool${visible === 1 ? "" : "s"} displayed`;
+  const updateClock = (widget) => {
+    const locale = widget.dataset.locale || "en-US";
+    const now = new Date();
+
+    const timeElement = widget.querySelector("[data-clock-time]");
+    const dateElement = widget.querySelector("[data-clock-date]");
+
+    const timeFormatter = new Intl.DateTimeFormat(locale, {
+      timeZone: "Asia/Riyadh",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: locale.startsWith("en")
+    });
+
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      timeZone: "Asia/Riyadh",
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+
+    if (timeElement) {
+      timeElement.textContent = timeFormatter.format(now);
+      timeElement.setAttribute("datetime", now.toISOString());
+    }
+
+    if (dateElement) {
+      dateElement.textContent = dateFormatter.format(now);
+      dateElement.setAttribute("datetime", now.toISOString());
+    }
   };
 
-  const setPressedState = (buttons, selectedButton) => {
+  if (clockWidgets.length) {
+    clockWidgets.forEach(updateClock);
+
+    window.setInterval(() => {
+      clockWidgets.forEach(updateClock);
+    }, 1000);
+  }
+
+  const searchInput = document.querySelector("[data-tool-search]");
+  const mainButtons = [...document.querySelectorAll("[data-main-filter]")];
+  const aiButtons = [...document.querySelectorAll("[data-ai-subfilter]")];
+  const programButtons = [...document.querySelectorAll("[data-program-subfilter]")];
+  const aiPanel = document.querySelector("[data-ai-subfilters]");
+  const programPanel = document.querySelector("[data-program-subfilters]");
+  const cards = [...document.querySelectorAll("[data-tool]")];
+  const groups = [...document.querySelectorAll("[data-tool-group]")];
+  const sections = [...document.querySelectorAll("[data-directory-section]")];
+  const resultCount = document.querySelector("[data-result-count]");
+  const language = document.documentElement.lang === "ar" ? "ar" : "en";
+
+  let mainFilter = "all";
+  let aiFilter = "all";
+  let programFilter = "all";
+
+  const setActive = (buttons, activeButton) => {
     buttons.forEach((button) => {
-      const selected = button === selectedButton;
-      button.classList.toggle("active", selected);
-      button.setAttribute("aria-pressed", String(selected));
+      const active = button === activeButton;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
     });
   };
 
-  const applyDirectoryFilters = () => {
-    if (!toolCards.length) return;
+  const resetSubfilter = (buttons, dataKey) => {
+    const allButton = buttons.find((button) => button.dataset[dataKey] === "all");
+    if (allButton) setActive(buttons, allButton);
+  };
+
+  const updateCount = (count) => {
+    if (!resultCount) return;
+    resultCount.textContent = language === "ar"
+      ? `${count} أداة معروضة`
+      : `${count} tool${count === 1 ? "" : "s"} displayed`;
+  };
+
+  const applyFilters = () => {
+    if (!cards.length) return;
 
     const query = (searchInput?.value || "")
       .trim()
-      .toLocaleLowerCase(pageLanguage);
+      .toLocaleLowerCase(language);
 
-    let visibleCount = 0;
+    let visible = 0;
 
-    toolCards.forEach((card) => {
-      const text = card.textContent.toLocaleLowerCase(pageLanguage);
+    cards.forEach((card) => {
+      const text = card.textContent.toLocaleLowerCase(language);
       const mainCategory = card.dataset.mainCategory || "";
-      const subcategory = card.dataset.subcategory || "";
+      const aiCategory = card.dataset.subcategory || "";
+      const programCategory = card.dataset.programCategory || "";
 
-      const matchesQuery = text.includes(query);
-      const matchesMain =
-        activeMainFilter === "all" || mainCategory === activeMainFilter;
-      const matchesSubcategory =
-        activeMainFilter !== "ai" ||
-        activeAiSubfilter === "all" ||
-        subcategory === activeAiSubfilter;
+      const matchesSearch = text.includes(query);
+      const matchesMain = mainFilter === "all" || mainCategory === mainFilter;
+      const matchesAi =
+        mainCategory !== "ai" ||
+        mainFilter !== "ai" ||
+        aiFilter === "all" ||
+        aiCategory === aiFilter;
+      const matchesProgram =
+        mainCategory !== "programs" ||
+        mainFilter !== "programs" ||
+        programFilter === "all" ||
+        programCategory === programFilter;
 
-      const shouldShow = matchesQuery && matchesMain && matchesSubcategory;
-      card.hidden = !shouldShow;
+      const show = matchesSearch && matchesMain && matchesAi && matchesProgram;
+      card.hidden = !show;
 
-      if (shouldShow) visibleCount += 1;
+      if (show) visible += 1;
     });
 
-    toolGroups.forEach((group) => {
+    groups.forEach((group) => {
       const visibleCards = group.querySelectorAll("[data-tool]:not([hidden])");
       group.hidden = visibleCards.length === 0;
     });
 
-    directorySections.forEach((section) => {
+    sections.forEach((section) => {
       const category = section.dataset.directorySection;
       const visibleCards = section.querySelectorAll("[data-tool]:not([hidden])");
-
-      const mainAllowsSection =
-        activeMainFilter === "all" || activeMainFilter === category;
-
-      section.hidden = !mainAllowsSection || visibleCards.length === 0;
+      const allowed = mainFilter === "all" || mainFilter === category;
+      section.hidden = !allowed || visibleCards.length === 0;
     });
 
-    if (aiSubfilterPanel) {
-      aiSubfilterPanel.hidden = activeMainFilter !== "ai";
-    }
+    if (aiPanel) aiPanel.hidden = mainFilter !== "ai";
+    if (programPanel) programPanel.hidden = mainFilter !== "programs";
 
-    updateCount(visibleCount);
+    updateCount(visible);
   };
 
-  mainFilterButtons.forEach((button) => {
+  mainButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeMainFilter = button.dataset.mainFilter || "all";
+      mainFilter = button.dataset.mainFilter || "all";
 
-      if (activeMainFilter !== "ai") {
-        activeAiSubfilter = "all";
-        const allAiButton = aiSubfilterButtons.find(
-          (item) => item.dataset.aiSubfilter === "all"
-        );
-        if (allAiButton) setPressedState(aiSubfilterButtons, allAiButton);
+      if (mainFilter !== "ai") {
+        aiFilter = "all";
+        resetSubfilter(aiButtons, "aiSubfilter");
       }
 
-      setPressedState(mainFilterButtons, button);
-      applyDirectoryFilters();
+      if (mainFilter !== "programs") {
+        programFilter = "all";
+        resetSubfilter(programButtons, "programSubfilter");
+      }
+
+      setActive(mainButtons, button);
+      applyFilters();
     });
   });
 
-  aiSubfilterButtons.forEach((button) => {
+  aiButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeMainFilter = "ai";
-      activeAiSubfilter = button.dataset.aiSubfilter || "all";
+      mainFilter = "ai";
+      aiFilter = button.dataset.aiSubfilter || "all";
 
-      const aiMainButton = mainFilterButtons.find(
+      const aiMainButton = mainButtons.find(
         (item) => item.dataset.mainFilter === "ai"
       );
-      if (aiMainButton) setPressedState(mainFilterButtons, aiMainButton);
 
-      setPressedState(aiSubfilterButtons, button);
-      applyDirectoryFilters();
+      if (aiMainButton) setActive(mainButtons, aiMainButton);
+      setActive(aiButtons, button);
+      applyFilters();
     });
   });
 
-  searchInput?.addEventListener("input", applyDirectoryFilters);
-  applyDirectoryFilters();
+  programButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      mainFilter = "programs";
+      programFilter = button.dataset.programSubfilter || "all";
+
+      const programsMainButton = mainButtons.find(
+        (item) => item.dataset.mainFilter === "programs"
+      );
+
+      if (programsMainButton) setActive(mainButtons, programsMainButton);
+      setActive(programButtons, button);
+      applyFilters();
+    });
+  });
+
+  searchInput?.addEventListener("input", applyFilters);
+  applyFilters();
 });
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=8");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=10");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);

@@ -153,3 +153,65 @@ html[dir="rtl"] .filter{text-align:right}
   .subfilter{text-align:start;border-radius:11px}
   .tool-group-head{align-items:center}
 }
+
+
+/* Version 9: professional software directory */
+.category-note{
+  padding:13px 15px;border-radius:12px;
+  border:1px solid rgba(183,199,122,.32);
+  background:rgba(141,155,91,.09);
+  color:#d9dfc5;font-size:.91rem
+}
+.featured-card{
+  border-color:rgba(183,199,122,.52);
+  background:linear-gradient(180deg,rgba(141,155,91,.15),rgba(255,255,255,.02));
+  position:relative
+}
+.featured-badge{
+  align-self:flex-start;padding:5px 9px;border-radius:999px;
+  background:var(--olive);color:var(--black);
+  font-size:.72rem;font-weight:900
+}
+.directory-section[data-directory-section="programs"] .tool-group{
+  padding:20px;border:1px solid var(--line);border-radius:16px;
+  background:rgba(255,255,255,.012)
+}
+.directory-section[data-directory-section="programs"] .tool-group + .tool-group{
+  margin-top:6px
+}
+.directory-section[data-directory-section="programs"] .tool-grid{
+  margin-top:2px
+}
+html[dir="rtl"] .featured-badge{align-self:flex-start}
+
+
+/* Version 10: live Riyadh clock */
+.home-clock-section{padding:0 0 28px}
+.home-clock-card{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:20px 24px;border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(180deg,rgba(141,155,91,.08),rgba(255,255,255,.018));
+  box-shadow:var(--shadow)
+}
+.clock-heading{display:flex;align-items:center;gap:10px;min-width:max-content}
+.clock-heading .kicker{margin:0}
+.clock-live-dot{
+  width:9px;height:9px;border-radius:50%;background:var(--olive-bright);
+  box-shadow:0 0 16px rgba(183,199,122,.78)
+}
+.clock-layout{display:grid;grid-template-columns:auto 1px auto;align-items:center;gap:24px}
+.clock-block{display:flex;flex-direction:column;gap:3px}
+.clock-label{color:var(--muted);font-size:.78rem}
+.clock-time{
+  font-size:clamp(1.65rem,4vw,2.5rem);font-weight:900;line-height:1;
+  letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--white)
+}
+.clock-date{font-size:1rem;font-weight:750;color:#daddd3}
+.clock-divider{width:1px;height:48px;background:var(--line)}
+html[dir="rtl"] .clock-time{direction:ltr;text-align:right}
+@media(max-width:760px){
+  .home-clock-card{align-items:flex-start;flex-direction:column}
+  .clock-layout{width:100%;grid-template-columns:1fr}
+  .clock-divider{display:none}
+  .clock-time{font-size:2rem}
+}

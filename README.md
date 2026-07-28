@@ -39,3 +39,18 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Grouped AI tools into assistants, search, coding, research, productivity, images, video, music, audio, and automation.
 - Kept 24 technical programs in a separate programs section.
 - Updated JavaScript filtering and cache version to v8.
+
+## Version 9
+- Changed the home hero to “Hi, I'm Khalid” / “أهلًا، أنا خالد”.
+- Removed the About / نبذة section from both home pages.
+- Rebuilt the software directory into seven professional categories.
+- Added networking tools, browsers including Tor Browser, virtualization and sandbox tools.
+- Added a Windows setup and optimization category featuring Chris Titus Tech WinUtil.
+- Added diagnostics, development, security, and monitoring utilities.
+- Added program-category filters and updated the JavaScript cache to v9.
+
+## Version 10
+- Added a live Riyadh clock to both home pages.
+- Displays hours, minutes, seconds, weekday, full date, month, and year.
+- Uses the browser's Intl API with the Asia/Riyadh timezone.
+- Updated cache version to v10.
