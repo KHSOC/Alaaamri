@@ -89,3 +89,17 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Platforms: Windows CMD, PowerShell, Linux/Bash, Cisco IOS, FortiGate CLI, Docker CLI, and Git.
 - Added links from the site navigation and Tech Hub.
 - Added `commands.js` and updated cache version to v15.
+
+## Version 16
+- Expanded the Command Center from 100 to 200 commands.
+- Added 100 new commands across Windows CMD, PowerShell, Linux/Bash, Cisco IOS, FortiGate CLI, Docker CLI, and Git.
+- Updated platform totals, hero statistics, search counts, A-Z index, and Tech Hub sidebar count.
+- Updated cache version to v16.
+
+## Version 17
+- Expanded the Command Center from 200 to 300 commands.
+- Added bilingual Windows Cleanup pages with 10 guided cleanup actions, commands, copy buttons, execution instructions, and risk labels.
+- Added bilingual Operating Systems Directory pages with 30 systems and platforms.
+- Added a locally generated SVG illustration and official website link for every system.
+- Added Windows Cleanup and Operating Systems to the main navigation.
+- Updated sitemap, service worker, security headers, and cache version to v17.

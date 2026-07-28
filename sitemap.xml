@@ -45,4 +45,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/command-center-en.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/command-center-ar.html"/>
   </url>
+
+  <url>
+    <loc>https://alaaamri.com/windows-cleanup-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/windows-cleanup-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/windows-cleanup-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/windows-cleanup-ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/windows-cleanup-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/windows-cleanup-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/operating-systems-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/operating-systems-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/operating-systems-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/operating-systems-ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/operating-systems-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/operating-systems-ar.html"/>
+  </url>
 </urlset>

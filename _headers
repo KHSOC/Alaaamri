@@ -36,3 +36,12 @@
 
 /social-preview.png
   Cache-Control: public, max-age=86400
+
+/os-*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/cleanup.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/systems.js
+  Cache-Control: public, max-age=31536000, immutable
