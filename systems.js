@@ -2,6 +2,19 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const logoImages = [...document.querySelectorAll("[data-os-logo]")];
+
+  logoImages.forEach((image) => {
+    image.addEventListener("error", () => {
+      const fallback = image.dataset.logoFallback;
+      if (fallback && image.getAttribute("src") !== fallback) {
+        image.setAttribute("src", fallback);
+        image.classList.add("using-logo-fallback");
+      }
+    }, { once: true });
+  });
+
   const cards = [...document.querySelectorAll("[data-os-card]")];
   if (!cards.length) return;
 

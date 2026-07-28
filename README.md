@@ -103,3 +103,10 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added a locally generated SVG illustration and official website link for every system.
 - Added Windows Cleanup and Operating Systems to the main navigation.
 - Updated sitemap, service worker, security headers, and cache version to v17.
+
+## Version 18
+- Replaced the generated abbreviation illustrations in the Operating Systems directory with recognizable system and platform logos.
+- Added 30 high-resolution SVG logo URLs through the Iconify API.
+- Kept the original local SVG illustrations as automatic fallbacks.
+- Restricted the CSP image allowlist to `https://api.iconify.design`.
+- Updated styles, scripts, and cache version to v18.

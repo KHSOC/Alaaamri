@@ -623,3 +623,35 @@ html[dir="rtl"] .clock-time{direction:ltr;text-align:right}
   .os-filter-list{grid-template-columns:repeat(2,1fr)}
   .os-summary{flex-direction:column}
 }
+
+
+/* Version 18: real operating-system logos */
+.os-card > img[data-os-logo]{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  object-fit:contain;
+  padding:48px 72px;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(183,199,122,.13),transparent 45%),
+    linear-gradient(145deg,#171c16,#0b0d0b);
+  border-bottom:1px solid var(--line);
+  filter:drop-shadow(0 12px 20px rgba(0,0,0,.28));
+}
+.os-card > img[data-os-logo].using-logo-fallback{
+  padding:0;
+  object-fit:cover;
+  filter:none;
+}
+.logo-source-note{
+  margin:-6px 0 17px;
+  padding:10px 13px;
+  border:1px solid rgba(183,199,122,.18);
+  border-radius:10px;
+  background:rgba(141,155,91,.055);
+  color:var(--muted);
+  font-size:.8rem
+}
+@media(max-width:700px){
+  .os-card > img[data-os-logo]{padding:38px 60px}
+}
