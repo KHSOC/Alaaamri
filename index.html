@@ -1,113 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Khalid's portfolio and technical hub for networking, cybersecurity, AI, and infrastructure.">
-  <meta name="theme-color" content="#07111f">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests">
-  <title>Khalid — Network & Security Engineer</title>
+  <meta name="description" content="Choose Arabic or English to enter Khalid&#x27;s portfolio and technical hub.">
+  <meta name="theme-color" content="#090a09">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Choose a language — Khalid">
+  <meta property="og:description" content="Choose Arabic or English to enter Khalid&#x27;s portfolio and technical hub.">
+  <meta property="og:url" content="https://alaaamri.com/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Khalid Tech Hub">
+  <title>Choose a language — Khalid</title>
   <link rel="canonical" href="https://alaaamri.com/">
+  <link rel="alternate" hreflang="en" href="https://alaaamri.com/en.html">
+  <link rel="alternate" hreflang="ar" href="https://alaaamri.com/ar.html">
+  <link rel="alternate" hreflang="x-default" href="https://alaaamri.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/style.css?v=3">
+  <link rel="stylesheet" href="/style.css?v=5">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/" aria-current="page"><span class="logo">K</span><span>Khalid Al-Amri</span></a>
-    <button class="menu-btn" type="button" data-menu aria-expanded="false" aria-label="Open navigation">Menu</button>
-    <nav class="nav-links" data-nav aria-label="Main navigation">
-      <a href="/">Portfolio</a>
-      <a href="/projects.html">Projects</a>
-      <a href="/tech-hub.html">Tech Hub</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main id="main">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">Riyadh, Saudi Arabia</span>
-      <h1>Khalid<br><span class="gradient-text">Network & Security Engineer</span></h1>
-      <p class="lead">I build secure, reliable, and scalable infrastructure across enterprise networking, Fortinet, Cisco, virtualization, Linux, and cybersecurity operations.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/projects.html">View Projects</a>
-        <a class="btn btn-secondary" href="/tech-hub.html">Open Tech Hub</a>
-        <a class="btn btn-secondary" href="mailto:k@alaaamri.com">Contact Me</a>
-      </div>
+<main id="main" class="language-page">
+  <div class="container language-shell">
+    <span class="eyebrow">alaaamri.com</span>
+    <h1>Khalid <span class="gradient-text">Tech Hub</span></h1>
+    <p class="lead">Choose your preferred language<br><span dir="rtl">اختر اللغة التي تفضلها</span></p>
+    <div class="language-grid">
+      <a class="language-card" href="/en.html" data-language-choice="en" lang="en">
+        <strong>English</strong>
+        <p>Portfolio, projects, contact details, and the technical tools directory.</p>
+        <span class="arrow">Continue in English →</span>
+      </a>
+      <a class="language-card" href="/ar.html" data-language-choice="ar" lang="ar" dir="rtl">
+        <strong>العربية</strong>
+        <p>الملف المهني والمشاريع وبيانات التواصل ودليل الأدوات التقنية.</p>
+        <span class="arrow">الاستمرار بالعربية ←</span>
+      </a>
     </div>
-    <div class="hero-card" aria-label="Abstract network topology">
-      <div class="network-map">
-        <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span><span class="node n5"></span>
-        <span class="line l1"></span><span class="line l2"></span><span class="line l3"></span><span class="line l4"></span>
-      </div>
-    </div>
+    <p class="language-note" id="saved-language-note">Your last choice is stored only in this browser. لا يتم إرسال اختيارك إلى أي خادم.</p>
   </div>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="stats">
-      <div class="stat"><strong>400+</strong><span>Branches Supported</span></div>
-      <div class="stat"><strong>5+</strong><span>Years in IT</span></div>
-      <div class="stat"><strong>3</strong><span>Core Certifications</span></div>
-      <div class="stat"><strong>24/7</strong><span>Operations Mindset</span></div>
-    </div>
-  </div>
-</section>
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-head"><div><span class="kicker">About</span><h2>Hands-on infrastructure experience</h2></div><p>Enterprise networking experience with a strong focus on FortiGate, SD-WAN, routing, switching, VPNs, monitoring, virtualization, and practical cybersecurity labs.</p></div>
-    <div class="grid-3">
-      <article class="card"><div class="icon">🌐</div><h3>Networking</h3><p>Cisco switching and routing, VLANs, OSPF, WAN connectivity, branch operations, and troubleshooting.</p></article>
-      <article class="card"><div class="icon">🛡️</div><h3>Security</h3><p>FortiGate policies, VPNs, segmentation, secure access, traffic analysis, and security-focused design.</p></article>
-      <article class="card"><div class="icon">🧪</div><h3>Home Lab</h3><p>VMware, Ubuntu Server, Docker, Pi-hole, Portainer, monitoring platforms, EVE-NG, and SIEM practice.</p></article>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div><span class="kicker">Credentials</span><h2>Certifications</h2></div></div>
-    <div class="grid-3">
-      <article class="card"><h3>CCNA</h3><p>Cisco networking fundamentals, routing, switching, and network services.</p></article>
-      <article class="card"><h3>CompTIA Security+</h3><p>Core security concepts, risk, architecture, operations, and incident response.</p></article>
-      <article class="card"><h3>Fortinet NSE 4</h3><p>FortiGate administration, security policy, VPN, routing, and operational knowledge.</p></article>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <div class="section-head"><div><span class="kicker">Experience</span><h2>Career timeline</h2></div></div>
-    <div class="timeline">
-      <div class="timeline-item"><h3>Network Engineer — 2022 to Present</h3><p class="lead">Supporting large-scale branch connectivity, FortiGate, Cisco infrastructure, SD-WAN, monitoring, and incident resolution.</p></div>
-      <div class="timeline-item"><h3>IT Support — 2021 to 2022</h3><p class="lead">Delivered end-user and infrastructure support in a university environment.</p></div>
-      <div class="timeline-item"><h3>Current Direction</h3><p class="lead">Expanding toward SOC operations, SIEM, threat detection, and cybersecurity analysis.</p></div>
-    </div>
-  </div>
-</section>
-<section class="section" id="contact">
-  <div class="container">
-    <div class="card">
-      <span class="kicker">Contact</span><h2>Let’s build something reliable.</h2>
-      <p class="lead">For networking, infrastructure, cybersecurity, or technical collaboration.</p>
-      <div class="actions"><a class="btn btn-primary" href="mailto:k@alaaamri.com">k@alaaamri.com</a><a class="btn btn-secondary" href="/tech-hub.html">Browse Tech Hub</a></div>
-    </div>
-  </div>
-</section>
 </main>
-
-<footer class="footer">
-  <div class="container footer-row">
-    <span>© 2026 Khalid — alaaamri.com</span>
-    <span>Built as a secure static site.</span>
-  </div>
-</footer>
-
-<script src="/app.js?v=3" defer></script>
+<script src="/app.js?v=5" defer></script>
 </body>
 </html>

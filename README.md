@@ -1,31 +1,21 @@
-# alaaamri.com
+# alaaamri.com — Version 5
 
-Upload the contents of this folder to Cloudflare Pages.
+Bilingual static portfolio and technical directory.
 
-Recommended Cloudflare Pages settings:
-- Framework preset: None
-- Build command: leave empty
-- Build output directory: /
-- Always Use HTTPS: On
-- Minimum TLS Version: TLS 1.2 or newer
+## Main pages
+- index.html: language selection gateway
+- en.html / ar.html: English and Arabic portfolio
+- projects-en.html / projects-ar.html
+- tech-hub-en.html / tech-hub-ar.html
 
-Files:
-- index.html: Portfolio home
-- projects.html: Projects
-- tech-hub.html: Curated technical resources
-- _headers: Security headers for Cloudflare Pages
-- manifest.webmanifest + sw.js: Installable PWA support
+## Security hardening
+- Strict Content Security Policy with no inline scripts or styles
+- No forms, database, authentication, cookies, or server-side code
+- External links use noopener + noreferrer
+- Security headers in _headers
+- Service worker is network-first for HTML, CSS, and JavaScript
+- Language preference is stored only in localStorage
 
-Before publishing:
-1. Review the experience numbers and wording.
-2. Add your real LinkedIn/GitHub URLs when available.
-3. Add a CV file only after removing sensitive personal information.
-
-## Version 2 fix
-- Improved Tech Hub category filtering.
-- Added explicit button state handling.
-- Changed the service worker to network-first for HTML, CSS, and JavaScript.
-- Added cache-busting query parameters to avoid stale Cloudflare/browser assets.
-
-## Flat v3
-All CSS, JS, and SVG files are stored in the repository root for GitHub web upload compatibility.
+## Deployment
+Upload every file to the repository root. Cloudflare deploys automatically from GitHub.
+After deployment, use Ctrl+Shift+R once to clear older cached assets.

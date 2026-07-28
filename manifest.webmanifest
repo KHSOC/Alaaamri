@@ -3,8 +3,9 @@
   "short_name": "Khalid Hub",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07111f",
-  "theme_color": "#07111f",
+  "background_color": "#090a09",
+  "theme_color": "#090a09",
+  "lang": "en",
   "icons": [
     {
       "src": "/favicon.svg",

@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://alaaamri.com/</loc></url>
-<url><loc>https://alaaamri.com/projects.html</loc></url>
-<url><loc>https://alaaamri.com/tech-hub.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://alaaamri.com/</loc>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/projects-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/projects-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/projects-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/projects-ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/projects-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/projects-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/tech-hub-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/tech-hub-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/tech-hub-ar.html"/>
+  </url>
+  <url>
+    <loc>https://alaaamri.com/tech-hub-ar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://alaaamri.com/tech-hub-en.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://alaaamri.com/tech-hub-ar.html"/>
+  </url>
 </urlset>
