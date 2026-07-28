@@ -54,3 +54,16 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Displays hours, minutes, seconds, weekday, full date, month, and year.
 - Uses the browser's Intl API with the Asia/Riyadh timezone.
 - Updated cache version to v10.
+
+## Version 11
+- Removed the portfolio hero description from the Arabic and English home pages.
+- Added a daily-toolkit section for information security analysts.
+- Added a daily-toolkit section for network security engineers.
+- Added 12 tools to each role-focused section.
+- Updated metadata, styling, and cache version to v11.
+
+## Version 12
+- Added a bilingual Training Courses section.
+- Added Abad Net, Coursera, Al Khaleej Training, Tuwaiq Academy, Udemy, Cyber Master, and Netriders Academy.
+- Added an in-page Training link to the Tech Hub navigation.
+- Updated metadata, styles, and cache version to v12.

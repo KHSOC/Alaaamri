@@ -215,3 +215,75 @@ html[dir="rtl"] .clock-time{direction:ltr;text-align:right}
   .clock-divider{display:none}
   .clock-time{font-size:2rem}
 }
+
+
+/* Version 11: daily role toolkits */
+.role-toolkit{border-top:1px solid var(--line)}
+.role-toolkit + .role-toolkit{padding-top:20px}
+.role-tool-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px
+}
+.role-tool-card{
+  min-height:235px;padding:20px;display:flex;flex-direction:column;gap:11px;
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(255,255,255,.038),rgba(141,155,91,.025));
+  transition:transform .18s ease,border-color .18s ease,background .18s ease
+}
+.role-tool-card:hover{
+  transform:translateY(-3px);border-color:var(--olive-dark);
+  background:linear-gradient(180deg,rgba(141,155,91,.09),rgba(255,255,255,.02))
+}
+.role-tool-top{
+  display:flex;justify-content:space-between;align-items:start;gap:12px
+}
+.role-tool-type{
+  color:var(--olive-bright);font-size:.74rem;font-weight:850;
+  text-align:end
+}
+.role-tool-card h3{margin:0}
+.role-tool-card p{margin:0;color:var(--muted)}
+.role-tool-card a{
+  margin-top:auto;text-decoration:none;color:#e9ecd9;font-weight:760;font-size:.91rem
+}
+.role-tool-card a:hover{color:var(--olive-bright)}
+@media(max-width:1050px){
+  .role-tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .role-tool-grid{grid-template-columns:1fr}
+}
+
+
+/* Version 12: training platforms */
+.training-section{border-top:1px solid var(--line)}
+.training-grid{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px
+}
+.training-card{
+  min-height:235px;padding:20px;display:flex;flex-direction:column;gap:11px;
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:linear-gradient(180deg,rgba(141,155,91,.07),rgba(255,255,255,.018));
+  transition:transform .18s ease,border-color .18s ease,background .18s ease
+}
+.training-card:hover{
+  transform:translateY(-3px);border-color:var(--olive-dark);
+  background:linear-gradient(180deg,rgba(141,155,91,.12),rgba(255,255,255,.02))
+}
+.training-top{
+  display:flex;justify-content:space-between;align-items:start;gap:12px
+}
+.training-type{
+  color:var(--olive-bright);font-size:.74rem;font-weight:850;text-align:end
+}
+.training-card h3{margin:0}
+.training-card p{margin:0;color:var(--muted)}
+.training-card a{
+  margin-top:auto;text-decoration:none;color:#e9ecd9;font-weight:760;font-size:.91rem
+}
+.training-card a:hover{color:var(--olive-bright)}
+@media(max-width:1050px){
+  .training-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .training-grid{grid-template-columns:1fr}
+}
