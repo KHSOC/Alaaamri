@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       menuButton.setAttribute("aria-expanded", String(isOpen));
     });
 
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") closeMenu();
@@ -44,18 +42,27 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("recommended");
       card.setAttribute("aria-describedby", "saved-language-note");
     }
+
     card.addEventListener("click", () => {
       if (language !== "ar" && language !== "en") return;
-      try { localStorage.setItem("siteLanguage", language); } catch (_) {}
+      try {
+        localStorage.setItem("siteLanguage", language);
+      } catch (_) {}
     });
   });
 
   const searchInput = document.querySelector("[data-tool-search]");
-  const filterButtons = [...document.querySelectorAll("[data-filter]")];
+  const mainFilterButtons = [...document.querySelectorAll("[data-main-filter]")];
+  const aiSubfilterButtons = [...document.querySelectorAll("[data-ai-subfilter]")];
+  const aiSubfilterPanel = document.querySelector("[data-ai-subfilters]");
   const toolCards = [...document.querySelectorAll("[data-tool]")];
+  const toolGroups = [...document.querySelectorAll("[data-tool-group]")];
+  const directorySections = [...document.querySelectorAll("[data-directory-section]")];
   const resultCount = document.querySelector("[data-result-count]");
   const pageLanguage = document.documentElement.lang === "ar" ? "ar" : "en";
-  let activeCategory = "all";
+
+  let activeMainFilter = "all";
+  let activeAiSubfilter = "all";
 
   const updateCount = (visible) => {
     if (!resultCount) return;
@@ -64,47 +71,104 @@ document.addEventListener("DOMContentLoaded", () => {
       : `${visible} tool${visible === 1 ? "" : "s"} displayed`;
   };
 
-  const applyFilters = () => {
-    const query = (searchInput?.value || "").trim().toLocaleLowerCase(pageLanguage);
-    let visible = 0;
+  const setPressedState = (buttons, selectedButton) => {
+    buttons.forEach((button) => {
+      const selected = button === selectedButton;
+      button.classList.toggle("active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  };
+
+  const applyDirectoryFilters = () => {
+    if (!toolCards.length) return;
+
+    const query = (searchInput?.value || "")
+      .trim()
+      .toLocaleLowerCase(pageLanguage);
+
+    let visibleCount = 0;
 
     toolCards.forEach((card) => {
       const text = card.textContent.toLocaleLowerCase(pageLanguage);
-      const category = card.dataset.category || "";
-      const matchesText = text.includes(query);
-      const matchesCategory = activeCategory === "all" || category === activeCategory;
-      const show = matchesText && matchesCategory;
-      card.hidden = !show;
-      if (show) visible += 1;
+      const mainCategory = card.dataset.mainCategory || "";
+      const subcategory = card.dataset.subcategory || "";
+
+      const matchesQuery = text.includes(query);
+      const matchesMain =
+        activeMainFilter === "all" || mainCategory === activeMainFilter;
+      const matchesSubcategory =
+        activeMainFilter !== "ai" ||
+        activeAiSubfilter === "all" ||
+        subcategory === activeAiSubfilter;
+
+      const shouldShow = matchesQuery && matchesMain && matchesSubcategory;
+      card.hidden = !shouldShow;
+
+      if (shouldShow) visibleCount += 1;
     });
 
-    updateCount(visible);
+    toolGroups.forEach((group) => {
+      const visibleCards = group.querySelectorAll("[data-tool]:not([hidden])");
+      group.hidden = visibleCards.length === 0;
+    });
+
+    directorySections.forEach((section) => {
+      const category = section.dataset.directorySection;
+      const visibleCards = section.querySelectorAll("[data-tool]:not([hidden])");
+
+      const mainAllowsSection =
+        activeMainFilter === "all" || activeMainFilter === category;
+
+      section.hidden = !mainAllowsSection || visibleCards.length === 0;
+    });
+
+    if (aiSubfilterPanel) {
+      aiSubfilterPanel.hidden = activeMainFilter !== "ai";
+    }
+
+    updateCount(visibleCount);
   };
 
-  filterButtons.forEach((button) => {
+  mainFilterButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const requestedCategory = button.dataset.filter || "all";
-      const validCategory = filterButtons.some((item) => item.dataset.filter === requestedCategory);
-      activeCategory = validCategory ? requestedCategory : "all";
+      activeMainFilter = button.dataset.mainFilter || "all";
 
-      filterButtons.forEach((item) => {
-        const selected = item === button;
-        item.classList.toggle("active", selected);
-        item.setAttribute("aria-pressed", String(selected));
-      });
+      if (activeMainFilter !== "ai") {
+        activeAiSubfilter = "all";
+        const allAiButton = aiSubfilterButtons.find(
+          (item) => item.dataset.aiSubfilter === "all"
+        );
+        if (allAiButton) setPressedState(aiSubfilterButtons, allAiButton);
+      }
 
-      applyFilters();
+      setPressedState(mainFilterButtons, button);
+      applyDirectoryFilters();
     });
   });
 
-  searchInput?.addEventListener("input", applyFilters);
-  applyFilters();
+  aiSubfilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeMainFilter = "ai";
+      activeAiSubfilter = button.dataset.aiSubfilter || "all";
+
+      const aiMainButton = mainFilterButtons.find(
+        (item) => item.dataset.mainFilter === "ai"
+      );
+      if (aiMainButton) setPressedState(mainFilterButtons, aiMainButton);
+
+      setPressedState(aiSubfilterButtons, button);
+      applyDirectoryFilters();
+    });
+  });
+
+  searchInput?.addEventListener("input", applyDirectoryFilters);
+  applyDirectoryFilters();
 });
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=7");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=8");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);

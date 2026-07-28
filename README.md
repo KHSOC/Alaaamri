@@ -31,3 +31,11 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Replaced the old favicon with `favicon-olive.svg`.
 - Changed the browser-tab icon to the olive visual identity.
 - Bumped all cache versions to v7.
+
+## Version 8
+- Added the uploaded CV as `Khalid-Al-Amri-CV.pdf`.
+- Added CV links to navigation, home hero, and contact sections.
+- Consolidated all 51 AI tools under one main AI section.
+- Grouped AI tools into assistants, search, coding, research, productivity, images, video, music, audio, and automation.
+- Kept 24 technical programs in a separate programs section.
+- Updated JavaScript filtering and cache version to v8.
