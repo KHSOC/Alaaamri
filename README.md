@@ -116,3 +116,20 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added both resources inside the Tech Hub as prominent cards, hero shortcuts, and Main Sections sidebar links.
 - Added an animated saturated glow to the Tech Hub link in the top navigation.
 - Updated metadata, styles, scripts, and cache version to v19.
+
+## Version 20
+- Completed a full security, spelling, accessibility, responsive-layout, and performance audit.
+- Fixed conflicting CSP policies that blocked external system logos.
+- Rebuilt the Service Worker with safe navigation and static-asset strategies.
+- Reduced the initial Command Center DOM from 300 cards to paginated rendering.
+- Added shared `commands-data.js`, offline support, stronger caching, and PWA icons.
+- Corrected Arabic wording and aligned the homepage experience timeline with the included CV.
+- Added `AUDIT-REPORT.md`.
+- Updated cache version to v20.
+
+## Version 21
+- Rebuilt the Tech Hub layout so the Main Sections menu stays sticky across all sections.
+- Added a desktop sticky sidebar and a mobile sticky horizontal navigation bar.
+- Added automatic active-section highlighting with IntersectionObserver.
+- Completed another security, spelling, internal-link, JavaScript, and accessibility audit.
+- Updated cache version to v21.

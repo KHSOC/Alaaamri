@@ -797,3 +797,234 @@ html[dir="rtl"] .clock-time{direction:ltr;text-align:right}
 @media(prefers-reduced-motion:reduce){
   .nav-tech-glow,.nav-tech-glow::after{animation:none!important}
 }
+
+
+/* Version 20: security, accessibility, and performance audit */
+html{
+  scrollbar-gutter:stable;
+  overflow-x:hidden;
+}
+body{
+  min-width:0;
+  overflow-x:hidden;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:none;
+}
+img{max-width:100%}
+button,a,summary{touch-action:manipulation}
+h1,h2,h3{text-wrap:balance;overflow-wrap:anywhere}
+p{text-wrap:pretty}
+[id]{scroll-margin-top:96px}
+
+:where(a,button,input,summary,[tabindex]):focus-visible{
+  outline:3px solid var(--olive-bright);
+  outline-offset:3px;
+  border-radius:8px;
+}
+.search:focus-visible{border-color:var(--olive-bright)}
+.nav{position:relative}
+.site-header{
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+@supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
+  .site-header{background:rgba(9,10,9,.97)}
+}
+
+.scroll-down{grid-column:1/-1}
+.hub-sidebar,.command-sidebar,.os-sidebar{
+  max-height:calc(100vh - 112px);
+  overflow:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+}
+
+.tool-card,.resource-card,.training-card,.role-tool-card,
+.command-card,.os-card,.cleanup-card{
+  content-visibility:auto;
+  contain-intrinsic-size:auto 245px;
+}
+
+.btn-tech-glow,.nav-tech-glow{
+  animation:techGlowShift 6s ease infinite!important;
+  filter:none!important;
+}
+.btn-tech-glow::after,.nav-tech-glow::after{
+  will-change:transform;
+}
+@keyframes techGlowPulse{
+  0%,100%{opacity:1}
+  50%{opacity:.96}
+}
+@keyframes navTechPulse{
+  0%,100%{opacity:1}
+  50%{opacity:.96}
+}
+
+.command-loading{
+  grid-column:1/-1;
+  min-height:180px;
+  display:grid;
+  place-items:center;
+  border:1px dashed var(--line);
+  border-radius:15px;
+  color:var(--muted);
+}
+.command-pagination{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:22px;
+  color:var(--muted);
+  font-size:.86rem;
+}
+.command-load-more{min-width:150px}
+.noscript-notice{margin-top:24px}
+.menu-open{overflow:hidden}
+
+@media(max-width:1180px){
+  .nav-links{
+    display:none;
+    position:absolute;
+    inset-inline:0;
+    top:calc(100% + 1px);
+    max-height:calc(100vh - 92px);
+    overflow:auto;
+    overscroll-behavior:contain;
+    background:rgba(14,16,14,.98);
+    border:1px solid var(--line);
+    border-radius:0 0 16px 16px;
+    padding:15px;
+    flex-direction:column;
+    align-items:stretch;
+    box-shadow:0 20px 45px rgba(0,0,0,.36);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:10px 12px;border-radius:9px}
+  .menu-btn{display:block}
+}
+
+@media(max-width:650px){
+  .container{width:min(calc(100% - 24px),var(--max))}
+  .site-header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .hero{padding-top:54px}
+  .actions .btn{width:100%;justify-content:center;text-align:center}
+  .hub-toolbar,.command-search-row{position:sticky;top:74px;z-index:15;padding:8px 0;background:rgba(9,10,9,.94)}
+}
+
+@media(hover:none){
+  .tool-card:hover,.resource-card:hover,.training-card:hover,.role-tool-card:hover,
+  .command-card:hover,.os-card:hover,.cleanup-card:hover,.guide-system-card:hover,
+  .contact-card:hover,.language-card:hover{
+    transform:none;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .btn-tech-glow,.btn-tech-glow::after,.nav-tech-glow,.nav-tech-glow::after,
+  .scroll-down-icon{animation:none!important}
+}
+
+
+/* Version 21: persistent Tech Hub main-sections navigation */
+.tech-hub-page-shell{
+  display:grid;
+  grid-template-columns:240px minmax(0,1fr);
+  gap:26px;
+  align-items:start;
+  padding-bottom:84px;
+}
+.tech-hub-page-content{min-width:0}
+.tech-hub-page-content > .section{
+  padding-inline:0;
+}
+.tech-hub-page-content > #tech-directory{
+  padding-top:20px;
+}
+.tech-hub-page-shell > .hub-sidebar{
+  position:sticky;
+  top:88px;
+  z-index:35;
+  align-self:start;
+  width:100%;
+  max-height:calc(100vh - 106px);
+  overflow:auto;
+  background:rgba(16,18,16,.96);
+  -webkit-backdrop-filter:blur(16px);
+  backdrop-filter:blur(16px);
+  box-shadow:0 16px 36px rgba(0,0,0,.24);
+}
+.tech-hub-page-shell > .hub-sidebar .filter{
+  min-height:43px;
+}
+.tech-hub-page-shell > .hub-sidebar .filter.active,
+.tech-hub-page-shell > .hub-sidebar .section-jump[aria-current="location"]{
+  background:var(--olive);
+  color:var(--black);
+  border-color:var(--olive);
+  font-weight:850;
+}
+.tech-hub-page-content > .section[id]{
+  scroll-margin-top:98px;
+}
+
+@media(max-width:900px){
+  .tech-hub-page-shell{
+    display:block;
+    padding-bottom:62px;
+  }
+  .tech-hub-page-shell > .hub-sidebar{
+    position:sticky!important;
+    top:72px;
+    z-index:50;
+    width:100%;
+    max-height:none;
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin-bottom:18px;
+    padding:8px;
+    border-radius:0 0 13px 13px;
+    background:rgba(9,10,9,.97);
+    box-shadow:0 12px 28px rgba(0,0,0,.3);
+    scrollbar-width:none;
+  }
+  .tech-hub-page-shell > .hub-sidebar::-webkit-scrollbar{
+    display:none;
+  }
+  .tech-hub-page-shell > .hub-sidebar h3,
+  .tech-hub-page-shell > .hub-sidebar .sidebar-divider{
+    display:none;
+  }
+  .tech-hub-page-shell > .hub-sidebar .filter-list{
+    display:flex!important;
+    grid-template-columns:none!important;
+    gap:8px;
+    width:max-content;
+    min-width:100%;
+  }
+  .tech-hub-page-shell > .hub-sidebar .filter{
+    width:auto;
+    min-width:max-content;
+    flex:0 0 auto;
+    padding:9px 12px;
+    white-space:nowrap;
+  }
+  .tech-hub-page-content > .section[id]{
+    scroll-margin-top:142px;
+  }
+}
+
+@media(max-width:650px){
+  .tech-hub-page .hub-toolbar{
+    top:130px;
+  }
+  .tech-hub-page-shell > .hub-sidebar{
+    margin-inline:-12px;
+    width:calc(100% + 24px);
+    padding-inline:12px;
+  }
+}

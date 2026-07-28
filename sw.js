@@ -1,53 +1,108 @@
-
 "use strict";
-const CACHE_NAME = "khalid-tech-hub-v19";
+
+const CACHE_NAME = "khalid-tech-hub-v21";
 const CORE_ASSETS = [
-  "/", "/index.html", "/en.html", "/ar.html",
-  "/projects-en.html", "/projects-ar.html",
-  "/tech-hub-en.html", "/tech-hub-ar.html", "/command-center-en.html", "/command-center-ar.html", "/windows-cleanup-en.html", "/windows-cleanup-ar.html", "/operating-systems-en.html", "/operating-systems-ar.html",
-  "/404.html", "/style.css?v=19", "/app.js?v=19", "/commands.js?v=19", "/cleanup.js?v=19", "/systems.js?v=19",
-  "/favicon-olive.svg?v=7", "/manifest.webmanifest", "/social-preview.png?v=14"
+  "/",
+  "/index.html",
+  "/en.html",
+  "/ar.html",
+  "/projects-en.html",
+  "/projects-ar.html",
+  "/tech-hub-en.html",
+  "/tech-hub-ar.html",
+  "/command-center-en.html",
+  "/command-center-ar.html",
+  "/windows-cleanup-en.html",
+  "/windows-cleanup-ar.html",
+  "/operating-systems-en.html",
+  "/operating-systems-ar.html",
+  "/offline.html",
+  "/style.css?v=21",
+  "/app.js?v=21",
+  "/commands-data.js?v=21",
+  "/commands.js?v=21",
+  "/cleanup.js?v=21",
+  "/systems.js?v=21",
+  "/favicon-olive.svg?v=7",
+  "/icon-192.png",
+  "/icon-512.png",
+  "/apple-touch-icon.png",
+  "/manifest.webmanifest",
+  "/social-preview.png?v=21"
 ];
+
+const cacheResponse = async (request, response) => {
+  if (!response || !response.ok || response.type === "opaque") return response;
+  const cache = await caches.open(CACHE_NAME);
+  await cache.put(request, response.clone());
+  return response;
+};
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) =>
+      Promise.allSettled(CORE_ASSETS.map((asset) => cache.add(asset)))
+    )
+  );
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))))
-      .then(() => self.clients.claim())
-  );
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)));
+
+    if ("navigationPreload" in self.registration) {
+      await self.registration.navigationPreload.enable();
+    }
+
+    await self.clients.claim();
+  })());
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET") return;
-  const url = new URL(event.request.url);
+  const request = event.request;
+  if (request.method !== "GET") return;
+
+  const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  const networkFirst =
-    event.request.mode === "navigate" ||
-    url.pathname.endsWith(".html") ||
-    url.pathname.endsWith(".css") ||
-    url.pathname.endsWith(".js");
+  if (request.mode === "navigate") {
+    event.respondWith((async () => {
+      try {
+        const preload = await event.preloadResponse;
+        if (preload) return cacheResponse(request, preload);
 
-  if (networkFirst) {
-    event.respondWith(
-      fetch(event.request)
-        .then((response) => {
-          if (!response || response.status !== 200 || response.type !== "basic") return response;
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          return response;
-        })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("/404.html")))
-    );
+        const network = await fetch(request);
+        return cacheResponse(request, network);
+      } catch (_) {
+        return (await caches.match(request))
+          || (await caches.match("/offline.html"))
+          || Response.error();
+      }
+    })());
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
-  );
+  const staticDestination = new Set(["style", "script", "worker", "image", "font", "manifest"]);
+  if (staticDestination.has(request.destination)) {
+    event.respondWith((async () => {
+      const cached = await caches.match(request);
+      if (cached) {
+        event.waitUntil(
+          fetch(request)
+            .then((response) => cacheResponse(request, response))
+            .catch(() => undefined)
+        );
+        return cached;
+      }
+
+      try {
+        const network = await fetch(request);
+        return cacheResponse(request, network);
+      } catch (_) {
+        return Response.error();
+      }
+    })());
+  }
 });

@@ -1,17 +1,69 @@
 {
+  "id": "/",
   "name": "Khalid Tech Hub",
   "short_name": "Khalid Hub",
+  "description": "Khalid's bilingual portfolio, technical directory, command center, and cybersecurity resources.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#090a09",
   "theme_color": "#090a09",
   "lang": "en",
+  "dir": "auto",
+  "categories": [
+    "business",
+    "education",
+    "productivity",
+    "utilities"
+  ],
   "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "/favicon-olive.svg?v=7",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Tech Hub",
+      "short_name": "Tech Hub",
+      "url": "/tech-hub-en.html",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Command Center",
+      "short_name": "Commands",
+      "url": "/command-center-en.html",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
