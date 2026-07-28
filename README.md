@@ -75,3 +75,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added Scroll Down controls to the portfolio and Tech Hub hero sections.
 - Added a saturated animated glow style to the Open Tech Hub button.
 - Updated cache version to v13.
+
+## Version 14
+- Changed the root page title from `Choose a language — Khalid` to `Khalid | Network & Security Engineer`.
+- Added complete Open Graph and X/Twitter card metadata.
+- Added a 1200x630 social preview image: `social-preview.png`.
+- Updated cache version to v14.
