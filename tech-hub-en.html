@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="A technical directory with AI tools, software, training platforms, and daily security and networking toolkits." name="description"/>
+<meta content="A technical hub with tools, software, training, a command center, Windows cleanup guide, and operating systems directory." name="description"/>
 <meta content="#090a09" name="theme-color"/>
 <meta content="dark" name="color-scheme"/>
 <meta content="no-referrer" name="referrer"/>
@@ -22,7 +22,7 @@
 <link href="https://alaaamri.com/" hreflang="x-default" rel="alternate"/>
 <link href="/favicon-olive.svg?v=7" rel="icon" type="image/svg+xml"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
-<link href="/style.css?v=18" rel="stylesheet"/>
+<link href="/style.css?v=19" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -33,8 +33,8 @@
 <nav aria-label="Main navigation" class="nav-links" data-nav="" id="main-navigation">
 <a href="/en.html">Portfolio</a>
 <a href="/projects-en.html">Projects</a>
-<a aria-current="page" href="/tech-hub-en.html">Tech Hub</a>
-<a href="/command-center-en.html">Command Center</a><a href="/windows-cleanup-en.html">Windows Cleanup</a><a href="/operating-systems-en.html">Operating Systems</a><a href="/Khalid-Al-Amri-CV.pdf" rel="noopener noreferrer" target="_blank">CV</a><a href="/en.html#contact">Contact</a>
+<a aria-current="page" class="nav-tech-glow" href="/tech-hub-en.html">Tech Hub</a>
+<a href="/command-center-en.html">Command Center</a><a href="/Khalid-Al-Amri-CV.pdf" rel="noopener noreferrer" target="_blank">CV</a><a href="/en.html#contact">Contact</a>
 </nav>
 <a class="language-link" href="/ar.html" hreflang="ar">العربية</a>
 <button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-btn" data-menu="" type="button">Menu</button>
@@ -44,7 +44,7 @@
 <main id="main"><section class="hero"><div class="container"><span class="eyebrow">Curated technical resources</span><h1>Khalid <span class="gradient-text">Tech Hub</span></h1><p class="lead">A comprehensive directory for AI tools, software, networking, browsers, virtualization, and cybersecurity.</p><a aria-label="Scroll to directory sections" class="scroll-down" href="#tech-directory">
 <span>Explore sections</span>
 <span aria-hidden="true" class="scroll-down-icon">↓</span>
-</a><div class="actions"><a class="btn btn-command-center" href="/command-center-en.html">⌘ Command Center</a></div></div></section><section class="section section-compact" id="tech-directory">
+</a><div class="actions"><a class="btn btn-command-center" href="/command-center-en.html">⌘ Command Center</a><a class="btn btn-secondary hub-guide-shortcut" href="/windows-cleanup-en.html">Windows Cleanup</a><a class="btn btn-secondary hub-guide-shortcut" href="/operating-systems-en.html">Operating Systems</a></div></div></section><section class="section section-compact" id="tech-directory">
 <div class="container">
 <div class="notice">Links open in a separate tab. Download software from official sites, and create a restore point before applying Windows-tweaking utilities.</div>
 <div class="hub-shell">
@@ -54,7 +54,13 @@
 <button aria-pressed="true" class="filter active" data-main-filter="all" type="button"><span>All</span><span>119</span></button>
 <button aria-pressed="false" class="filter" data-main-filter="ai" type="button"><span>AI tools</span><span>51</span></button>
 <button aria-pressed="false" class="filter" data-main-filter="programs" type="button"><span>Programs &amp; utilities</span><span>68</span></button>
-<div class="sidebar-divider"><span>Jump directly</span></div><a class="filter section-jump command-center-jump" href="/command-center-en.html"><span>Command Center</span><span>300</span></a><a class="filter section-jump" data-section-jump="training" href="#training-courses">
+<div class="sidebar-divider"><span>Jump directly</span></div><a class="filter section-jump featured-hub-link" href="/windows-cleanup-en.html">
+<span>Windows Cleanup</span>
+<span>10</span>
+</a><a class="filter section-jump featured-hub-link" href="/operating-systems-en.html">
+<span>Operating Systems</span>
+<span>30</span>
+</a><a class="filter section-jump command-center-jump" href="/command-center-en.html"><span>Command Center</span><span>300</span></a><a class="filter section-jump" data-section-jump="training" href="#training-courses">
 <span>Training courses</span><span>7</span>
 </a><a class="filter section-jump" data-section-jump="analyst" href="#security-analyst-daily-tools">
 <span>Security analyst tools</span><span>12</span>
@@ -1090,6 +1096,36 @@
 </div>
 </div>
 </div>
+</section><section class="section guides-systems-section" id="guides-and-systems">
+<div class="container">
+<div class="section-head">
+<div>
+<span class="kicker">Practical references</span>
+<h2>Guides &amp; Operating Systems</h2>
+</div>
+<p>Dedicated pages for Windows maintenance and exploring operating systems, server platforms, storage, and security systems.</p>
+</div>
+<div class="guide-system-grid">
+<a class="guide-system-card cleanup-guide-card" href="/windows-cleanup-en.html">
+<div aria-hidden="true" class="guide-system-icon">⊹</div>
+<div>
+<span class="guide-system-type">Windows maintenance</span>
+<h3>Clean Unnecessary Windows Files</h3>
+<p>A step-by-step guide with cleanup commands, where to run them, execution instructions, and risk levels.</p>
+<strong>Open cleanup guide →</strong>
+</div>
+</a>
+<a class="guide-system-card systems-guide-card" href="/operating-systems-en.html">
+<div aria-hidden="true" class="guide-system-icon">▦</div>
+<div>
+<span class="guide-system-type">30 systems and platforms</span>
+<h3>Operating Systems Directory</h3>
+<p>Explore 30 systems and platforms such as Zorin OS, Synology DSM, Proxmox, TrueNAS, and pfSense with official links.</p>
+<strong>Open systems directory →</strong>
+</div>
+</a>
+</div>
+</div>
 </section><section class="section training-section" id="training-courses">
 <div class="container">
 <div class="section-head">
@@ -1501,6 +1537,6 @@
 <span>A hardened static site with no database or login surface.</span>
 </div>
 </footer>
-<script defer="" src="/app.js?v=18"></script>
+<script defer="" src="/app.js?v=19"></script>
 </body>
 </html>

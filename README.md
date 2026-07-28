@@ -110,3 +110,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Kept the original local SVG illustrations as automatic fallbacks.
 - Restricted the CSP image allowlist to `https://api.iconify.design`.
 - Updated styles, scripts, and cache version to v18.
+
+## Version 19
+- Removed Windows Cleanup and Operating Systems from the top navigation across all pages.
+- Added both resources inside the Tech Hub as prominent cards, hero shortcuts, and Main Sections sidebar links.
+- Added an animated saturated glow to the Tech Hub link in the top navigation.
+- Updated metadata, styles, scripts, and cache version to v19.

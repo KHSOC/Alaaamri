@@ -1,302 +1,278 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A practical, safety-focused Windows cleanup guide with commands and execution steps.">
-  <meta name="theme-color" content="#090a09">
-  <meta name="color-scheme" content="dark">
-  <meta name="referrer" content="no-referrer">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="How to Clean Unnecessary Windows Files">
-  <meta property="og:description" content="A practical, safety-focused Windows cleanup guide with commands and execution steps.">
-  <meta property="og:url" content="https://alaaamri.com/windows-cleanup-en.html">
-  <meta property="og:image" content="https://alaaamri.com/social-preview.png?v=14">
-  <title>How to Clean Unnecessary Windows Files</title>
-  <link rel="canonical" href="https://alaaamri.com/windows-cleanup-en.html">
-  <link rel="alternate" hreflang="ar" href="https://alaaamri.com/windows-cleanup-ar.html">
-  <link rel="alternate" hreflang="en" href="https://alaaamri.com/windows-cleanup-en.html">
-  <link rel="icon" href="/favicon-olive.svg?v=7" type="image/svg+xml">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/style.css?v=18">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="A practical, safety-focused Windows cleanup guide with commands and execution steps." name="description"/>
+<meta content="#090a09" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="website" property="og:type"/>
+<meta content="How to Clean Unnecessary Windows Files" property="og:title"/>
+<meta content="A practical, safety-focused Windows cleanup guide with commands and execution steps." property="og:description"/>
+<meta content="https://alaaamri.com/windows-cleanup-en.html" property="og:url"/>
+<meta content="https://alaaamri.com/social-preview.png?v=14" property="og:image"/>
+<title>How to Clean Unnecessary Windows Files</title>
+<link href="https://alaaamri.com/windows-cleanup-en.html" rel="canonical"/>
+<link href="https://alaaamri.com/windows-cleanup-ar.html" hreflang="ar" rel="alternate"/>
+<link href="https://alaaamri.com/windows-cleanup-en.html" hreflang="en" rel="alternate"/>
+<link href="/favicon-olive.svg?v=7" rel="icon" type="image/svg+xml"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<link href="/style.css?v=19" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/en.html"><span class="logo">K</span><span>Khalid</span></a>
-    <div class="nav-actions">
-      <nav class="nav-links" id="main-navigation" data-nav aria-label="Main navigation">
-        <a href="/en.html">Portfolio</a>
-        <a href="/tech-hub-en.html">Tech Hub</a>
-        <a href="/command-center-en.html">Command Center</a>
-        <a href="/windows-cleanup-en.html" aria-current="page">Windows Cleanup</a>
-        <a href="/operating-systems-en.html">Operating Systems</a>
-        <a href="/Khalid-Al-Amri-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-      </nav>
-      <a class="language-link" href="/windows-cleanup-ar.html" hreflang="ar">العربية</a>
-      <button class="menu-btn" type="button" data-menu aria-controls="main-navigation" aria-expanded="false"
-              aria-label="Open navigation">Menu</button>
-    </div>
-  </div>
+<div class="container nav">
+<a class="brand" href="/en.html"><span class="logo">K</span><span>Khalid</span></a>
+<div class="nav-actions">
+<nav aria-label="Main navigation" class="nav-links" data-nav="" id="main-navigation">
+<a href="/en.html">Portfolio</a>
+<a class="nav-tech-glow" href="/tech-hub-en.html">Tech Hub</a>
+<a href="/command-center-en.html">Command Center</a>
+
+
+<a href="/Khalid-Al-Amri-CV.pdf" rel="noopener noreferrer" target="_blank">CV</a>
+</nav>
+<a class="language-link" href="/windows-cleanup-ar.html" hreflang="ar">العربية</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation" class="menu-btn" data-menu="" type="button">Menu</button>
+</div>
+</div>
 </header>
 <main id="main">
-  <section class="cleanup-hero">
-    <div class="container">
-      <span class="eyebrow">Windows maintenance</span>
-      <h1>How to Clean Unnecessary Windows Files</h1>
-      <p class="lead">A practical, safety-focused Windows cleanup guide with commands and execution steps.</p>
-      <div class="notice cleanup-warning">Create a restore point, close applications, and read each risk label before running commands. Avoid unknown debloat scripts and bulk deletion tools.</div>
-    </div>
-  </section>
-
-  <section class="section section-compact">
-    <div class="container">
-      <div class="cleanup-start">
-        <div><strong>1</strong><span>Create a restore point</span></div>
-        <div><strong>2</strong><span>Open the required terminal</span></div>
-        <div><strong>3</strong><span>Copy and paste the command</span></div>
-        <div><strong>4</strong><span>Review the result before continuing</span></div>
-      </div>
-
-      <div class="cleanup-grid">
-        
+<section class="cleanup-hero">
+<div class="container">
+<span class="eyebrow">Windows maintenance</span>
+<h1>How to Clean Unnecessary Windows Files</h1>
+<p class="lead">A practical, safety-focused Windows cleanup guide with commands and execution steps.</p>
+<div class="notice cleanup-warning">Create a restore point, close applications, and read each risk label before running commands. Avoid unknown debloat scripts and bulk deletion tools.</div>
+</div>
+</section>
+<section class="section section-compact">
+<div class="container">
+<div class="cleanup-start">
+<div><strong>1</strong><span>Create a restore point</span></div>
+<div><strong>2</strong><span>Open the required terminal</span></div>
+<div><strong>3</strong><span>Copy and paste the command</span></div>
+<div><strong>4</strong><span>Review the result before continuing</span></div>
+</div>
+<div class="cleanup-grid">
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">01</span>
-    <span class="cleanup-env">Windows Settings</span>
-    <span class="risk-badge risk-safe">Low risk</span>
-  </div>
-  <h3>Storage Sense and Temporary Files</h3>
-  <p>Review temporary-file categories and remove only the items you recognize. Keep Downloads unchecked unless you intentionally want to delete those files.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="Settings → System → Storage → Temporary files"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>Settings → System → Storage → Temporary files</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Open Settings, choose System, then Storage, then Temporary files. Review the list and select Remove files.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">01</span>
+<span class="cleanup-env">Windows Settings</span>
+<span class="risk-badge risk-safe">Low risk</span>
+</div>
+<h3>Storage Sense and Temporary Files</h3>
+<p>Review temporary-file categories and remove only the items you recognize. Keep Downloads unchecked unless you intentionally want to delete those files.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="Settings → System → Storage → Temporary files" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>Settings → System → Storage → Temporary files</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Open Settings, choose System, then Storage, then Temporary files. Review the list and select Remove files.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">02</span>
-    <span class="cleanup-env">Run or CMD</span>
-    <span class="risk-badge risk-safe">Low risk</span>
-  </div>
-  <h3>Open Disk Cleanup</h3>
-  <p>Launch the built-in Disk Cleanup interface and choose temporary or system-file categories.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="cleanmgr"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>cleanmgr</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Press Win + R, type cleanmgr, press Enter, select drive C:, then review the categories.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">02</span>
+<span class="cleanup-env">Run or CMD</span>
+<span class="risk-badge risk-safe">Low risk</span>
+</div>
+<h3>Open Disk Cleanup</h3>
+<p>Launch the built-in Disk Cleanup interface and choose temporary or system-file categories.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="cleanmgr" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>cleanmgr</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Press Win + R, type cleanmgr, press Enter, select drive C:, then review the categories.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">03</span>
-    <span class="cleanup-env">CMD as Administrator</span>
-    <span class="risk-badge risk-caution">Review first</span>
-  </div>
-  <h3>Configure reusable Disk Cleanup options</h3>
-  <p>Open an extended selection window and save the chosen cleanup categories under profile number 1.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="cleanmgr /sageset:1"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>cleanmgr /sageset:1</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Open Terminal as Administrator, paste the command, choose categories carefully, then press OK.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">03</span>
+<span class="cleanup-env">CMD as Administrator</span>
+<span class="risk-badge risk-caution">Review first</span>
+</div>
+<h3>Configure reusable Disk Cleanup options</h3>
+<p>Open an extended selection window and save the chosen cleanup categories under profile number 1.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="cleanmgr /sageset:1" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>cleanmgr /sageset:1</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Open Terminal as Administrator, paste the command, choose categories carefully, then press OK.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">04</span>
-    <span class="cleanup-env">CMD as Administrator</span>
-    <span class="risk-badge risk-caution">Review first</span>
-  </div>
-  <h3>Run the saved Disk Cleanup profile</h3>
-  <p>Run the cleanup categories previously saved with sageset profile 1.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="cleanmgr /sagerun:1"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>cleanmgr /sagerun:1</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Run this only after completing cleanmgr /sageset:1 and reviewing its selected categories.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">04</span>
+<span class="cleanup-env">CMD as Administrator</span>
+<span class="risk-badge risk-caution">Review first</span>
+</div>
+<h3>Run the saved Disk Cleanup profile</h3>
+<p>Run the cleanup categories previously saved with sageset profile 1.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="cleanmgr /sagerun:1" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>cleanmgr /sagerun:1</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Run this only after completing cleanmgr /sageset:1 and reviewing its selected categories.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">05</span>
-    <span class="cleanup-env">Terminal as Administrator</span>
-    <span class="risk-badge risk-safe">Low risk</span>
-  </div>
-  <h3>Analyze the Windows component store</h3>
-  <p>Analyze the WinSxS component store and report whether component cleanup is recommended.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="DISM /Online /Cleanup-Image /AnalyzeComponentStore"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>DISM /Online /Cleanup-Image /AnalyzeComponentStore</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Open Windows Terminal as Administrator, paste the command, and wait for the report to complete.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">05</span>
+<span class="cleanup-env">Terminal as Administrator</span>
+<span class="risk-badge risk-safe">Low risk</span>
+</div>
+<h3>Analyze the Windows component store</h3>
+<p>Analyze the WinSxS component store and report whether component cleanup is recommended.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="DISM /Online /Cleanup-Image /AnalyzeComponentStore" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>DISM /Online /Cleanup-Image /AnalyzeComponentStore</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Open Windows Terminal as Administrator, paste the command, and wait for the report to complete.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">06</span>
-    <span class="cleanup-env">Terminal as Administrator</span>
-    <span class="risk-badge risk-caution">Review first</span>
-  </div>
-  <h3>Clean superseded Windows components</h3>
-  <p>Remove superseded component versions that Windows no longer needs for normal servicing.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="DISM /Online /Cleanup-Image /StartComponentCleanup"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>DISM /Online /Cleanup-Image /StartComponentCleanup</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Close running installers, open Terminal as Administrator, run the command, and allow it to finish without interruption.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">06</span>
+<span class="cleanup-env">Terminal as Administrator</span>
+<span class="risk-badge risk-caution">Review first</span>
+</div>
+<h3>Clean superseded Windows components</h3>
+<p>Remove superseded component versions that Windows no longer needs for normal servicing.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="DISM /Online /Cleanup-Image /StartComponentCleanup" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>DISM /Online /Cleanup-Image /StartComponentCleanup</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Close running installers, open Terminal as Administrator, run the command, and allow it to finish without interruption.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">07</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-caution">Review first</span>
-  </div>
-  <h3>Clear the current user&#x27;s temporary folder</h3>
-  <p>Attempt to remove files from the current user&#x27;s temporary folder. Files in use are skipped.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Close applications first, open PowerShell, paste the command, and press Enter. Some files may remain because they are in use.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">07</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-caution">Review first</span>
+</div>
+<h3>Clear the current user's temporary folder</h3>
+<p>Attempt to remove files from the current user's temporary folder. Files in use are skipped.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Close applications first, open PowerShell, paste the command, and press Enter. Some files may remain because they are in use.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">08</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-danger">Potentially destructive</span>
-  </div>
-  <h3>Empty the Recycle Bin</h3>
-  <p>Permanently empty the Recycle Bin for available drives.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="Clear-RecycleBin -Force"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>Clear-RecycleBin -Force</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Review the Recycle Bin first. Then open PowerShell, paste the command, and press Enter.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">08</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-danger">Potentially destructive</span>
+</div>
+<h3>Empty the Recycle Bin</h3>
+<p>Permanently empty the Recycle Bin for available drives.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="Clear-RecycleBin -Force" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>Clear-RecycleBin -Force</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Review the Recycle Bin first. Then open PowerShell, paste the command, and press Enter.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">09</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-safe">Low risk</span>
-  </div>
-  <h3>Review large files in Downloads</h3>
-  <p>List the 20 largest files in Downloads without deleting anything.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name=&#x27;SizeGB&#x27;;Expression={[math]::Round($_.Length/1GB,2)}}"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name=&#x27;SizeGB&#x27;;Expression={[math]::Round($_.Length/1GB,2)}}</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Run in PowerShell, review the paths, then manually delete only files you no longer need.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">09</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-safe">Low risk</span>
+</div>
+<h3>Review large files in Downloads</h3>
+<p>List the 20 largest files in Downloads without deleting anything.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name='SizeGB';Expression={[math]::Round($_.Length/1GB,2)}}" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name='SizeGB';Expression={[math]::Round($_.Length/1GB,2)}}</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Run in PowerShell, review the paths, then manually delete only files you no longer need.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">10</span>
-    <span class="cleanup-env">CMD as Administrator</span>
-    <span class="risk-badge risk-danger">Potentially destructive</span>
-  </div>
-  <h3>Disable hibernation to remove hiberfil.sys</h3>
-  <p>Disable hibernation and remove its reserved file. This also disables Fast Startup on many systems.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>Command or path</span>
-      <button type="button" data-cleanup-copy="powercfg /hibernate off"
-              data-copy-default="Copy command" data-copy-success="Copied">Copy command</button>
-    </div>
-    <pre><code>powercfg /hibernate off</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>How to run it</strong>
-    <span>Use only when you do not need Hibernate or Fast Startup. To restore it later, run powercfg /hibernate on.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">10</span>
+<span class="cleanup-env">CMD as Administrator</span>
+<span class="risk-badge risk-danger">Potentially destructive</span>
+</div>
+<h3>Disable hibernation to remove hiberfil.sys</h3>
+<p>Disable hibernation and remove its reserved file. This also disables Fast Startup on many systems.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>Command or path</span>
+<button data-cleanup-copy="powercfg /hibernate off" data-copy-default="Copy command" data-copy-success="Copied" type="button">Copy command</button>
+</div>
+<pre><code>powercfg /hibernate off</code></pre>
+</div>
+<div class="execution-box">
+<strong>How to run it</strong>
+<span>Use only when you do not need Hibernate or Fast Startup. To restore it later, run powercfg /hibernate on.</span>
+</div>
 </article>
-
-      </div>
-
-      <div class="cleanup-footer-note">
-        <strong>What should you avoid?</strong>
-        <p>Do not manually delete Windows or WinSxS folders, erase event logs, or delete shadow copies merely to save space.</p>
-      </div>
-    </div>
-  </section>
+</div>
+<div class="cleanup-footer-note">
+<strong>What should you avoid?</strong>
+<p>Do not manually delete Windows or WinSxS folders, erase event logs, or delete shadow copies merely to save space.</p>
+</div>
+</div>
+</section>
 </main>
 <footer class="footer">
-  <div class="container footer-row">
-    <span>© 2026 Khalid — alaaamri.com</span>
-    <span>Educational maintenance guide — back up before making changes.</span>
-  </div>
+<div class="container footer-row">
+<span>© 2026 Khalid — alaaamri.com</span>
+<span>Educational maintenance guide — back up before making changes.</span>
+</div>
 </footer>
-<script src="/app.js?v=18" defer></script>
-<script src="/cleanup.js?v=18" defer></script>
+<script defer="" src="/app.js?v=19"></script>
+<script defer="" src="/cleanup.js?v=19"></script>
 </body>
 </html>

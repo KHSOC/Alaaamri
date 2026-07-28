@@ -1,302 +1,278 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها.">
-  <meta name="theme-color" content="#090a09">
-  <meta name="color-scheme" content="dark">
-  <meta name="referrer" content="no-referrer">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="طريقة تنظيف Windows من الملفات غير المهمة">
-  <meta property="og:description" content="دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها.">
-  <meta property="og:url" content="https://alaaamri.com/windows-cleanup-ar.html">
-  <meta property="og:image" content="https://alaaamri.com/social-preview.png?v=14">
-  <title>طريقة تنظيف Windows من الملفات غير المهمة</title>
-  <link rel="canonical" href="https://alaaamri.com/windows-cleanup-ar.html">
-  <link rel="alternate" hreflang="ar" href="https://alaaamri.com/windows-cleanup-ar.html">
-  <link rel="alternate" hreflang="en" href="https://alaaamri.com/windows-cleanup-en.html">
-  <link rel="icon" href="/favicon-olive.svg?v=7" type="image/svg+xml">
-  <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/style.css?v=18">
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها." name="description"/>
+<meta content="#090a09" name="theme-color"/>
+<meta content="dark" name="color-scheme"/>
+<meta content="no-referrer" name="referrer"/>
+<meta content="website" property="og:type"/>
+<meta content="طريقة تنظيف Windows من الملفات غير المهمة" property="og:title"/>
+<meta content="دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها." property="og:description"/>
+<meta content="https://alaaamri.com/windows-cleanup-ar.html" property="og:url"/>
+<meta content="https://alaaamri.com/social-preview.png?v=14" property="og:image"/>
+<title>طريقة تنظيف Windows من الملفات غير المهمة</title>
+<link href="https://alaaamri.com/windows-cleanup-ar.html" rel="canonical"/>
+<link href="https://alaaamri.com/windows-cleanup-ar.html" hreflang="ar" rel="alternate"/>
+<link href="https://alaaamri.com/windows-cleanup-en.html" hreflang="en" rel="alternate"/>
+<link href="/favicon-olive.svg?v=7" rel="icon" type="image/svg+xml"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<link href="/style.css?v=19" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
 <header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/ar.html"><span class="logo">K</span><span>Khalid</span></a>
-    <div class="nav-actions">
-      <nav class="nav-links" id="main-navigation" data-nav aria-label="التنقل الرئيسي">
-        <a href="/ar.html">الملف المهني</a>
-        <a href="/tech-hub-ar.html">الدليل التقني</a>
-        <a href="/command-center-ar.html">مركز الأوامر</a>
-        <a href="/windows-cleanup-ar.html" aria-current="page">تنظيف Windows</a>
-        <a href="/operating-systems-ar.html">الأنظمة</a>
-        <a href="/Khalid-Al-Amri-CV.pdf" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
-      </nav>
-      <a class="language-link" href="/windows-cleanup-en.html" hreflang="en">English</a>
-      <button class="menu-btn" type="button" data-menu aria-controls="main-navigation" aria-expanded="false"
-              aria-label="فتح قائمة التنقل">القائمة</button>
-    </div>
-  </div>
+<div class="container nav">
+<a class="brand" href="/ar.html"><span class="logo">K</span><span>Khalid</span></a>
+<div class="nav-actions">
+<nav aria-label="التنقل الرئيسي" class="nav-links" data-nav="" id="main-navigation">
+<a href="/ar.html">الملف المهني</a>
+<a class="nav-tech-glow" href="/tech-hub-ar.html">الدليل التقني</a>
+<a href="/command-center-ar.html">مركز الأوامر</a>
+
+
+<a href="/Khalid-Al-Amri-CV.pdf" rel="noopener noreferrer" target="_blank">السيرة الذاتية</a>
+</nav>
+<a class="language-link" href="/windows-cleanup-en.html" hreflang="en">English</a>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="فتح قائمة التنقل" class="menu-btn" data-menu="" type="button">القائمة</button>
+</div>
+</div>
 </header>
 <main id="main">
-  <section class="cleanup-hero">
-    <div class="container">
-      <span class="eyebrow">صيانة Windows</span>
-      <h1>طريقة تنظيف Windows من الملفات غير المهمة</h1>
-      <p class="lead">دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها.</p>
-      <div class="notice cleanup-warning">أنشئ نقطة استعادة، أغلق البرامج، واقرأ مستوى الخطورة قبل التنفيذ. لا تستخدم أدوات الحذف الجماعي أو سكربتات مجهولة.</div>
-    </div>
-  </section>
-
-  <section class="section section-compact">
-    <div class="container">
-      <div class="cleanup-start">
-        <div><strong>1</strong><span>أنشئ نقطة استعادة</span></div>
-        <div><strong>2</strong><span>افتح Terminal بالطريقة المطلوبة</span></div>
-        <div><strong>3</strong><span>انسخ الأمر والصقه</span></div>
-        <div><strong>4</strong><span>راجع النتيجة قبل المتابعة</span></div>
-      </div>
-
-      <div class="cleanup-grid">
-        
+<section class="cleanup-hero">
+<div class="container">
+<span class="eyebrow">صيانة Windows</span>
+<h1>طريقة تنظيف Windows من الملفات غير المهمة</h1>
+<p class="lead">دليل عملي وآمن نسبيًا لتنظيف ملفات Windows المؤقتة مع الأوامر وطريقة تنفيذها.</p>
+<div class="notice cleanup-warning">أنشئ نقطة استعادة، أغلق البرامج، واقرأ مستوى الخطورة قبل التنفيذ. لا تستخدم أدوات الحذف الجماعي أو سكربتات مجهولة.</div>
+</div>
+</section>
+<section class="section section-compact">
+<div class="container">
+<div class="cleanup-start">
+<div><strong>1</strong><span>أنشئ نقطة استعادة</span></div>
+<div><strong>2</strong><span>افتح Terminal بالطريقة المطلوبة</span></div>
+<div><strong>3</strong><span>انسخ الأمر والصقه</span></div>
+<div><strong>4</strong><span>راجع النتيجة قبل المتابعة</span></div>
+</div>
+<div class="cleanup-grid">
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">01</span>
-    <span class="cleanup-env">إعدادات Windows</span>
-    <span class="risk-badge risk-safe">منخفض الخطورة</span>
-  </div>
-  <h3>Storage Sense والملفات المؤقتة</h3>
-  <p>راجع تصنيفات الملفات المؤقتة واحذف العناصر التي تعرفها فقط. اترك التنزيلات دون تحديد إلا إذا كنت تقصد حذفها.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="Settings → System → Storage → Temporary files"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>Settings → System → Storage → Temporary files</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>افتح الإعدادات ثم النظام ثم التخزين ثم الملفات المؤقتة. راجع القائمة واضغط إزالة الملفات.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">01</span>
+<span class="cleanup-env">إعدادات Windows</span>
+<span class="risk-badge risk-safe">منخفض الخطورة</span>
+</div>
+<h3>Storage Sense والملفات المؤقتة</h3>
+<p>راجع تصنيفات الملفات المؤقتة واحذف العناصر التي تعرفها فقط. اترك التنزيلات دون تحديد إلا إذا كنت تقصد حذفها.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="Settings → System → Storage → Temporary files" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>Settings → System → Storage → Temporary files</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>افتح الإعدادات ثم النظام ثم التخزين ثم الملفات المؤقتة. راجع القائمة واضغط إزالة الملفات.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">02</span>
-    <span class="cleanup-env">نافذة Run أو CMD</span>
-    <span class="risk-badge risk-safe">منخفض الخطورة</span>
-  </div>
-  <h3>فتح أداة تنظيف القرص</h3>
-  <p>تشغيل واجهة Disk Cleanup المدمجة واختيار تصنيفات الملفات المؤقتة أو ملفات النظام.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="cleanmgr"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>cleanmgr</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>اضغط Win + R، اكتب cleanmgr، اضغط Enter، اختر القرص C: ثم راجع التصنيفات.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">02</span>
+<span class="cleanup-env">نافذة Run أو CMD</span>
+<span class="risk-badge risk-safe">منخفض الخطورة</span>
+</div>
+<h3>فتح أداة تنظيف القرص</h3>
+<p>تشغيل واجهة Disk Cleanup المدمجة واختيار تصنيفات الملفات المؤقتة أو ملفات النظام.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="cleanmgr" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>cleanmgr</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>اضغط Win + R، اكتب cleanmgr، اضغط Enter، اختر القرص C: ثم راجع التصنيفات.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">03</span>
-    <span class="cleanup-env">CMD كمسؤول</span>
-    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
-  </div>
-  <h3>إعداد خيارات تنظيف قابلة لإعادة الاستخدام</h3>
-  <p>فتح نافذة خيارات موسعة وحفظ تصنيفات التنظيف المختارة ضمن الملف رقم 1.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="cleanmgr /sageset:1"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>cleanmgr /sageset:1</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>افتح Terminal كمسؤول، الصق الأمر، اختر التصنيفات بعناية ثم اضغط موافق.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">03</span>
+<span class="cleanup-env">CMD كمسؤول</span>
+<span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+</div>
+<h3>إعداد خيارات تنظيف قابلة لإعادة الاستخدام</h3>
+<p>فتح نافذة خيارات موسعة وحفظ تصنيفات التنظيف المختارة ضمن الملف رقم 1.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="cleanmgr /sageset:1" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>cleanmgr /sageset:1</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>افتح Terminal كمسؤول، الصق الأمر، اختر التصنيفات بعناية ثم اضغط موافق.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">04</span>
-    <span class="cleanup-env">CMD كمسؤول</span>
-    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
-  </div>
-  <h3>تشغيل ملف تنظيف القرص المحفوظ</h3>
-  <p>تشغيل تصنيفات التنظيف التي حُفظت مسبقًا في ملف sageset رقم 1.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="cleanmgr /sagerun:1"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>cleanmgr /sagerun:1</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>شغّل هذا الأمر بعد إكمال cleanmgr /sageset:1 ومراجعة التصنيفات المختارة.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">04</span>
+<span class="cleanup-env">CMD كمسؤول</span>
+<span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+</div>
+<h3>تشغيل ملف تنظيف القرص المحفوظ</h3>
+<p>تشغيل تصنيفات التنظيف التي حُفظت مسبقًا في ملف sageset رقم 1.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="cleanmgr /sagerun:1" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>cleanmgr /sagerun:1</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>شغّل هذا الأمر بعد إكمال cleanmgr /sageset:1 ومراجعة التصنيفات المختارة.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">05</span>
-    <span class="cleanup-env">Terminal كمسؤول</span>
-    <span class="risk-badge risk-safe">منخفض الخطورة</span>
-  </div>
-  <h3>تحليل مخزن مكونات Windows</h3>
-  <p>تحليل مخزن مكونات WinSxS وعرض ما إذا كان تنظيف المكونات موصى به.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="DISM /Online /Cleanup-Image /AnalyzeComponentStore"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>DISM /Online /Cleanup-Image /AnalyzeComponentStore</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>افتح Windows Terminal كمسؤول، الصق الأمر وانتظر حتى يكتمل التقرير.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">05</span>
+<span class="cleanup-env">Terminal كمسؤول</span>
+<span class="risk-badge risk-safe">منخفض الخطورة</span>
+</div>
+<h3>تحليل مخزن مكونات Windows</h3>
+<p>تحليل مخزن مكونات WinSxS وعرض ما إذا كان تنظيف المكونات موصى به.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="DISM /Online /Cleanup-Image /AnalyzeComponentStore" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>DISM /Online /Cleanup-Image /AnalyzeComponentStore</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>افتح Windows Terminal كمسؤول، الصق الأمر وانتظر حتى يكتمل التقرير.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">06</span>
-    <span class="cleanup-env">Terminal كمسؤول</span>
-    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
-  </div>
-  <h3>تنظيف مكونات Windows المستبدلة</h3>
-  <p>إزالة إصدارات المكونات القديمة التي لم يعد Windows يحتاجها للصيانة العادية.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="DISM /Online /Cleanup-Image /StartComponentCleanup"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>DISM /Online /Cleanup-Image /StartComponentCleanup</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>أغلق برامج التثبيت المفتوحة، افتح Terminal كمسؤول، شغّل الأمر واتركه حتى يكتمل دون مقاطعة.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">06</span>
+<span class="cleanup-env">Terminal كمسؤول</span>
+<span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+</div>
+<h3>تنظيف مكونات Windows المستبدلة</h3>
+<p>إزالة إصدارات المكونات القديمة التي لم يعد Windows يحتاجها للصيانة العادية.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="DISM /Online /Cleanup-Image /StartComponentCleanup" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>DISM /Online /Cleanup-Image /StartComponentCleanup</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>أغلق برامج التثبيت المفتوحة، افتح Terminal كمسؤول، شغّل الأمر واتركه حتى يكتمل دون مقاطعة.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">07</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
-  </div>
-  <h3>تنظيف مجلد الملفات المؤقتة للمستخدم الحالي</h3>
-  <p>محاولة حذف الملفات من مجلد المستخدم المؤقت. يتم تجاوز الملفات المستخدمة حاليًا.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>أغلق البرامج أولًا، افتح PowerShell، الصق الأمر واضغط Enter. قد تبقى بعض الملفات لأنها قيد الاستخدام.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">07</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-caution">راجع قبل التنفيذ</span>
+</div>
+<h3>تنظيف مجلد الملفات المؤقتة للمستخدم الحالي</h3>
+<p>محاولة حذف الملفات من مجلد المستخدم المؤقت. يتم تجاوز الملفات المستخدمة حاليًا.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>Get-ChildItem -Path $env:TEMP -Force -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>أغلق البرامج أولًا، افتح PowerShell، الصق الأمر واضغط Enter. قد تبقى بعض الملفات لأنها قيد الاستخدام.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">08</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
-  </div>
-  <h3>إفراغ سلة المحذوفات</h3>
-  <p>إفراغ سلة المحذوفات نهائيًا للأقراص المتاحة.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="Clear-RecycleBin -Force"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>Clear-RecycleBin -Force</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>راجع سلة المحذوفات أولًا. بعدها افتح PowerShell والصق الأمر واضغط Enter.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">08</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
+</div>
+<h3>إفراغ سلة المحذوفات</h3>
+<p>إفراغ سلة المحذوفات نهائيًا للأقراص المتاحة.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="Clear-RecycleBin -Force" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>Clear-RecycleBin -Force</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>راجع سلة المحذوفات أولًا. بعدها افتح PowerShell والصق الأمر واضغط Enter.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">09</span>
-    <span class="cleanup-env">PowerShell</span>
-    <span class="risk-badge risk-safe">منخفض الخطورة</span>
-  </div>
-  <h3>مراجعة الملفات الكبيرة داخل التنزيلات</h3>
-  <p>عرض أكبر 20 ملفًا داخل مجلد التنزيلات دون حذف أي شيء.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name=&#x27;SizeGB&#x27;;Expression={[math]::Round($_.Length/1GB,2)}}"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name=&#x27;SizeGB&#x27;;Expression={[math]::Round($_.Length/1GB,2)}}</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>شغّل الأمر في PowerShell، راجع المسارات ثم احذف يدويًا الملفات التي لا تحتاجها فقط.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">09</span>
+<span class="cleanup-env">PowerShell</span>
+<span class="risk-badge risk-safe">منخفض الخطورة</span>
+</div>
+<h3>مراجعة الملفات الكبيرة داخل التنزيلات</h3>
+<p>عرض أكبر 20 ملفًا داخل مجلد التنزيلات دون حذف أي شيء.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name='SizeGB';Expression={[math]::Round($_.Length/1GB,2)}}" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>Get-ChildItem $HOME\Downloads -File -Recurse -ErrorAction SilentlyContinue | Sort-Object Length -Descending | Select-Object -First 20 Name, Directory, @{Name='SizeGB';Expression={[math]::Round($_.Length/1GB,2)}}</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>شغّل الأمر في PowerShell، راجع المسارات ثم احذف يدويًا الملفات التي لا تحتاجها فقط.</span>
+</div>
 </article>
-
 <article class="cleanup-card">
-  <div class="cleanup-card-top">
-    <span class="cleanup-number">10</span>
-    <span class="cleanup-env">CMD كمسؤول</span>
-    <span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
-  </div>
-  <h3>تعطيل السبات لحذف hiberfil.sys</h3>
-  <p>تعطيل السبات وحذف ملفه المحجوز. قد يؤدي ذلك أيضًا إلى تعطيل Fast Startup في كثير من الأجهزة.</p>
-  <div class="cleanup-command">
-    <div class="code-heading">
-      <span>الأمر أو المسار</span>
-      <button type="button" data-cleanup-copy="powercfg /hibernate off"
-              data-copy-default="نسخ الأمر" data-copy-success="تم النسخ">نسخ الأمر</button>
-    </div>
-    <pre><code>powercfg /hibernate off</code></pre>
-  </div>
-  <div class="execution-box">
-    <strong>طريقة التنفيذ</strong>
-    <span>استخدمه فقط إذا كنت لا تحتاج وضع السبات أو Fast Startup. لإعادته لاحقًا شغّل powercfg /hibernate on.</span>
-  </div>
+<div class="cleanup-card-top">
+<span class="cleanup-number">10</span>
+<span class="cleanup-env">CMD كمسؤول</span>
+<span class="risk-badge risk-danger">قد يسبب حذفًا أو انقطاعًا</span>
+</div>
+<h3>تعطيل السبات لحذف hiberfil.sys</h3>
+<p>تعطيل السبات وحذف ملفه المحجوز. قد يؤدي ذلك أيضًا إلى تعطيل Fast Startup في كثير من الأجهزة.</p>
+<div class="cleanup-command">
+<div class="code-heading">
+<span>الأمر أو المسار</span>
+<button data-cleanup-copy="powercfg /hibernate off" data-copy-default="نسخ الأمر" data-copy-success="تم النسخ" type="button">نسخ الأمر</button>
+</div>
+<pre><code>powercfg /hibernate off</code></pre>
+</div>
+<div class="execution-box">
+<strong>طريقة التنفيذ</strong>
+<span>استخدمه فقط إذا كنت لا تحتاج وضع السبات أو Fast Startup. لإعادته لاحقًا شغّل powercfg /hibernate on.</span>
+</div>
 </article>
-
-      </div>
-
-      <div class="cleanup-footer-note">
-        <strong>ما الذي لا أنصح به؟</strong>
-        <p>لا تحذف مجلدات Windows أو WinSxS يدويًا، ولا تمسح سجلات الأحداث، ولا تستخدم أوامر حذف Shadow Copies بهدف توفير المساحة.</p>
-      </div>
-    </div>
-  </section>
+</div>
+<div class="cleanup-footer-note">
+<strong>ما الذي لا أنصح به؟</strong>
+<p>لا تحذف مجلدات Windows أو WinSxS يدويًا، ولا تمسح سجلات الأحداث، ولا تستخدم أوامر حذف Shadow Copies بهدف توفير المساحة.</p>
+</div>
+</div>
+</section>
 </main>
 <footer class="footer">
-  <div class="container footer-row">
-    <span>© 2026 Khalid — alaaamri.com</span>
-    <span>دليل صيانة تعليمي — خذ نسخة احتياطية قبل التغييرات.</span>
-  </div>
+<div class="container footer-row">
+<span>© 2026 Khalid — alaaamri.com</span>
+<span>دليل صيانة تعليمي — خذ نسخة احتياطية قبل التغييرات.</span>
+</div>
 </footer>
-<script src="/app.js?v=18" defer></script>
-<script src="/cleanup.js?v=18" defer></script>
+<script defer="" src="/app.js?v=19"></script>
+<script defer="" src="/cleanup.js?v=19"></script>
 </body>
 </html>
