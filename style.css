@@ -802,15 +802,15 @@ html[dir="rtl"] .clock-time{direction:ltr;text-align:right}
 /* Version 20: security, accessibility, and performance audit */
 html{
   scrollbar-gutter:stable;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 body{
   min-width:0;
-  overflow-x:hidden;
+  overflow-x:clip;
   font-synthesis:none;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing:antialiased;
-  overscroll-behavior-y:none;
+  overscroll-behavior-y:auto;
 }
 img{max-width:100%}
 button,a,summary{touch-action:manipulation}
@@ -1026,5 +1026,88 @@ p{text-wrap:pretty}
     margin-inline:-12px;
     width:calc(100% + 24px);
     padding-inline:12px;
+  }
+}
+
+
+/* Version 22: reliable page scrolling and sticky Tech Hub sidebar */
+html,
+body{
+  overflow-x:clip!important;
+}
+html{
+  overflow-y:auto!important;
+}
+body{
+  overflow-y:visible!important;
+  overscroll-behavior-y:auto!important;
+}
+
+.tech-hub-page-shell,
+.tech-hub-page-content{
+  overflow:visible!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar{
+  position:sticky!important;
+  top:88px!important;
+  align-self:start!important;
+  height:max-content!important;
+  max-height:none!important;
+  overflow:visible!important;
+  overscroll-behavior:auto!important;
+  contain:none!important;
+  padding:10px!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar h3{
+  margin:2px 6px 8px!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar .filter-list{
+  gap:4px!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar .filter{
+  min-height:38px!important;
+  padding:8px 10px!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar .sidebar-divider{
+  margin:5px 4px 2px!important;
+  padding-top:8px!important;
+}
+
+.tech-hub-page-shell > .hub-sidebar,
+.tech-hub-page-shell > .hub-sidebar *{
+  overscroll-behavior-y:auto!important;
+}
+
+@media(max-width:900px){
+  html,
+  body{
+    overflow-x:clip!important;
+  }
+
+  .tech-hub-page-shell > .hub-sidebar{
+    position:sticky!important;
+    top:72px!important;
+    height:auto!important;
+    max-height:none!important;
+    overflow-x:auto!important;
+    overflow-y:clip!important;
+    overscroll-behavior-x:contain!important;
+    overscroll-behavior-y:auto!important;
+    touch-action:pan-x pan-y!important;
+    padding:8px!important;
+  }
+
+  .tech-hub-page-shell > .hub-sidebar .filter-list{
+    gap:8px!important;
+  }
+
+  .tech-hub-page-shell > .hub-sidebar .filter{
+    min-height:40px!important;
+    padding:9px 12px!important;
   }
 }

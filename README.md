@@ -133,3 +133,11 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added automatic active-section highlighting with IntersectionObserver.
 - Completed another security, spelling, internal-link, JavaScript, and accessibility audit.
 - Updated cache version to v21.
+
+## Version 22
+- Fixed mouse-wheel page scrolling inside the Tech Hub.
+- Removed the sidebar's independent vertical scroll container.
+- Replaced `overflow-x: hidden` with `overflow-x: clip` so sticky positioning works reliably.
+- Added recovery for stale mobile-menu body scroll locks.
+- Replaced `scrollIntoView` with horizontal-only menu scrolling.
+- Updated cache version to v22.

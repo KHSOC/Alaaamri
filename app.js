@@ -30,6 +30,8 @@ window.khalidCopyText = async (value) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.remove("menu-open");
+
   const menuButton = document.querySelector("[data-menu]");
   const nav = document.querySelector("[data-nav]");
 
@@ -161,12 +163,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (activeLink && matchMedia("(max-width: 900px)").matches) {
-      const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-      activeLink.scrollIntoView({
-        behavior: reducedMotion ? "auto" : "smooth",
-        block: "nearest",
-        inline: "center"
-      });
+      const scroller = activeLink.closest(".hub-sidebar");
+      if (scroller) {
+        const scrollerRect = scroller.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+        const delta =
+          (linkRect.left + linkRect.width / 2) -
+          (scrollerRect.left + scrollerRect.width / 2);
+        const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        scroller.scrollBy({
+          left: delta,
+          top: 0,
+          behavior: reducedMotion ? "auto" : "smooth"
+        });
+      }
     }
   };
 
@@ -351,10 +362,17 @@ document.addEventListener("DOMContentLoaded", () => {
   scheduleFilters();
 });
 
+
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("menu-open");
+  document.querySelector("[data-nav]")?.classList.remove("open");
+  document.querySelector("[data-menu]")?.setAttribute("aria-expanded", "false");
+});
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=21");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=22");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);
