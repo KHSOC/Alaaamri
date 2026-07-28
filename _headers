@@ -27,5 +27,5 @@
 /manifest.webmanifest
   Cache-Control: public, max-age=86400
 
-/favicon.svg
-  Cache-Control: public, max-age=31536000, immutable
+/favicon-olive.svg
+  Cache-Control: public, max-age=86400

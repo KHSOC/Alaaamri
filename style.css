@@ -47,7 +47,7 @@ h2{font-size:clamp(2rem,4vw,3.15rem);letter-spacing:-.035em}h3{font-size:1.12rem
 .section-head p{color:var(--muted);max-width:650px;margin:0}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .card{padding:24px}.card p,.contact-card p,.tool-card p{color:var(--muted);margin:0}.icon{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;background:rgba(141,155,91,.15);border:1px solid rgba(183,199,122,.22);margin-bottom:20px}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tag{font-size:.79rem;padding:5px 9px;border-radius:999px;background:#1b1f1a;color:#bec3b5;border:1px solid var(--line)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{text-align:center;padding:23px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.022)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;max-width:650px;margin-inline:auto}.stat{text-align:center;padding:23px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.022)}
 .stat strong{display:block;font-size:1.95rem;color:var(--olive-bright)}.kicker{color:var(--olive-bright);font-weight:850;text-transform:uppercase;letter-spacing:.14em;font-size:.77rem}
 .timeline{border-inline-start:2px solid rgba(141,155,91,.42);padding-inline-start:28px;display:grid;gap:28px}.timeline-item{position:relative}
 .timeline-item::before{content:"";position:absolute;inset-inline-start:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--olive-bright);box-shadow:0 0 17px rgba(183,199,122,.58)}
@@ -99,3 +99,21 @@ html[dir="rtl"] .filter{text-align:right}
   .language-page{padding:22px 0}.nav-actions{gap:8px}.language-link{padding:6px 9px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* Cybersecurity resources */
+.cyber-resources{border-top:1px solid var(--line)}
+.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.resource-card{
+  padding:20px;display:flex;flex-direction:column;gap:11px;min-height:225px;
+  background:linear-gradient(180deg,rgba(141,155,91,.055),rgba(255,255,255,.018));
+  border:1px solid var(--line);border-radius:var(--radius);transition:.18s ease
+}
+.resource-card:hover{transform:translateY(-3px);border-color:var(--olive-dark)}
+.resource-top{display:flex;justify-content:space-between;gap:12px;align-items:start}
+.resource-type{font-size:.72rem;color:var(--olive-bright);font-weight:800}
+.resource-card h3{margin:0}
+.resource-card p{color:var(--muted);margin:0}
+.resource-card a{margin-top:auto;text-decoration:none;color:#e9ecd9;font-weight:760;font-size:.91rem}
+.resource-card a:hover{color:var(--olive-bright)}
+@media(max-width:1050px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.resource-grid{grid-template-columns:1fr}}

@@ -1,12 +1,12 @@
 
 "use strict";
-const CACHE_NAME = "khalid-tech-hub-v5";
+const CACHE_NAME = "khalid-tech-hub-v7";
 const CORE_ASSETS = [
   "/", "/index.html", "/en.html", "/ar.html",
   "/projects-en.html", "/projects-ar.html",
   "/tech-hub-en.html", "/tech-hub-ar.html",
-  "/404.html", "/style.css?v=5", "/app.js?v=5",
-  "/favicon.svg", "/manifest.webmanifest"
+  "/404.html", "/style.css?v=7", "/app.js?v=7",
+  "/favicon-olive.svg?v=7", "/manifest.webmanifest"
 ];
 
 self.addEventListener("install", (event) => {

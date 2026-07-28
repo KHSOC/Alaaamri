@@ -19,3 +19,15 @@ Bilingual static portfolio and technical directory.
 ## Deployment
 Upload every file to the repository root. Cloudflare deploys automatically from GitHub.
 After deployment, use Ctrl+Shift+R once to clear older cached assets.
+
+## Version 6
+- Removed the 400+ branches and 24/7 statistics.
+- Removed OSPF from the networking description.
+- Added 24 technical programs and utilities.
+- Added a dedicated cybersecurity-resources section with 18 websites.
+- Updated cache version to v6.
+
+## Version 7
+- Replaced the old favicon with `favicon-olive.svg`.
+- Changed the browser-tab icon to the olive visual identity.
+- Bumped all cache versions to v7.
