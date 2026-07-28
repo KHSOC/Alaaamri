@@ -98,6 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
+
+  const sectionJumpLinks = [...document.querySelectorAll("[data-section-jump]")];
+
+  sectionJumpLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sectionJumpLinks.forEach((item) => item.classList.remove("active"));
+      link.classList.add("active");
+      closeMenu();
+    });
+  });
+
   const searchInput = document.querySelector("[data-tool-search]");
   const mainButtons = [...document.querySelectorAll("[data-main-filter]")];
   const aiButtons = [...document.querySelectorAll("[data-ai-subfilter]")];
@@ -242,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=12");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=13");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);

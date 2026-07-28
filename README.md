@@ -67,3 +67,11 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added Abad Net, Coursera, Al Khaleej Training, Tuwaiq Academy, Udemy, Cyber Master, and Netriders Academy.
 - Added an in-page Training link to the Tech Hub navigation.
 - Updated metadata, styles, and cache version to v12.
+
+## Version 13
+- Removed Training from the top Tech Hub navigation.
+- Added Training, Security Analyst Tools, Network Security Engineer Tools, and Cybersecurity Websites to the Main Sections sidebar.
+- Added direct smooth-scroll navigation to those sections.
+- Added Scroll Down controls to the portfolio and Tech Hub hero sections.
+- Added a saturated animated glow style to the Open Tech Hub button.
+- Updated cache version to v13.
