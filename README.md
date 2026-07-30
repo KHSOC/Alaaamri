@@ -141,3 +141,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added recovery for stale mobile-menu body scroll locks.
 - Replaced `scrollIntoView` with horizontal-only menu scrolling.
 - Updated cache version to v22.
+
+## Version 23
+- Replaced the website CV with the newly uploaded ATS resume.
+- Kept the public filename `Khalid-Al-Amri-CV.pdf`.
+- Updated every CV link to `/Khalid-Al-Amri-CV.pdf?v=23` to bypass old browser caches.
+- Updated the site and Service Worker cache version to v23.
