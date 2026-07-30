@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "khalid-tech-hub-v23";
+const CACHE_NAME = "khalid-tech-hub-v24";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -17,18 +17,18 @@ const CORE_ASSETS = [
   "/operating-systems-en.html",
   "/operating-systems-ar.html",
   "/offline.html",
-  "/style.css?v=23",
-  "/app.js?v=23",
-  "/commands-data.js?v=23",
-  "/commands.js?v=23",
-  "/cleanup.js?v=23",
-  "/systems.js?v=23",
+  "/style.css?v=24",
+  "/app.js?v=24",
+  "/commands-data.js?v=24",
+  "/commands.js?v=24",
+  "/cleanup.js?v=24",
+  "/systems.js?v=24",
   "/favicon-olive.svg?v=7",
   "/icon-192.png",
   "/icon-512.png",
   "/apple-touch-icon.png",
   "/manifest.webmanifest",
-  "/social-preview.png?v=23"
+  "/social-preview.png?v=24"
 ];
 
 const cacheResponse = async (request, response) => {

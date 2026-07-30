@@ -372,7 +372,7 @@ window.addEventListener("pageshow", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=23");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=24");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);

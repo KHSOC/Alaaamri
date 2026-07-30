@@ -147,3 +147,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Kept the public filename `Khalid-Al-Amri-CV.pdf`.
 - Updated every CV link to `/Khalid-Al-Amri-CV.pdf?v=23` to bypass old browser caches.
 - Updated the site and Service Worker cache version to v23.
+
+## Version 24
+- Replaced the website CV with the newly uploaded resume.
+- Kept the public filename `Khalid-Al-Amri-CV.pdf`.
+- Updated every CV link to `/Khalid-Al-Amri-CV.pdf?v=24`.
+- Updated the site and Service Worker cache version to v24.
