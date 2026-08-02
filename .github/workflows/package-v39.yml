@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - v27-expanded-lab-atlas
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
