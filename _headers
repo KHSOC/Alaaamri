@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://api.iconify.design; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://api.iconify.design; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self' https://cloudflare-dns.com https://*.supabase.co wss://*.supabase.co; worker-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
   Referrer-Policy: no-referrer
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -79,3 +79,19 @@
 
 /robots.txt
   Cache-Control: public, max-age=86400
+
+/toolbox.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/search-index.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/site-config.js
+  Cache-Control: public, max-age=300, must-revalidate
+
+/community.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/community-database.sql
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow, noarchive

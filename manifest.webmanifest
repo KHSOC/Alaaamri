@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Khalid Tech Hub",
   "short_name": "Khalid Hub",
-  "description": "Khalid's bilingual portfolio, technical directory, command center, and cybersecurity resources.",
+  "description": "Khalid's bilingual portfolio, technical directory, interactive toolbox, command center, and optional technical community.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -55,9 +55,31 @@
       ]
     },
     {
+      "name": "Toolbox",
+      "short_name": "Toolbox",
+      "url": "/toolbox-en.html",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
       "name": "Command Center",
       "short_name": "Commands",
       "url": "/command-center-en.html",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Tech Lounge",
+      "short_name": "Community",
+      "url": "/community-en.html",
       "icons": [
         {
           "src": "/icon-192.png",

@@ -160,3 +160,14 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Kept only job titles, dates, responsibilities, and current career focus.
 - Updated Arabic and English home pages.
 - Updated cache version to v25.
+
+## Version 26
+- Added a bilingual Network & Security Toolbox with 30 interactive modules.
+- Added subnetting, IP, MAC, transfer, encoding, hashing, JWT, password, timestamp, diff, IOC, DNS, header, URL, FortiGate, Cisco, log, command, search, quiz, feedback, and local usage tools.
+- Added a bilingual community page for optional accounts, synchronized favorites, public chat, and guide comments.
+- Added secure Supabase-ready browser integration with Row Level Security setup in community-database.sql.
+- Added a local site search index covering major pages and 300 commands.
+- Added page favorites across the site.
+- Added comments containers to Command Center, Windows Cleanup, and Operating Systems guides.
+- Community features remain safely disabled until public Supabase URL and anon key are configured in site-config.js.
+- Updated CSP, navigation, sitemap, PWA shortcuts, caching, and Service Worker to v26.

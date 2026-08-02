@@ -70,9 +70,48 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
     });
 
-    matchMedia("(min-width: 1181px)").addEventListener("change", (event) => {
+    matchMedia("(min-width: 1361px)").addEventListener("change", (event) => {
       if (event.matches) closeMenu();
     });
+  }
+
+
+
+  const favoriteButton = document.createElement("button");
+  favoriteButton.type = "button";
+  favoriteButton.className = "save-page-button";
+  favoriteButton.setAttribute("aria-label", document.documentElement.lang === "ar" ? "حفظ هذه الصفحة في المفضلة" : "Save this page to favorites");
+  favoriteButton.textContent = "★";
+
+  const readPageFavorites = () => {
+    try { return JSON.parse(localStorage.getItem("khalidPageFavorites") || "[]"); }
+    catch (_) { return []; }
+  };
+
+  const updateFavoriteButton = () => {
+    const saved = readPageFavorites().some((item) => item.url === location.pathname);
+    favoriteButton.classList.toggle("saved", saved);
+    favoriteButton.setAttribute("aria-pressed", String(saved));
+    favoriteButton.title = saved
+      ? (document.documentElement.lang === "ar" ? "إزالة الصفحة من المفضلة" : "Remove page from favorites")
+      : (document.documentElement.lang === "ar" ? "حفظ الصفحة في المفضلة" : "Save page to favorites");
+  };
+
+  favoriteButton.addEventListener("click", () => {
+    try {
+      const favorites = readPageFavorites();
+      const index = favorites.findIndex((item) => item.url === location.pathname);
+      if (index >= 0) favorites.splice(index, 1);
+      else favorites.unshift({ title: document.title, url: location.pathname, savedAt: new Date().toISOString() });
+      localStorage.setItem("khalidPageFavorites", JSON.stringify(favorites.slice(0, 100)));
+      updateFavoriteButton();
+    } catch (_) {}
+  });
+
+  const favoriteExcludedPaths = new Set(["/", "/index.html", "/404.html", "/offline.html"]);
+  if (!favoriteExcludedPaths.has(location.pathname)) {
+    document.body.append(favoriteButton);
+    updateFavoriteButton();
   }
 
   const languageCards = [...document.querySelectorAll("[data-language-choice]")];
@@ -372,7 +411,7 @@ window.addEventListener("pageshow", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("/sw.js?v=25");
+      const registration = await navigator.serviceWorker.register("/sw.js?v=26");
       registration.update().catch(() => {});
     } catch (error) {
       console.warn("Service worker registration failed:", error);
