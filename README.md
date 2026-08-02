@@ -185,3 +185,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added five interactive questions to every module, for 150 questions across the three courses.
 - Removed curriculum-source references and simplified the catalog and course layouts.
 - Updated academy assets and offline cache version to v36.
+
+## Version 37
+- Redesigned the Arabic and English homepages around a balanced professional profile and technical platform.
+- Added direct gateways to Courses, Security Lab, WebSec Atlas, Tech Hub, Toolbox, and Command Center.
+- Replaced the clock and decorative network graphic with useful profile, learning, and project summaries.
+- Simplified homepage navigation and updated the offline cache version to v37.
