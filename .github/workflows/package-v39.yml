@@ -1,0 +1,71 @@
+name: Package v39
+
+on:
+  push:
+    branches:
+      - v27-expanded-lab-atlas
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Apply expanded Security Lab and WebSec Atlas
+        shell: bash
+        run: |
+          cat .github/v39-payload/part-* | base64 -d > /tmp/v39-overlay.tar.gz
+          tar -xzf /tmp/v39-overlay.tar.gz -C .
+
+      - name: Validate JavaScript and content counts
+        shell: bash
+        run: |
+          node --check security-lab/security-lab.js
+          node --check security-lab/security-lab-data-1.js
+          node --check security-lab/security-lab-data-2.js
+          node --check security-lab/security-lab-data-3.js
+          node --check websec/websec.js
+          node --check websec/websec-data-1.js
+          node --check websec/websec-data-2.js
+          node --check websec/websec-data-3.js
+          node --check sw.js
+          python - <<'PY'
+          from pathlib import Path
+
+          lab = ''.join(
+              (Path('security-lab') / f'security-lab-data-{i}.js').read_text(encoding='utf-8')
+              for i in (1, 2, 3)
+          )
+          atlas = ''.join(
+              (Path('websec') / f'websec-data-{i}.js').read_text(encoding='utf-8')
+              for i in (1, 2, 3)
+          )
+
+          assert lab.count('"code":"LAB-') == 12, 'Security Lab count is not 12'
+          assert atlas.count('"id":') == 105, 'WebSec Atlas count is not 105'
+          assert 'khalid-tech-hub-v39' in Path('sw.js').read_text(encoding='utf-8')
+          assert '12 مختبرًا' in Path('security-lab/index.html').read_text(encoding='utf-8')
+          assert '105 موضوعات' in Path('websec/index.html').read_text(encoding='utf-8')
+          print('Validated: 12 labs, 105 Atlas topics, cache v39')
+          PY
+
+      - name: Build complete upload ZIP
+        shell: bash
+        run: |
+          zip -r alaaamri-site-v39.zip . \
+            -x '.git/*' \
+            -x '.github/*' \
+            -x 'alaaamri-site-v39.zip'
+
+      - name: Upload complete site package
+        uses: actions/upload-artifact@v4
+        with:
+          name: alaaamri-site-v39
+          path: alaaamri-site-v39.zip
+          retention-days: 7
+          if-no-files-found: error
