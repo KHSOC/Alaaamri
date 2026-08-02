@@ -2,7 +2,7 @@
 
 (function(){
   const courses=Array.isArray(window.TRAINING_COURSES)?window.TRAINING_COURSES:[];
-  const accentMap={orange:"#f4a261",blue:"#66a7ff",green:"#75d7a7",purple:"#b691ff"};
+  const accentMap={orange:"#b7c77a",blue:"#b7c77a",green:"#b7c77a",purple:"#b7c77a"};
   const storageKey="khalid-academy-progress-v1";
   const $=id=>document.getElementById(id);
   let state=loadProgress();
@@ -28,6 +28,7 @@
   function clear(el){while(el.firstChild)el.removeChild(el.firstChild);}
   function validCompleted(course){return courseState(course.id).completed.filter(id=>course.modules.some(module=>module.id===id));}
   function pct(course){return course.modules.length?Math.round(validCompleted(course).length/course.modules.length*100):0;}
+  function lessonCount(course){return course.modules.reduce((total,module)=>total+module.lessons.length+(Array.isArray(module.guides)?module.guides.length:0),0);}
   function updateGlobalProgress(){
     const total=courses.reduce((n,c)=>n+c.modules.length,0);
     const done=courses.reduce((n,c)=>n+courseState(c.id).completed.filter(id=>c.modules.some(m=>m.id===id)).length,0);
@@ -44,10 +45,10 @@
     document.querySelectorAll("#course-nav button").forEach(b=>b.classList.remove("active"));
     const grid=$("course-grid");clear(grid);
     courses.forEach(course=>{
-      const card=node("article","course-card");card.style.setProperty("--accent",accentMap[course.accent]||"#5ee7f0");
+      const card=node("article","course-card");card.style.setProperty("--accent",accentMap[course.accent]||"#b7c77a");
       const top=node("div","course-top");top.append(node("span","course-badge",course.code),node("span","level-badge",course.level));
       card.append(top,node("h3","",course.arTitle),node("p","",course.description));
-      const meta=node("div","card-meta");meta.append(node("span","",course.modules.length+" وحدات"),node("span","",course.duration),node("span","",course.subtitle));card.append(meta);
+      const meta=node("div","card-meta");meta.append(node("span","",course.modules.length+" وحدات"),node("span","",lessonCount(course)+" درسًا وشرحًا"),node("span","",course.subtitle));card.append(meta);
       const progress=node("div","card-progress"),track=node("div","card-progress-track"),fill=node("span"),label=node("small","",pct(course)+"%");fill.style.width=pct(course)+"%";track.append(fill);progress.append(track,label);card.append(progress);
       const action=node("button","course-action",pct(course)?"متابعة الدورة ←":"استعراض الدورة ←");action.type="button";action.addEventListener("click",()=>go(course.id,firstIncomplete(course)));card.append(action);grid.append(card);
     });
@@ -64,7 +65,7 @@
     activeCourse=course;activeModule=module;$("catalog-view").hidden=true;$("course-view").hidden=false;$("catalog-nav").classList.remove("active");
     document.querySelectorAll("#course-nav button").forEach(b=>b.classList.toggle("active",b.dataset.course===course.id));
     $("course-code").textContent=course.code;$("course-level").textContent=course.level;$("course-title").textContent=course.arTitle;$("course-description").textContent=course.description;
-    const meta=$("course-meta");clear(meta);meta.append(node("span","",course.modules.length+" وحدات"),node("span","",course.duration),node("span","",course.subtitle));
+    const meta=$("course-meta");clear(meta);meta.append(node("span","",course.modules.length+" وحدات"),node("span","",lessonCount(course)+" درسًا وشرحًا"),node("span","",course.subtitle));
     const outcomes=$("course-outcomes");clear(outcomes);course.outcomes.forEach(x=>outcomes.append(node("li","",x)));
     $("course-source").textContent=course.source;const source=$("official-source");if(course.officialUrl){source.href=course.officialUrl;source.hidden=false;}else{source.hidden=true;source.removeAttribute("href");}
     renderModuleList(course,module);renderModule(course,module);updateCourseProgress(course);document.title=module.title+" — "+course.arTitle;
@@ -75,11 +76,11 @@
   function renderModuleList(course,current){
     const box=$("module-list");clear(box);const done=courseState(course.id).completed;
     course.modules.forEach((module,i)=>{const b=node("button","module-nav-button"+(module.id===current.id?" active":"")+(done.includes(module.id)?" completed":""));b.type="button";
-      const check=node("span","module-check",done.includes(module.id)?"✓":String(i+1));const labels=node("span");labels.append(node("strong","",module.title),node("small","",module.duration));b.append(check,labels,node("span","","←"));b.addEventListener("click",()=>go(course.id,module.id));box.append(b);});
+      const count=module.lessons.length+(Array.isArray(module.guides)?module.guides.length:0);const check=node("span","module-check",done.includes(module.id)?"✓":String(i+1));const labels=node("span");labels.append(node("strong","",module.title),node("small","",count+" محاور تعليمية"));b.append(check,labels,node("span","","←"));b.addEventListener("click",()=>go(course.id,module.id));box.append(b);});
   }
   function renderModule(course,module){
-    const index=course.modules.findIndex(m=>m.id===module.id);$("module-number").textContent="MODULE "+String(index+1).padStart(2,"0");$("module-duration").textContent=module.duration;$("module-title").textContent=module.title;$("module-summary").textContent=module.summary;
-    const stack=$("lesson-stack");clear(stack);module.lessons.forEach((lesson,i)=>{const card=node("article","lesson-card");card.append(node("span","lesson-index","LESSON "+String(i+1).padStart(2,"0")),node("h3","",lesson.title),node("p","",lesson.body));const list=node("ul","key-points");lesson.points.forEach(point=>list.append(node("li","",point)));card.append(list);stack.append(card);});
+    const index=course.modules.findIndex(m=>m.id===module.id);$("module-number").textContent="MODULE "+String(index+1).padStart(2,"0");$("module-title").textContent=module.title;$("module-summary").textContent=module.summary;
+    const stack=$("lesson-stack");clear(stack);const lessons=module.lessons.concat(Array.isArray(module.guides)?module.guides:[]);lessons.forEach((lesson,i)=>{const card=node("article","lesson-card");card.append(node("span","lesson-index","LESSON "+String(i+1).padStart(2,"0")),node("h3","",lesson.title),node("p","",lesson.body));const list=node("ul","key-points");lesson.points.forEach(point=>list.append(node("li","",point)));card.append(list);stack.append(card);});
     $("module-lab").textContent=module.lab;renderQuiz(course,module);const completed=courseState(course.id).completed.includes(module.id),button=$("complete-module");button.classList.toggle("completed",completed);button.textContent=completed?"الوحدة مكتملة ✓":"تحديد الوحدة كمكتملة ✓";
     $("prev-module").disabled=index===0;$("next-module").disabled=index===course.modules.length-1;$("prev-module").dataset.target=course.modules[index-1]?.id||"";$("next-module").dataset.target=course.modules[index+1]?.id||"";
     window.scrollTo({top:0,behavior:"smooth"});

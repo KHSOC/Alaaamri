@@ -171,3 +171,11 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added comments containers to Command Center, Windows Cleanup, and Operating Systems guides.
 - Community features remain safely disabled until public Supabase URL and anon key are configured in site-config.js.
 - Updated CSP, navigation, sitemap, PWA shortcuts, caching, and Service Worker to v26.
+
+## Version 35
+- Removed estimated course durations from the training academy.
+- Expanded every module from two learning sections to four, for 120 detailed lessons and practical explanations.
+- Recolored the academy to match the main olive visual identity.
+- Restored Security Lab with four interactive SOC investigation scenarios.
+- Restored WebSec Atlas with 35 searchable defensive web-security topics.
+- Updated offline assets and cache version to v35.

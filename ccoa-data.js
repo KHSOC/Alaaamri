@@ -1,14 +1,14 @@
 "use strict";
 
 window.TRAINING_COURSES.push({
-  id:"ccoa",code:"CCOA",accent:"blue",title:"ISACA CCOA",subtitle:"Certified Cybersecurity Operations Analyst",arTitle:"دورة ISACA CCOA",level:"مبتدئ إلى متوسط",duration:"20 ساعة",
+  id:"ccoa",code:"CCOA",accent:"blue",title:"ISACA CCOA",subtitle:"Certified Cybersecurity Operations Analyst",arTitle:"دورة ISACA CCOA",level:"مبتدئ إلى متوسط",
   description:"مسار عملي لمحلل العمليات الأمنية يغطي المجالات الخمسة لشهادة ISACA CCOA: أساسيات التقنية، مبادئ الأمن والمخاطر، تكتيكات الخصوم، اكتشاف الحوادث والاستجابة لها، وتأمين الأصول.",
   source:"مبنية على كتاب CCOA - الدليل العربي الشامل للمؤلف Abdelmoneim Hassanein، مع مواءمة المجالات والأوزان مع مخطط اختبار ISACA الرسمي.",
   officialUrl:"https://www.isaca.org/credentialing/ccoa/ccoa-exam-content-outline",
   outcomes:["بناء أساس تقني في الشبكات والأنظمة والتطبيقات والسحابة","تحليل المخاطر وربطها بالحوكمة وأهداف العمل","قراءة سلوك الخصم وربطه بـMITRE ATT&CK وCyber Kill Chain","اكتشاف الحوادث وفرزها وتحليل السجلات والحزم والبرمجيات الخبيثة","اقتراح الاحتواء ودعم التحقيق الجنائي وتحصين الأصول"],
   modules:[
     {
-      id:"cc-01",title:"بنية CCOA وأساسيات الشبكات",duration:"110 دقائق",summary:"ابدأ بخريطة الشهادة العملية، ثم أسّس فهم الشبكات الذي تحتاجه لقراءة الترافيك وتفسير التنبيهات بدل التعامل معها كحقول منفصلة.",
+      id:"cc-01",title:"بنية CCOA وأساسيات الشبكات",summary:"ابدأ بخريطة الشهادة العملية، ثم أسّس فهم الشبكات الذي تحتاجه لقراءة الترافيك وتفسير التنبيهات بدل التعامل معها كحقول منفصلة.",
       lessons:[
         {title:"الشهادة ومجالاتها الخمسة",body:"CCOA هي Certified Cybersecurity Operations Analyst من ISACA. يختبر المنهج المعرفة والمهارة العملية عبر خمسة مجالات: Technology Essentials بنسبة 25%، Cybersecurity Principles and Risk بنسبة 20%، Adversarial TTPs بنسبة 10%، Incident Detection and Response بنسبة 34%، وSecuring Assets بنسبة 11%. أعلى أولوية دراسية للمجال الرابع، لكن نجاح التحليل يعتمد على أساس تقني متين.",points:["الاختبار يجمع أسئلة معرفية وأسئلة قائمة على الأداء","المجال الرابع هو الأكبر وزنًا والأكثر عملية","التدريب بالأدوات جزء من الاستعداد وليس إضافة اختيارية"]},
         {title:"OSI وTCP/IP والبروتوكولات",body:"يحدد نموذج OSI موقع المشكلة أوالسلوك المشبوه، بينما يصف TCP/IP الاتصال الفعلي. يتتبع المحلل Frame وPacket وSegment، ويفهم TCP Handshake وFlags وUDP وARP وICMP وDNS وHTTP وTLS حتى يميز فشلًا تقنيًا عاديًا من مؤشر هجوم.",points:["5-Tuple يربط التدفق بين Logs وPCAP وFirewall","SYN بلا استجابة يختلف عن جلسة اكتملت ثم أغلقت بـFIN أوRST","DNS يوفر سياقًا مبكرًا لاتصالات كثيرة"]}
@@ -17,7 +17,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"أي مجال في CCOA يحمل أعلى وزن بحسب مخطط الاختبار؟",choices:["Technology Essentials","Cybersecurity Principles and Risk","Adversarial TTPs","Incident Detection and Response"],answer:3,explanation:"Incident Detection and Response يمثل 34%، ولذلك يستحق أكبر حصة من التدريب العملي."}
     },
     {
-      id:"cc-02",title:"الأنظمة ونقاط النهاية والتطبيقات",duration:"115 دقيقة",summary:"افهم كيف تعمل الأنظمة والتطبيقات وقواعد البيانات والسحابة والحاويات، وما الأدلة التي يتركها النشاط الطبيعي والمشبوه داخلها.",
+      id:"cc-02",title:"الأنظمة ونقاط النهاية والتطبيقات",summary:"افهم كيف تعمل الأنظمة والتطبيقات وقواعد البيانات والسحابة والحاويات، وما الأدلة التي يتركها النشاط الطبيعي والمشبوه داخلها.",
       lessons:[
         {title:"Windows وLinux وCommand Line",body:"في Windows تُظهر Event Logs وPowerShell وRegistry وServices وScheduled Tasks مسار النشاط. في Linux تكشف auth logs وjournal وshell history وprocesses وcron وpermissions الدخول والتصعيد والثبات. تحليل شجرة العمليات يربط العملية الأم بالابن ويكشف سلاسل غير منطقية مثل تطبيق مكتبي يطلق PowerShell نحو الإنترنت.",points:["Event IDs المهمة تُقرأ مع المستخدم والجهاز والزمن لا منفردة","sudo وSSH وcron مصادر محورية في تحقيق Linux","الأوامر مثل ps وss وgrep وfind تساعد في جمع الأدلة"]},
         {title:"التطبيقات وAPI والسحابة والحاويات",body:"تتكون بيئة التطبيق من واجهة وخدمات وAPI وقاعدة بيانات وMiddleware وخط نشر. تضيف السحابة نموذج مسؤولية مشتركة وIdentity وControl Plane Logs، بينما تشارك الحاويات نواة المضيف فتحتاج صورًا موثوقة وأقل صلاحية ومراقبة Runtime.",points:["API Logs تكشف الهوية والطريقة والمسار والنتيجة","Secrets لا توضع داخل الكود أوImage","Container Escape وMisconfiguration يهددان المضيف وبقية الحاويات"]}
@@ -26,7 +26,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"أي علاقة تساعد أكثر في كشف سلسلة تنفيذ مشبوهة على نقطة النهاية؟",choices:["حجم الشاشة","علاقة Parent-Child بين العمليات","اسم الشركة المصنعة","ترتيب الملفات أبجديًا"],answer:1,explanation:"شجرة العمليات تكشف من أطلق ماذا، وتُظهر سلاسل غير معتادة تدعم فرضية التحقيق."}
     },
     {
-      id:"cc-03",title:"مبادئ الأمن والحوكمة وإدارة المخاطر",duration:"120 دقيقة",summary:"اربط قرارات SOC بأهداف المؤسسة، وافهم الضوابط والحوكمة والامتثال وقياس المخاطر بدل اختزال الأمن في تنبيه تقني.",
+      id:"cc-03",title:"مبادئ الأمن والحوكمة وإدارة المخاطر",summary:"اربط قرارات SOC بأهداف المؤسسة، وافهم الضوابط والحوكمة والامتثال وقياس المخاطر بدل اختزال الأمن في تنبيه تقني.",
       lessons:[
         {title:"CIA وAAA والحوكمة والأطر",body:"CIA يوازن السرية والسلامة والتوافر، وAAA يضبط إثبات الهوية والصلاحية والتسجيل. الحوكمة تحدد من يقرر ومن يتحمل المخاطر، وتترجم الاستراتيجية إلى Policies وStandards وProcedures. تساعد أطر NIST CSF وISO 27001 وCOBIT في تنظيم البرنامج، بينما يضيف الامتثال متطلبات محددة لا تعني وحدها أن المؤسسة آمنة.",points:["Policy تحدد التوجه وProcedure تشرح التنفيذ","Separation of Duties وLeast Privilege يقللان إساءة الصلاحية","Non-repudiation يدعم إثبات الفعل وهوية منفذه"]},
         {title:"تقييم المخاطر وسياق العمل",body:"الخطر نتيجة احتمال تهديد يستغل ثغرة وأثره على أصل. التقييم النوعي يصنف High وMedium وLow، والكمي يستخدم قيمًا مثل SLE وARO وALE. بعد اختيار المعالجة - تخفيف أوتجنب أونقل أوقبول - يبقى Residual Risk يجب أن يقبله مالك مخول.",points:["SLE = Asset Value × Exposure Factor","ALE = SLE × Annual Rate of Occurrence","أولوية الحادث تتأثر بحساسية الأصل والأثر لا شدة التنبيه وحدها"]}
@@ -35,7 +35,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"إذا كانت قيمة الأصل 200,000 وعامل التعرض 25%، فما SLE؟",choices:["25,000","50,000","100,000","200,000"],answer:1,explanation:"الخسارة الواحدة المتوقعة تساوي قيمة الأصل مضروبة في عامل التعرض: 200,000 × 0.25 = 50,000."}
     },
     {
-      id:"cc-04",title:"مخاطر التطبيقات والسحابة والبيانات وسلسلة التوريد",duration:"105 دقائق",summary:"وسّع منظور المخاطر إلى الخدمات التي يعتمد عليها العمل، وصنّف البيانات وحمايتها عبر دورة حياتها.",
+      id:"cc-04",title:"مخاطر التطبيقات والسحابة والبيانات وسلسلة التوريد",summary:"وسّع منظور المخاطر إلى الخدمات التي يعتمد عليها العمل، وصنّف البيانات وحمايتها عبر دورة حياتها.",
       lessons:[
         {title:"مخاطر التطبيق والسحابة والشبكة",body:"تأتي مخاطر التطبيقات من ضعف المصادقة والتحكم بالوصول والإدخال والاعتماديات. في السحابة تتكرر أخطاء IAM والتخزين المكشوف وغياب السجلات، وتختلف مسؤولية العميل باختلاف IaaS وPaaS وSaaS. أما الشبكة فتحتاج Segmentation وSecure Protocols ومراقبة North-South وEast-West.",points:["التكوين الخاطئ من أكثر أسباب التعرض شيوعًا","Shared Responsibility لا ينقل كل الأمن إلى المزود","الثغرة في خدمة مكشوفة تجمع خطر التطبيق والشبكة معًا"]},
         {title:"البيانات والطرف الثالث",body:"تصنيف البيانات يحدد الضوابط المناسبة أثناء التخزين والنقل والمعالجة. يشمل ذلك Encryption وDLP وBackup وRetention وKey Management. يضيف الموردون والبرمجيات المفتوحة وCI/CD خطر سلسلة توريد، لذلك نحتاج تقييمًا تعاقديًا وتقنيًا ومراقبة مستمرة وSBOM عند ملاءمته.",points:["التشفير لا يغني عن إدارة المفاتيح والتحكم بالوصول","RPO يحدد فقد البيانات المقبول وRTO زمن استعادة الخدمة","خطر المورد يستمر بعد التعاقد ويحتاج متابعة"]}
@@ -44,7 +44,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"ما الذي يحدد أقصى فقد بيانات مقبول زمنيًا؟",choices:["RTO","RPO","MTTR","SLA فقط"],answer:1,explanation:"Recovery Point Objective يحدد النقطة الزمنية المقبولة للاستعادة، وبالتالي مقدار البيانات الذي يمكن فقده."}
     },
     {
-      id:"cc-05",title:"الخصوم وTTPs ونمذجة الهجوم",duration:"110 دقائق",summary:"حوّل التهديد من أسماء جهات وقوائم IOCs إلى سلوك ومراحل يمكن رصدها وقطعها.",
+      id:"cc-05",title:"الخصوم وTTPs ونمذجة الهجوم",summary:"حوّل التهديد من أسماء جهات وقوائم IOCs إلى سلوك ومراحل يمكن رصدها وقطعها.",
       lessons:[
         {title:"Threat Actors وAttack Vectors",body:"تختلف الجهات في الدافع والموارد: دولة، مجرم مالي، Hacktivist، Insider أوScript Kiddie. تشمل قنوات الدخول Phishing واستغلال الخدمات المكشوفة والحسابات الصالحة والوسائط وسلسلة التوريد. فهم الدافع والقدرة يساعد على ترتيب التهديدات المناسبة للمؤسسة.",points:["APT تصف حملة موجهة ومستمرة لا ملف Malware محددًا","Insider قد يكون خبيثًا أومهملًا أوحسابًا مخترقًا","Threat Intelligence الجيد مرتبط بسياق وثقة وزمن"]},
         {title:"MITRE ATT&CK وKill Chain وDiamond Model",body:"تصف Cyber Kill Chain مراحل الحملة، بينما ينظم MITRE ATT&CK التكتيكات والتقنيات والإجراءات من Initial Access إلى Impact. يربط Diamond Model بين Adversary وCapability وInfrastructure وVictim. تستخدم هذه النماذج لبناء فرضيات واكتشاف فجوات الرؤية لا كقائمة حفظ.",points:["Tactic تمثل الهدف وTechnique تمثل طريقة تحقيقه","TTP أكثر ثباتًا عادة من Domain أوHash","ربط Alert بمرحلة يوجه البحث إلى ما قبلها وما بعدها"]}
@@ -53,7 +53,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"أي عنصر يصف سلوك الخصم بصورة أكثر ثباتًا من عنوان IP؟",choices:["TTP","اسم الملف فقط","لون التنبيه","رقم التذكرة"],answer:0,explanation:"التكتيكات والتقنيات والإجراءات تصف طريقة العمل، وغالبًا تبقى مفيدة بعد تغير البنية والمؤشرات."}
     },
     {
-      id:"cc-06",title:"SOC والسجلات وSIEM وهندسة الاكتشاف",duration:"130 دقيقة",summary:"تعلّم دورة التنبيه من جمع السجل وتطبيعه إلى Rule وTriage وCase موثق قابل للتصعيد.",
+      id:"cc-06",title:"SOC والسجلات وSIEM وهندسة الاكتشاف",summary:"تعلّم دورة التنبيه من جمع السجل وتطبيعه إلى Rule وTriage وCase موثق قابل للتصعيد.",
       lessons:[
         {title:"SOC وLog Sources وSIEM",body:"ينظم SOC العمل عبر مستويات للفرز والتحقيق العميق والخبرة. يجمع SIEM سجلات Identity وEndpoint وDNS وProxy وFirewall وCloud وApplications، ثم يطبع الحقول ويربط الأحداث. جودة الكشف تبدأ من Time Sync وParsing وAsset Context وRetention مناسب.",points:["لا يوجد سجل واحد يحكي القصة كاملة","NTP والمنطقة الزمنية أساسيان لبناء Timeline","Parsing خاطئ قد يجعل قاعدة صحيحة بلا نتائج"]},
         {title:"Detection Use Cases وTriage",body:"تبدأ حالة الاستخدام بفرضية وسلوك ومصدر بيانات، ثم Query أوRule وThreshold وExceptions وSeverity وRunbook. يحدد Triage صحة التنبيه ونطاقه وأثره وأولوية التصعيد، مع التمييز بين True Positive وFalse Positive وBenign Positive.",points:["Failed-to-Success Pattern مفيد لاكتشاف محاولات دخول ناجحة بعد فشل","Baseline وRare Value يقللان الضوضاء ويكشفان الشذوذ","كل Rule تحتاج Owner وValidation وMetrics وتحديثًا دوريًا"]}
@@ -62,7 +62,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"ما المتطلب الأكثر أهمية لربط أحداث من أجهزة مختلفة زمنيًا؟",choices:["لون Dashboard موحد","مزامنة الوقت وتوحيد المنطقة الزمنية","زيادة حجم الخط","حذف الأحداث القديمة فورًا"],answer:1,explanation:"من دون وقت موثوق وموحد يصبح ترتيب الأدلة وربطها عرضة للخطأ."}
     },
     {
-      id:"cc-07",title:"اكتشاف الحوادث والاستخبارات وصيد التهديدات",duration:"125 دقيقة",summary:"فرّق بين IOC وIOA، وأثرِ التنبيهات بمعلومات التهديد، ثم حوّل الفجوات إلى Hunts منهجية.",
+      id:"cc-07",title:"اكتشاف الحوادث والاستخبارات وصيد التهديدات",summary:"فرّق بين IOC وIOA، وأثرِ التنبيهات بمعلومات التهديد، ثم حوّل الفجوات إلى Hunts منهجية.",
       lessons:[
         {title:"IOC وIOA وThreat Intelligence",body:"IOC أثر ملاحظ مثل IP أوDomain أوHash، وIOA يصف نشاطًا وسلوكًا قد يكشف الهجوم قبل اكتماله. تُقيّم الاستخبارات بحسب المصدر والثقة والحداثة والملاءمة، ثم تُستخدم في Enrichment وBlocking وHunting مع مراعاة TLP وFalse Positives.",points:["Hash دقيق لكنه يتغير بسهولة","Domain وIP قد يكونان مشتركين أومعاد استخدامهما","السياق يحول المؤشر من قيمة إلى قرار"]},
         {title:"Anomaly Detection وThreat Hunting",body:"يبدأ Hunt بفرضية مرتبطة بتهديد وبيانات متاحة، ثم Queries وتحليل وتوثيق. تكشف Baselines انحرافات مثل Beaconing وImpossible Travel وRare Process وLateral Movement. إذا تكرر النمط وتحسنت الثقة، يتحول إلى Detection دائم.",points:["الصيد ليس بحثًا عشوائيًا عن أي شيء غريب","النتيجة السلبية قد تكشف فجوة Telemetry","Beaconing يظهر في دورية الاتصال وثبات حجمه ووجهته"]}
@@ -71,7 +71,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"ما نقطة البداية الصحيحة لـThreat Hunt؟",choices:["شراء منصة جديدة","فرضية قابلة للاختبار مرتبطة بسلوك وبيانات","حظر كل الاتصالات الخارجية","فحص جهاز عشوائي"],answer:1,explanation:"الفرضية تحدد ما تبحث عنه ولماذا وأي بيانات تثبته أوتنفيه."}
     },
     {
-      id:"cc-08",title:"الاستجابة للحوادث والتحليل الجنائي",duration:"135 دقيقة",summary:"قد الحادث من التحقق والتصنيف إلى الاحتواء والتعافي، مع الحفاظ على الأدلة وإيصال القرار الصحيح للجهات المناسبة.",
+      id:"cc-08",title:"الاستجابة للحوادث والتحليل الجنائي",summary:"قد الحادث من التحقق والتصنيف إلى الاحتواء والتعافي، مع الحفاظ على الأدلة وإيصال القرار الصحيح للجهات المناسبة.",
       lessons:[
         {title:"Incident Response Lifecycle",body:"تبدأ الاستجابة بالتحضير ثم الاكتشاف والتحليل، يليهما الاحتواء والاستئصال والتعافي والدروس المستفادة. يوازن الاحتواء بين إيقاف الضرر والحفاظ على الدليل واستمرار العمل. تحدد Playbooks الأدوار والتصعيد والإشعارات والقرارات المتكررة.",points:["لا تستأصل قبل فهم Scope وPersistence","الاحتواء قصير المدى يختلف عن الحل طويل المدى","التوثيق يشمل من قرر ومتى ولماذا وما النتيجة"]},
         {title:"Forensics وChain of Custody",body:"يدعم المحلل جمع الأدلة من القرص والذاكرة والسجلات والشبكة وفق ترتيب Volatility. تُحسب Hashes وتوثق Chain of Custody ويُحلل على نسخة. يبني Timeline متعدد المصادر قصة قابلة للدفاع ويربط التقنية بالأثر التجاري والتنظيمي.",points:["الذاكرة قد تحتوي Processes وConnections وKeys متطايرة","إطفاء الجهاز قد يفقد دليلًا مهمًا، والقرار يتبع الخطة والسياق","Hash يثبت سلامة النسخة ولا يثبت وحده من نفذ الهجوم"]}
@@ -80,7 +80,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"لماذا تُحسب Hash لصورة الدليل الجنائي؟",choices:["لتشفيرها","لإثبات سلامتها وعدم تغيرها","لتقليل حجمها","لتحديد مالك الجهاز"],answer:1,explanation:"مطابقة البصمة قبل التحليل وبعده تدعم إثبات أن النسخة لم تتغير."}
     },
     {
-      id:"cc-09",title:"تحليل الشبكة والبرمجيات الخبيثة",duration:"140 دقيقة",summary:"استخدم PCAP وFlow وDNS وArtifact لبناء استنتاج مضبوط، وميّز التحليل الآمن من تشغيل عينة مجهولة بلا عزل.",
+      id:"cc-09",title:"تحليل الشبكة والبرمجيات الخبيثة",summary:"استخدم PCAP وFlow وDNS وArtifact لبناء استنتاج مضبوط، وميّز التحليل الآمن من تشغيل عينة مجهولة بلا عزل.",
       lessons:[
         {title:"Wireshark وNetwork Traffic Analysis",body:"ابدأ بسؤال وفلتر ثم افحص Conversation وStatistics وProtocol Details. يكشف PCAP المحتوى والـHeaders عند توفره، بينما يلخص NetFlow الأطراف والزمن والحجم. ابحث عن Scanning وBrute Force وDNS Tunneling وBeaconing وExfiltration مع مقارنة Baseline.",points:["display filters تضيق الدليل دون تغيير الملف","TLS Metadata مثل SNI والشهادة والتوقيت قد يبقى مفيدًا","الحجم والدورية والندرة مؤشرات تحتاج تحققًا مستقلًا"]},
         {title:"Static وDynamic Malware Analysis",body:"يفحص التحليل الساكن Hash وStrings وHeaders وImports دون تشغيل، بينما يراقب التحليل الديناميكي Processes وFiles وRegistry وNetwork داخل Sandbox معزول. تساعد YARA في وصف خصائص الملفات، وتدعم Volatility تحليل الذاكرة، لكن النتيجة تُربط دائمًا بأدلة البيئة.",points:["لا تشغل عينة مجهولة على جهاز العمل","Packing وObfuscation يقللان فائدة Static Analysis","سلوك Sandbox قد يختلف إذا اكتشفت العينة بيئة التحليل"]}
@@ -89,7 +89,7 @@ window.TRAINING_COURSES.push({
       quiz:{question:"ما الفرق الأساسي بين Static وDynamic Malware Analysis؟",choices:["كلاهما يتطلب تشغيل العينة","Static يفحص دون تشغيل وDynamic يراقب السلوك أثناء التشغيل المعزول","Dynamic لا يسجل الشبكة","Static يعمل فقط على Linux"],answer:1,explanation:"التحليل الساكن يقلل خطر التنفيذ، والديناميكي يكشف السلوك لكنه يحتاج عزلًا وضوابط قوية."}
     },
     {
-      id:"cc-10",title:"تأمين الأصول والمعامل والاستعداد للاختبار",duration:"150 دقيقة",summary:"أغلق دورة العمليات بتحصين الأصول وإدارة الثغرات، ثم اجمع مهاراتك في سيناريو أداء يحاكي عمل المحلل.",
+      id:"cc-10",title:"تأمين الأصول والمعامل والاستعداد للاختبار",summary:"أغلق دورة العمليات بتحصين الأصول وإدارة الثغرات، ثم اجمع مهاراتك في سيناريو أداء يحاكي عمل المحلل.",
       lessons:[
         {title:"Controls وHardening وVulnerability Management",body:"تُصنف الضوابط إلى Administrative وTechnical وPhysical، وإلى Preventive وDetective وCorrective وغيرها. يشمل التحصين إزالة الخدمات غير الضرورية والتحديث والتكوين الآمن وMFA وLeast Privilege وSegmentation. تمر إدارة الثغرات بالاكتشاف والتحقق وترتيب الأولوية والمعالجة وإعادة الاختبار وقبول الاستثناء الموثق.",points:["CVSS بداية للأولوية وليس القرار كاملًا","Exploitability وAsset Criticality والتعرض تغيّر الأولوية","إعادة الفحص تثبت الإغلاق ولا يكفي إغلاق التذكرة"]},
         {title:"بيئة المعمل وخطة المراجعة",body:"تعتمد الجاهزية على ممارسة Security Onion أومنصة SIEM، وKibana أوأداة بحث، وWireshark، وLinux CLI، وأدوات Forensics وMalware Analysis ضمن مختبر معزول. وزّع المراجعة بحسب أوزان المجالات، وحل السيناريو كمسار: سؤال، دليل، فرضية، تحقق، قرار، وتوثيق.",points:["خصص الحصة الأكبر للاكتشاف والاستجابة","راجع الأخطاء بحسب المجال لا الدرجة الإجمالية فقط","في Performance-Based Questions افهم الهدف قبل استخدام الأداة"]}

@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "khalid-tech-hub-v34";
+const CACHE_NAME = "khalid-tech-hub-v35";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -18,18 +18,19 @@ const CORE_ASSETS = [
   "/operating-systems-ar.html",
   "/websec/",
   "/websec/index.html",
-  "/websec/websec.css?v=29",
-  "/websec/websec-data.js?v=27",
-  "/websec/websec.js?v=27",
+  "/websec/websec.css?v=35",
+  "/websec/websec-data.js?v=35",
+  "/websec/websec.js?v=35",
   "/security-lab/",
   "/security-lab/index.html",
-  "/security-lab/security-lab.css?v=29",
-  "/security-lab/security-lab.js?v=29",
+  "/security-lab/security-lab.css?v=35",
+  "/security-lab/security-lab.js?v=35",
   "/courses",
-  "/courses.css?v=33",
-  "/courses-data.js?v=33",
-  "/ccoa-data.js?v=33",
-  "/courses.js?v=33",
+  "/courses.css?v=35",
+  "/courses-data.js?v=35",
+  "/ccoa-data.js?v=35",
+  "/course-guides.js?v=35",
+  "/courses.js?v=35",
   "/offline.html",
   "/search-index.js?v=32",
   "/toolbox.js?v=29",

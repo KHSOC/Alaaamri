@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="مختبرات عربية آمنة وعملية لتدريب محلل الأمن على فرز التنبيهات والتحقيق والاستجابة للحوادث.">
+  <meta name="theme-color" content="#090a09">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <title>Security Lab — Khalid Tech Hub</title>
+  <link rel="canonical" href="https://alaaamri.com/security-lab/">
+  <link rel="icon" href="/favicon-olive.svg?v=35" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css?v=32">
+  <link rel="stylesheet" href="/security-lab/security-lab.css?v=35">
+</head>
+<body>
+  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/ar"><span class="logo">K</span><span>Khalid</span></a>
+      <div class="nav-actions">
+        <nav class="nav-links open lab-nav" aria-label="التنقل الرئيسي">
+          <a href="/ar">الملف المهني</a><a href="/tech-hub-ar">الدليل التقني</a><a href="/courses">الدورات</a><a aria-current="page" href="/security-lab/">Security Lab</a><a href="/websec/">WebSec Atlas</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="lab-hero">
+      <div class="container lab-hero-grid">
+        <div><span class="eyebrow">SOC PRACTICE</span><h1>Security <span class="gradient-text">Lab</span></h1><p class="lead">أربع حالات عملية آمنة تتدرب فيها على قراءة الأدلة، ترتيب الأولويات، بناء الفرضية، واختيار إجراء الاستجابة الصحيح.</p><div class="actions"><a class="btn btn-primary" href="#labs">ابدأ المختبرات</a><a class="btn btn-secondary" href="/courses#ccoa/cc-06">راجع دورة CCOA</a></div></div>
+        <aside class="lab-hero-card"><span>منهج التحقيق</span><ol><li>ثبّت الوقت والنطاق</li><li>اجمع الأدلة المرتبطة</li><li>اختبر الفرضية</li><li>احتوِ ودوّن القرار</li></ol></aside>
+      </div>
+    </section>
+
+    <section class="section" id="labs">
+      <div class="container">
+        <div class="section-head"><div><span class="kicker">4 SCENARIOS</span><h2>اختر سيناريو التحقيق</h2></div><p>كل مختبر يقدم أدلة افتراضية، مهام تحليل، سؤال قرار، وتفسيرًا للإجابة.</p></div>
+        <div class="lab-grid" id="lab-grid"></div>
+      </div>
+    </section>
+
+    <section class="section lab-workspace-section" id="workspace" hidden>
+      <div class="container">
+        <button class="lab-back" id="lab-back" type="button">← العودة للمختبرات</button>
+        <article class="lab-workspace">
+          <header><span class="kicker" id="lab-code"></span><h2 id="lab-title"></h2><p id="lab-summary"></p></header>
+          <div class="lab-columns">
+            <section><h3>الأدلة المتاحة</h3><div class="evidence-list" id="evidence-list"></div></section>
+            <section><h3>خطوات التحقيق</h3><ol class="task-list" id="task-list"></ol></section>
+          </div>
+          <section class="decision-card"><span class="kicker">DECISION POINT</span><h3 id="lab-question"></h3><div class="decision-options" id="decision-options"></div><p id="decision-feedback" role="status" hidden></p></section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-row"><span>Khalid Security Lab</span><a href="/tech-hub-ar">العودة للدليل التقني</a></div></footer>
+  <script defer src="/security-lab/security-lab.js?v=35"></script>
+</body>
+</html>
