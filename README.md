@@ -179,3 +179,9 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Restored Security Lab with four interactive SOC investigation scenarios.
 - Restored WebSec Atlas with 35 searchable defensive web-security topics.
 - Updated offline assets and cache version to v35.
+
+## Version 36
+- Expanded every academy module to six detailed learning sections, for 180 practical explanations in total.
+- Added five interactive questions to every module, for 150 questions across the three courses.
+- Removed curriculum-source references and simplified the catalog and course layouts.
+- Updated academy assets and offline cache version to v36.

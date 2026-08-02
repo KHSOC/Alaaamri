@@ -3,8 +3,6 @@
 window.TRAINING_COURSES.push({
   id:"ccoa",code:"CCOA",accent:"blue",title:"ISACA CCOA",subtitle:"Certified Cybersecurity Operations Analyst",arTitle:"دورة ISACA CCOA",level:"مبتدئ إلى متوسط",
   description:"مسار عملي لمحلل العمليات الأمنية يغطي المجالات الخمسة لشهادة ISACA CCOA: أساسيات التقنية، مبادئ الأمن والمخاطر، تكتيكات الخصوم، اكتشاف الحوادث والاستجابة لها، وتأمين الأصول.",
-  source:"مبنية على كتاب CCOA - الدليل العربي الشامل للمؤلف Abdelmoneim Hassanein، مع مواءمة المجالات والأوزان مع مخطط اختبار ISACA الرسمي.",
-  officialUrl:"https://www.isaca.org/credentialing/ccoa/ccoa-exam-content-outline",
   outcomes:["بناء أساس تقني في الشبكات والأنظمة والتطبيقات والسحابة","تحليل المخاطر وربطها بالحوكمة وأهداف العمل","قراءة سلوك الخصم وربطه بـMITRE ATT&CK وCyber Kill Chain","اكتشاف الحوادث وفرزها وتحليل السجلات والحزم والبرمجيات الخبيثة","اقتراح الاحتواء ودعم التحقيق الجنائي وتحصين الأصول"],
   modules:[
     {

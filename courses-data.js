@@ -11,7 +11,6 @@ window.TRAINING_COURSES = [
     level:"مبتدئ إلى متوسط",
 
     description:"مسار تأسيسي يجمع الأمن السيبراني، الشبكات، التوجيه وNAT، ثم يربطها عمليًا بمفاهيم PAN-OS وNGFW وThreat Prevention.",
-    source:"مبنية على كتابي Palo Alto Zero to Hero - Domain 1 وNetwork Fundamentals - Domain 2 للمؤلف Abdelmoneim Hassanein.",
     outcomes:["فهم Zero Trust وAAA وCIA وإدارة المخاطر","إتقان أساسيات OSI وTCP/IP وSubnetting وRouting وNAT","ربط App-ID وContent-ID وUser-ID بالسياسات الأمنية","اتباع منهجية واضحة في المراقبة والتشخيص"],
     modules:[
       {
@@ -109,7 +108,6 @@ window.TRAINING_COURSES = [
   {
     id:"f5-big-ip",code:"F5",accent:"cyan",title:"F5 BIG-IP 17.1.x",subtitle:"From Foundations to Application Delivery",arTitle:"دورة F5 BIG-IP",level:"مبتدئ إلى متقدم",
     description:"مسار عملي لفهم Full Proxy وTMOS وLTM، إدارة SSL والـHA، ثم BIG-IP DNS وAdvanced WAF وAPM وAFM والأتمتة والتشخيص.",
-    source:"مبنية على جزأي F5 BIG-IP 17 From Zero to Hero للمؤلف Abdelmoneim Hassanein.",
     outcomes:["تصميم Virtual Server وPool وMonitor صحيح","اختيار Load Balancing وPersistence وSNAT حسب التطبيق","فهم SSL Offload وHA وDNS وWAF وAPM وAFM","استخدام TMSH وLogs وtcpdump بمنهجية تشخيص"],
     modules:[
       {id:"f5-01",title:"ADC وFull Proxy وTMOS",summary:"افهم مكان BIG-IP في مسار التطبيق ولماذا يبني اتصالين مستقلين بدل تمرير Packet فقط.",lessons:[

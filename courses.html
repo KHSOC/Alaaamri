@@ -17,9 +17,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>الدورات التدريبية — Khalid Tech Hub</title>
   <link rel="canonical" href="https://alaaamri.com/courses">
-  <link rel="icon" href="/favicon-olive.svg?v=35" type="image/svg+xml">
+  <link rel="icon" href="/favicon-olive.svg?v=36" type="image/svg+xml">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="/courses.css?v=35">
+  <link rel="stylesheet" href="/courses.css?v=36">
 </head>
 <body>
   <a class="skip-link" href="#courses-main">انتقل إلى المحتوى</a>
@@ -59,17 +59,13 @@
               <p>ثلاث دورات مرتبة من الأساس إلى التطبيق، تضم شروحًا موسعة وسيناريوهات عملية وقوائم تحقق وتمارين واختبارات مع تتبع كامل للتقدم.</p>
               <button class="primary-button" id="start-first" type="button">ابدأ أول دورة ←</button>
             </div>
-            <div class="hero-orbit" aria-hidden="true">
-              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-              <span class="orbit-core">KA</span><span class="orbit-node node-one">PAN</span><span class="orbit-node node-two">F5</span><span class="orbit-node node-three">SOC</span>
-            </div>
           </div>
 
           <div class="academy-stats" aria-label="إحصائيات الدورات">
             <article><strong>3</strong><span>دورات متكاملة</span></article>
             <article><strong>30</strong><span>وحدة تعليمية</span></article>
-            <article><strong>120+</strong><span>درسًا وشرحًا تطبيقيًا</span></article>
-            <article><strong>30</strong><span>تمرينًا واختبارًا</span></article>
+            <article><strong>180</strong><span>شرحًا تطبيقيًا</span></article>
+            <article><strong>150</strong><span>سؤالًا واختبارًا</span></article>
           </div>
 
           <section class="catalog-section">
@@ -77,15 +73,6 @@
             <div class="course-grid" id="course-grid"></div>
           </section>
 
-          <section class="method-section">
-            <div class="section-head"><div><span class="eyebrow">HOW IT WORKS</span><h2>طريقة تعلم مصممة للتطبيق</h2></div></div>
-            <div class="method-grid">
-              <article><span>01</span><h3>افهم الفكرة</h3><p>شرح مركز يربط المصطلح بمكانه في الشبكة أو المنصة أو عملية SOC.</p></article>
-              <article><span>02</span><h3>راجع النقاط</h3><p>ملخصات عملية تركز على الفروق والأخطاء الشائعة وما يجب التحقق منه.</p></article>
-              <article><span>03</span><h3>طبّق تمرينًا</h3><p>سيناريو صغير يحول المعلومة إلى تصميم أو تحقيق أو خطوات تشخيص.</p></article>
-              <article><span>04</span><h3>اختبر نفسك</h3><p>سؤال بعد كل وحدة مع تفسير الإجابة، ثم حفظ التقدم على جهازك.</p></article>
-            </div>
-          </section>
         </section>
 
         <section id="course-view" hidden>
@@ -95,10 +82,7 @@
             <div class="course-progress-card"><span>تقدمك في الدورة</span><strong id="course-progress">0%</strong><div class="progress-track"><span id="course-progress-fill"></span></div><small id="course-progress-label"></small></div>
           </section>
 
-          <section class="course-intro">
-            <article class="intro-card"><span class="eyebrow">ماذا ستتعلم؟</span><ul id="course-outcomes"></ul></article>
-            <article class="intro-card source-card"><span class="eyebrow">مصدر المنهج</span><p id="course-source"></p><a id="official-source" href="#" target="_blank" rel="external noopener noreferrer" hidden>فتح المصدر الرسمي ↗</a><small>المحتوى ملخّص ومُعاد تنظيمه للتعلم، ولا يمثل اعتمادًا رسميًا من الشركات المذكورة.</small></article>
-          </section>
+          <section class="course-intro"><article class="intro-card"><span class="eyebrow">ماذا ستتعلم؟</span><ul id="course-outcomes"></ul></article></section>
 
           <div class="learning-layout">
             <aside class="curriculum-panel"><div class="curriculum-head"><span class="eyebrow">CURRICULUM</span><h2>محتوى الدورة</h2></div><div id="module-list"></div></aside>
@@ -106,7 +90,7 @@
               <header class="module-header"><div><span class="module-number" id="module-number"></span></div><h2 id="module-title"></h2><p id="module-summary"></p></header>
               <div class="lesson-stack" id="lesson-stack"></div>
               <article class="lab-card"><div class="lab-icon" aria-hidden="true">LAB</div><div><span class="eyebrow">تمرين الوحدة</span><h3>طبّق ما تعلّمته</h3><p id="module-lab"></p></div></article>
-              <article class="quiz-card" id="quiz-card"><div class="quiz-head"><div><span class="eyebrow">KNOWLEDGE CHECK</span><h3>اختبر فهمك</h3></div><span id="quiz-status"></span></div><p class="quiz-question" id="quiz-question"></p><div class="quiz-options" id="quiz-options"></div><p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite" hidden></p></article>
+              <section class="quiz-stack" id="quiz-stack" aria-label="اختبارات الوحدة"></section>
               <div class="module-actions"><button class="secondary-button" id="prev-module" type="button">الوحدة السابقة</button><button class="complete-button" id="complete-module" type="button">تحديد الوحدة كمكتملة ✓</button><button class="secondary-button" id="next-module" type="button">الوحدة التالية</button></div>
             </section>
           </div>
@@ -116,9 +100,11 @@
     </div>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script defer src="/courses-data.js?v=35"></script>
-  <script defer src="/ccoa-data.js?v=35"></script>
-  <script defer src="/course-guides.js?v=35"></script>
-  <script defer src="/courses.js?v=35"></script>
+  <script defer src="/courses-data.js?v=36"></script>
+  <script defer src="/ccoa-data.js?v=36"></script>
+  <script defer src="/course-guides.js?v=36"></script>
+  <script defer src="/course-advanced.js?v=36"></script>
+  <script defer src="/course-quizzes.js?v=36"></script>
+  <script defer src="/courses.js?v=36"></script>
 </body>
 </html>

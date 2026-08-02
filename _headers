@@ -125,5 +125,11 @@
 /course-guides.js
   Cache-Control: public, max-age=31536000, immutable
 
+/course-advanced.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/course-quizzes.js
+  Cache-Control: public, max-age=31536000, immutable
+
 /courses.js
   Cache-Control: public, max-age=31536000, immutable
