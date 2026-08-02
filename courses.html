@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="دورات تدريبية عربية منظمة في Palo Alto Networks وF5 BIG-IP وISACA CCOA مع دروس وتمارين واختبارات وتتبع للتقدم.">
+  <meta name="theme-color" content="#050e20">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="الدورات التدريبية — Khalid Tech Hub">
+  <meta property="og:description" content="مسارات عربية في Palo Alto وF5 BIG-IP وISACA CCOA مع تمارين واختبارات.">
+  <meta property="og:url" content="https://alaaamri.com/courses/">
+  <meta property="og:site_name" content="Khalid Tech Hub">
+  <meta property="og:image" content="https://alaaamri.com/social-preview.png?v=30">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>الدورات التدريبية — Khalid Tech Hub</title>
+  <link rel="canonical" href="https://alaaamri.com/courses/">
+  <link rel="icon" href="/favicon-olive.svg?v=30" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/courses.css?v=33">
+</head>
+<body>
+  <a class="skip-link" href="#courses-main">انتقل إلى المحتوى</a>
+  <div class="academy-shell">
+    <aside class="academy-sidebar" id="academy-sidebar" aria-label="التنقل في الدورات">
+      <a class="academy-brand" href="/courses.html">
+        <span class="brand-mark" aria-hidden="true">▰</span>
+        <span><strong>Khalid Academy</strong><small>NETWORK · SECURITY · SOC</small></span>
+      </a>
+      <nav class="academy-nav" aria-label="الأقسام">
+        <p class="sidebar-label">الدورات التدريبية</p>
+        <button class="active" id="catalog-nav" type="button"><span class="nav-icon">ALL</span><span>جميع الدورات</span></button>
+        <div id="course-nav"></div>
+      </nav>
+      <div class="sidebar-links">
+        <p class="sidebar-label">روابط الموقع</p>
+        <a href="/tech-hub-ar.html"><span>الدليل التقني</span><span>↗</span></a>
+        <a href="/security-lab/"><span>Security Lab</span><span>↗</span></a>
+        <a href="/websec/"><span>WebSec Atlas</span><span>↗</span></a>
+      </div>
+      <div class="study-card"><span aria-hidden="true">✓</span><div><strong>التقدم محفوظ محليًا</strong><small>إكمال الوحدات ونتائج الاختبارات تبقى على هذا الجهاز فقط.</small></div></div>
+    </aside>
+
+    <div class="academy-content">
+      <header class="academy-topbar">
+        <button class="menu-button" id="menu-button" type="button" aria-controls="academy-sidebar" aria-expanded="false">القائمة</button>
+        <div class="topbar-label"><span class="status-dot"></span><span>مسارات تقنية عملية باللغة العربية</span></div>
+        <div class="topbar-progress"><span>تقدمك الكلي</span><strong id="global-progress">0%</strong><div class="mini-progress"><span id="global-progress-fill"></span></div></div>
+      </header>
+
+      <main id="courses-main">
+        <section id="catalog-view">
+          <div class="academy-hero">
+            <div class="hero-copy">
+              <span class="eyebrow">KHALID TECH ACADEMY</span>
+              <h1>تعلّم التقنية كمسار،<br><span>لا كمعلومات متفرقة.</span></h1>
+              <p>ثلاث دورات مرتبة من الأساس إلى التطبيق، مبنية على كتبك ومصادر رسمية، مع تمارين واختبارات وتتبع كامل للتقدم.</p>
+              <button class="primary-button" id="start-first" type="button">ابدأ أول دورة ←</button>
+            </div>
+            <div class="hero-orbit" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+              <span class="orbit-core">KA</span><span class="orbit-node node-one">PAN</span><span class="orbit-node node-two">F5</span><span class="orbit-node node-three">SOC</span>
+            </div>
+          </div>
+
+          <div class="academy-stats" aria-label="إحصائيات الدورات">
+            <article><strong>3</strong><span>دورات متكاملة</span></article>
+            <article><strong>30</strong><span>وحدة تعليمية</span></article>
+            <article><strong>52+</strong><span>ساعة تعلم</span></article>
+            <article><strong>30</strong><span>تمرينًا واختبارًا</span></article>
+          </div>
+
+          <section class="catalog-section">
+            <div class="section-head"><div><span class="eyebrow">LEARNING PATHS</span><h2>اختر مسارك التدريبي</h2></div><p>ابدأ بما يخدم هدفك الحالي، ويمكنك التنقل بين الدورات في أي وقت.</p></div>
+            <div class="course-grid" id="course-grid"></div>
+          </section>
+
+          <section class="method-section">
+            <div class="section-head"><div><span class="eyebrow">HOW IT WORKS</span><h2>طريقة تعلم مصممة للتطبيق</h2></div></div>
+            <div class="method-grid">
+              <article><span>01</span><h3>افهم الفكرة</h3><p>شرح مركز يربط المصطلح بمكانه في الشبكة أوالمنصة أوعملية SOC.</p></article>
+              <article><span>02</span><h3>راجع النقاط</h3><p>ملخصات عملية تركز على الفروق والأخطاء الشائعة وما يجب التحقق منه.</p></article>
+              <article><span>03</span><h3>طبّق تمرينًا</h3><p>سيناريو صغير يحول المعلومة إلى تصميم أوتحقيق أوخطوات تشخيص.</p></article>
+              <article><span>04</span><h3>اختبر نفسك</h3><p>سؤال بعد كل وحدة مع تفسير الإجابة، ثم حفظ التقدم على جهازك.</p></article>
+            </div>
+          </section>
+        </section>
+
+        <section id="course-view" hidden>
+          <button class="back-button" id="back-catalog" type="button">← العودة لجميع الدورات</button>
+          <section class="course-hero" id="course-hero">
+            <div><span class="course-code" id="course-code"></span><span class="eyebrow" id="course-level"></span><h1 id="course-title"></h1><p id="course-description"></p><div class="course-meta" id="course-meta"></div></div>
+            <div class="course-progress-card"><span>تقدمك في الدورة</span><strong id="course-progress">0%</strong><div class="progress-track"><span id="course-progress-fill"></span></div><small id="course-progress-label"></small></div>
+          </section>
+
+          <section class="course-intro">
+            <article class="intro-card"><span class="eyebrow">ماذا ستتعلم؟</span><ul id="course-outcomes"></ul></article>
+            <article class="intro-card source-card"><span class="eyebrow">مصدر المنهج</span><p id="course-source"></p><a id="official-source" href="#" target="_blank" rel="external noopener noreferrer" hidden>فتح المصدر الرسمي ↗</a><small>المحتوى ملخّص ومُعاد تنظيمه للتعلم، ولا يمثل اعتمادًا رسميًا من الشركات المذكورة.</small></article>
+          </section>
+
+          <div class="learning-layout">
+            <aside class="curriculum-panel"><div class="curriculum-head"><span class="eyebrow">CURRICULUM</span><h2>محتوى الدورة</h2></div><div id="module-list"></div></aside>
+            <section class="module-panel" id="module-panel">
+              <header class="module-header"><div><span class="module-number" id="module-number"></span><span class="module-duration" id="module-duration"></span></div><h2 id="module-title"></h2><p id="module-summary"></p></header>
+              <div class="lesson-stack" id="lesson-stack"></div>
+              <article class="lab-card"><div class="lab-icon" aria-hidden="true">LAB</div><div><span class="eyebrow">تمرين الوحدة</span><h3>طبّق ما تعلّمته</h3><p id="module-lab"></p></div></article>
+              <article class="quiz-card" id="quiz-card"><div class="quiz-head"><div><span class="eyebrow">KNOWLEDGE CHECK</span><h3>اختبر فهمك</h3></div><span id="quiz-status"></span></div><p class="quiz-question" id="quiz-question"></p><div class="quiz-options" id="quiz-options"></div><p class="quiz-feedback" id="quiz-feedback" role="status" aria-live="polite" hidden></p></article>
+              <div class="module-actions"><button class="secondary-button" id="prev-module" type="button">الوحدة السابقة</button><button class="complete-button" id="complete-module" type="button">تحديد الوحدة كمكتملة ✓</button><button class="secondary-button" id="next-module" type="button">الوحدة التالية</button></div>
+            </section>
+          </div>
+        </section>
+      </main>
+      <footer class="academy-footer"><span>Khalid Academy · <a href="https://alaaamri.com">alaaamri.com</a></span><span>تعلّم، طبّق، اختبر، ثم شارك المعرفة.</span></footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script defer src="/courses-data.js?v=33"></script>
+  <script defer src="/ccoa-data.js?v=33"></script>
+  <script defer src="/courses.js?v=33"></script>
+</body>
+</html>

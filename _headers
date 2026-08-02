@@ -109,3 +109,18 @@
 
 /courses/courses.js
   Cache-Control: public, max-age=31536000, immutable
+
+/courses.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/courses.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/ccoa-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses.js
+  Cache-Control: public, max-age=31536000, immutable

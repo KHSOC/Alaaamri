@@ -90,7 +90,7 @@
     {
       "name": "Training Courses",
       "short_name": "Courses",
-      "url": "/courses/",
+      "url": "/courses.html",
       "icons": [
         {
           "src": "/icon-192.png",
