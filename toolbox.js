@@ -750,7 +750,47 @@
   });
 
   // Site search.
-  const searchIndex = Array.isArray(window.KHALID_SEARCH_INDEX) ? window.KHALID_SEARCH_INDEX : [];
+  const baseSearchIndex = Array.isArray(window.KHALID_SEARCH_INDEX) ? window.KHALID_SEARCH_INDEX : [];
+  const websecTopics = Array.isArray(window.WEBSEC_TOPICS) ? window.WEBSEC_TOPICS : [];
+  const websecSearchIndex = [
+    {
+      title: "Security Lab",
+      arTitle: "مختبر الاختبارات الأمنية",
+      enTitle: "Security Lab",
+      url: "/security-lab/",
+      arUrl: "/security-lab/",
+      enUrl: "/security-lab/",
+      description: "Local-first security testing workspace and reporting toolkit",
+      arDescription: "مساحة عمل محلية ومولد أمثلة وأدوات ترميز ومنشئ تقارير للاختبارات الأمنية المصرح بها.",
+      enDescription: "A local-first workspace, context-aware example builder, codec toolkit, and Markdown report builder.",
+      keywords: "security lab pentest workspace payload builder encoder decoder report markdown bug bounty"
+    },
+    {
+      title: "WebSec Atlas",
+      arTitle: "موسوعة WebSec Atlas",
+      enTitle: "WebSec Atlas",
+      url: "/websec/",
+      arUrl: "/websec/",
+      enUrl: "/websec/",
+      description: "Web application security field manual",
+      arDescription: "موسوعة لاختبار أمن تطبيقات الويب والثغرات والـPayloads وطرق المعالجة.",
+      enDescription: "A searchable field manual for web vulnerabilities, payloads, detection, and remediation.",
+      keywords: "web security pentest bug bounty payload bypass vulnerability"
+    },
+    ...websecTopics.map((topic) => ({
+      title: topic.title,
+      arTitle: topic.title,
+      enTitle: topic.title,
+      url: `/websec/#${topic.id}`,
+      arUrl: `/websec/#${topic.id}`,
+      enUrl: `/websec/#${topic.id}`,
+      description: topic.summary,
+      arDescription: topic.summary,
+      enDescription: topic.summary,
+      keywords: [topic.short, topic.category, topic.severity, ...(topic.techniques || [])].join(" ")
+    }))
+  ];
+  const searchIndex = [...baseSearchIndex, ...websecSearchIndex];
   const renderSearchResults = (query) => {
     const list = $("[data-site-search-results]");
     if (!list) return;

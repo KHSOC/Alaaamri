@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Khalid Tech Hub",
   "short_name": "Khalid Hub",
-  "description": "Khalid's bilingual portfolio, technical directory, interactive toolbox, command center, and optional technical community.",
+  "description": "Khalid's bilingual portfolio, technical directory, security lab, interactive toolbox, command center, and optional technical community.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -80,6 +80,39 @@
       "name": "Tech Lounge",
       "short_name": "Community",
       "url": "/community-en.html",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Security Lab",
+      "short_name": "Security Lab",
+      "url": "/security-lab/",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Training Courses",
+      "short_name": "Courses",
+      "url": "/courses/",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "WebSec Atlas",
+      "short_name": "WebSec",
+      "url": "/websec/",
       "icons": [
         {
           "src": "/icon-192.png",

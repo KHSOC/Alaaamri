@@ -71,9 +71,6 @@
   Cache-Control: public, max-age=86400
   Cross-Origin-Resource-Policy: cross-origin
 
-/os-*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
 /sitemap.xml
   Cache-Control: public, max-age=86400
 
@@ -95,3 +92,30 @@
 /community-database.sql
   Cache-Control: no-store
   X-Robots-Tag: noindex, nofollow, noarchive
+
+/websec/websec.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/websec/websec-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/websec/websec.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/security-lab/security-lab.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/security-lab/security-lab.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses/courses.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses/courses-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses/ccoa-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/courses/courses.js
+  Cache-Control: public, max-age=31536000, immutable
