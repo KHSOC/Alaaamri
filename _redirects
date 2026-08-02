@@ -1,2 +1,3 @@
-/courses  /courses.html  200
-/courses/ /courses.html  200
+# Cloudflare Pages serves courses.html automatically at /courses.
+# Do not proxy /courses back to courses.html because Pages redirects
+# .html URLs to their extension-less equivalents, which creates a loop.
