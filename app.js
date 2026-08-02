@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (_) {}
   });
 
-  const favoriteExcludedPaths = new Set(["/", "/index.html", "/404.html", "/offline.html"]);
+  const favoriteExcludedPaths = new Set(["/", "/index.html", "/ar.html", "/en.html", "/404.html", "/offline.html"]);
   if (!favoriteExcludedPaths.has(location.pathname)) {
     document.body.append(favoriteButton);
     updateFavoriteButton();

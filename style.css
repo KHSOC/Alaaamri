@@ -1256,3 +1256,6 @@ html[dir="rtl"] .panel-code,html[dir="rtl"] .portal-code{letter-spacing:.05em}
   .profile-summary-card,.lab-highlight,.contact-banner{padding:23px}.home-actions .btn,.profile-actions .btn{flex:1 1 180px}
   .contact-actions{width:100%;justify-content:flex-start}.contact-actions .btn{flex:1 1 150px}
 }
+.nav-tech-glow{background:var(--olive)!important;background-size:auto!important;border-color:var(--olive)!important;box-shadow:0 0 18px rgba(141,155,91,.28)!important;animation:none!important}
+.nav-tech-glow::after{display:none!important}
+.nav-tech-glow:hover{background:var(--olive-bright)!important;color:var(--black)!important;box-shadow:0 0 24px rgba(183,199,122,.3)!important}
