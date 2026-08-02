@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "khalid-tech-hub-v31";
+const CACHE_NAME = "khalid-tech-hub-v32";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -32,15 +32,11 @@ const CORE_ASSETS = [
   "/courses/ccoa-data.js?v=31",
   "/courses/courses.js?v=31",
   "/offline.html",
-  "/community.js?v=26",
-  "/site-config.js?v=26",
-  "/search-index.js?v=30",
+  "/search-index.js?v=32",
   "/toolbox.js?v=29",
-  "/community-ar.html",
-  "/community-en.html",
   "/toolbox-ar.html",
   "/toolbox-en.html",
-  "/style.css?v=26",
+  "/style.css?v=32",
   "/app.js?v=26",
   "/commands-data.js?v=26",
   "/commands.js?v=26",

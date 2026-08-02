@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Khalid Tech Hub",
   "short_name": "Khalid Hub",
-  "description": "Khalid's bilingual portfolio, technical directory, security lab, interactive toolbox, command center, and optional technical community.",
+  "description": "Khalid's bilingual portfolio, technical directory, security lab, interactive toolbox, command center, and training courses.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -69,17 +69,6 @@
       "name": "Command Center",
       "short_name": "Commands",
       "url": "/command-center-en.html",
-      "icons": [
-        {
-          "src": "/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Tech Lounge",
-      "short_name": "Community",
-      "url": "/community-en.html",
       "icons": [
         {
           "src": "/icon-192.png",

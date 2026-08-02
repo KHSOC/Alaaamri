@@ -83,16 +83,6 @@
 /search-index.js
   Cache-Control: public, max-age=31536000, immutable
 
-/site-config.js
-  Cache-Control: public, max-age=300, must-revalidate
-
-/community.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/community-database.sql
-  Cache-Control: no-store
-  X-Robots-Tag: noindex, nofollow, noarchive
-
 /websec/websec.css
   Cache-Control: public, max-age=31536000, immutable
 
