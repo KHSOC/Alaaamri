@@ -191,3 +191,10 @@ After deployment, use Ctrl+Shift+R once to clear older cached assets.
 - Added direct gateways to Courses, Security Lab, WebSec Atlas, Tech Hub, Toolbox, and Command Center.
 - Replaced the clock and decorative network graphic with useful profile, learning, and project summaries.
 - Simplified homepage navigation and updated the offline cache version to v37.
+
+## Version 38
+- Added a complete FortiGate 7.4 course with ten modules, eighty explanations, ten labs, and fifty questions.
+- Expanded every existing course module from six to eight detailed learning sections.
+- Increased the academy to four courses, forty modules, 320 explanations, and 200 questions.
+- Corrected the Arabic name, removed the homepage introduction, and aligned the Projects navigation with the homepage.
+- Updated academy assets and offline cache version to v38.

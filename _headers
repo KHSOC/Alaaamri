@@ -122,10 +122,16 @@
 /ccoa-data.js
   Cache-Control: public, max-age=31536000, immutable
 
+/fortigate-data.js
+  Cache-Control: public, max-age=31536000, immutable
+
 /course-guides.js
   Cache-Control: public, max-age=31536000, immutable
 
 /course-advanced.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/course-mastery.js
   Cache-Control: public, max-age=31536000, immutable
 
 /course-quizzes.js

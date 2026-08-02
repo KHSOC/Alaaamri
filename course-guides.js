@@ -125,5 +125,8 @@
   };
 
   const courses=Array.isArray(window.TRAINING_COURSES)?window.TRAINING_COURSES:[];
-  courses.forEach(course=>course.modules.forEach(module=>{module.guides=guides[module.id]||[];}));
+  courses.forEach(course=>course.modules.forEach(module=>{
+    const items=guides[module.id];
+    if(items)module.guides=(Array.isArray(module.guides)?module.guides:[]).concat(items);
+  }));
 })();
