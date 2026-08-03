@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "khalid-tech-hub-v39";
+const CACHE_NAME = "khalid-tech-hub-v40";
 const CORE_ASSETS = [
   "/",
   "/index.html",
@@ -18,13 +18,16 @@ const CORE_ASSETS = [
   "/operating-systems-ar.html",
   "/websec/",
   "/websec/index.html",
-  "/websec/websec.css?v=35",
-  "/websec/websec-data.js?v=35",
-  "/websec/websec.js?v=35",
+  "/websec/websec.css?v=40",
+  "/websec/websec-data-v39.js?v=40",
+  "/websec/websec.js?v=40",
   "/security-lab/",
   "/security-lab/index.html",
-  "/security-lab/security-lab.css?v=35",
-  "/security-lab/security-lab.js?v=35",
+  "/security-lab/security-lab.css?v=39",
+  "/security-lab/security-lab-data-1.js?v=39",
+  "/security-lab/security-lab-data-2.js?v=39",
+  "/security-lab/security-lab-data-3.js?v=39",
+  "/security-lab/security-lab.js?v=39",
   "/courses",
   "/courses.css?v=38",
   "/courses-data.js?v=38",
@@ -46,7 +49,7 @@ const CORE_ASSETS = [
   "/commands.js?v=26",
   "/cleanup.js?v=26",
   "/systems.js?v=28",
-  "/favicon-olive.svg?v=26",
+  "/favicon-olive.svg?v=40",
   "/icon-192.png",
   "/icon-512.png",
   "/apple-touch-icon.png",
@@ -98,8 +101,6 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  // Let the browser handle document navigation and redirects directly.
-  // Safari can reject redirected navigation responses returned by a service worker.
   if (request.mode === "navigate") return;
 
   const staticDestination = new Set([
