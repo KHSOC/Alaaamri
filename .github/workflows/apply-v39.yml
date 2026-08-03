@@ -18,25 +18,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Rebuild v39 archive
+      - name: Rebuild and validate v39 patch
         shell: bash
         run: |
           set -euo pipefail
-          cat .deploy/part-* > /tmp/site-v39.zip.b64
-          base64 --decode /tmp/site-v39.zip.b64 > /tmp/site-v39.zip
-          echo "18f96fb8ccf9525a351067686925f10805d7c719a733e980770a466fc276814e  /tmp/site-v39.zip" | sha256sum --check
-          unzip -t /tmp/site-v39.zip
+          cat .deploy/part-* > /tmp/alaaamri-v39-patch.zip.b64
+          base64 --decode /tmp/alaaamri-v39-patch.zip.b64 > /tmp/alaaamri-v39-patch.zip
+          echo "13af92d76bafe126777509a8bd6aa2c4e2109b20160e9ce24e3f1fb5d4b855bc  /tmp/alaaamri-v39-patch.zip" | sha256sum --check
+          unzip -t /tmp/alaaamri-v39-patch.zip
 
-      - name: Replace site files
+      - name: Apply v39 patch
         shell: bash
         run: |
           set -euo pipefail
-          find . -mindepth 1 -maxdepth 1 \
-            ! -name '.git' \
-            ! -name '.github' \
-            ! -name '.deploy' \
-            -exec rm -rf {} +
-          unzip -q /tmp/site-v39.zip -d .
+          unzip -oq /tmp/alaaamri-v39-patch.zip -d .
           rm -rf .deploy
           rm -f .github/workflows/apply-v39.yml
 
