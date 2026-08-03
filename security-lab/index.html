@@ -1,62 +1,25 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="مختبرات عربية آمنة وعملية لتدريب محلل الأمن على فرز التنبيهات والتحقيق والاستجابة للحوادث.">
-  <meta name="theme-color" content="#090a09">
-  <meta name="color-scheme" content="dark">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
-  <title>Security Lab — Khalid Tech Hub</title>
-  <link rel="canonical" href="https://alaaamri.com/security-lab/">
-  <link rel="icon" href="/favicon-olive.svg?v=35" type="image/svg+xml">
-  <link rel="stylesheet" href="/style.css?v=32">
-  <link rel="stylesheet" href="/security-lab/security-lab.css?v=35">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="12 مختبرًا عربيًا عمليًا وآمنًا لتدريب محلل الأمن على فرز التنبيهات والتحقيق والاستجابة للحوادث.">
+<meta name="theme-color" content="#090a09">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://api.iconify.design; style-src 'self'; style-src-attr 'none'; script-src 'self'; script-src-attr 'none'; font-src 'self'; connect-src 'self' https://cloudflare-dns.com https://*.supabase.co wss://*.supabase.co; worker-src 'self'; manifest-src 'self'; media-src 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+<title>Security Lab — Khalid Tech Hub</title>
+<link rel="canonical" href="https://alaaamri.com/security-lab/">
+<link rel="icon" href="/favicon-olive.svg?v=39" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css?v=37a">
+<link rel="stylesheet" href="/security-lab/security-lab.css?v=39">
 </head>
 <body>
-  <a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="/ar"><span class="logo">K</span><span>Khalid</span></a>
-      <div class="nav-actions">
-        <nav class="nav-links open lab-nav" aria-label="التنقل الرئيسي">
-          <a href="/ar">الملف المهني</a><a href="/tech-hub-ar">الدليل التقني</a><a href="/courses">الدورات</a><a aria-current="page" href="/security-lab/">Security Lab</a><a href="/websec/">WebSec Atlas</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="lab-hero">
-      <div class="container lab-hero-grid">
-        <div><span class="eyebrow">SOC PRACTICE</span><h1>Security <span class="gradient-text">Lab</span></h1><p class="lead">أربع حالات عملية آمنة تتدرب فيها على قراءة الأدلة، ترتيب الأولويات، بناء الفرضية، واختيار إجراء الاستجابة الصحيح.</p><div class="actions"><a class="btn btn-primary" href="#labs">ابدأ المختبرات</a><a class="btn btn-secondary" href="/courses#ccoa/cc-06">راجع دورة CCOA</a></div></div>
-        <aside class="lab-hero-card"><span>منهج التحقيق</span><ol><li>ثبّت الوقت والنطاق</li><li>اجمع الأدلة المرتبطة</li><li>اختبر الفرضية</li><li>احتوِ ودوّن القرار</li></ol></aside>
-      </div>
-    </section>
-
-    <section class="section" id="labs">
-      <div class="container">
-        <div class="section-head"><div><span class="kicker">4 SCENARIOS</span><h2>اختر سيناريو التحقيق</h2></div><p>كل مختبر يقدم أدلة افتراضية، مهام تحليل، سؤال قرار، وتفسيرًا للإجابة.</p></div>
-        <div class="lab-grid" id="lab-grid"></div>
-      </div>
-    </section>
-
-    <section class="section lab-workspace-section" id="workspace" hidden>
-      <div class="container">
-        <button class="lab-back" id="lab-back" type="button">← العودة للمختبرات</button>
-        <article class="lab-workspace">
-          <header><span class="kicker" id="lab-code"></span><h2 id="lab-title"></h2><p id="lab-summary"></p></header>
-          <div class="lab-columns">
-            <section><h3>الأدلة المتاحة</h3><div class="evidence-list" id="evidence-list"></div></section>
-            <section><h3>خطوات التحقيق</h3><ol class="task-list" id="task-list"></ol></section>
-          </div>
-          <section class="decision-card"><span class="kicker">DECISION POINT</span><h3 id="lab-question"></h3><div class="decision-options" id="decision-options"></div><p id="decision-feedback" role="status" hidden></p></section>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="container footer-row"><span>Khalid Security Lab</span><a href="/tech-hub-ar">العودة للدليل التقني</a></div></footer>
-  <script defer src="/security-lab/security-lab.js?v=35"></script>
-</body>
-</html>
+<a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+<header class="site-header"><div class="container nav"><a class="brand" href="/ar.html"><span class="logo">K</span><span>Khalid</span></a><nav class="nav-links open lab-nav" aria-label="التنقل الرئيسي"><a href="/ar.html">الملف المهني</a><a href="/tech-hub-ar.html">الدليل التقني</a><a href="/courses">الدورات</a><a aria-current="page" href="/security-lab/">Security Lab</a><a href="/websec/">WebSec Atlas</a></nav></div></header>
+<main id="main">
+<section class="lab-hero"><div class="container lab-hero-grid"><div><span class="eyebrow">SOC PRACTICE</span><h1>Security <span class="gradient-text">Lab</span></h1><p class="lead">12 حالة عملية آمنة تغطي البريد والهوية والشبكة والأجهزة الطرفية والسحابة والويب وLinux والحاويات. كل حالة مبنية على أدلة افتراضية وفرضيات وخطوات تحقيق وقرار احتواء وشرح كامل.</p><div class="actions"><a class="btn btn-primary" href="#labs">ابدأ المختبرات</a><a class="btn btn-secondary" href="/websec/">افتح WebSec Atlas</a></div><div class="lab-hero-stats"><span><strong>12</strong> سيناريو</span><span><strong>72</strong> دليلًا</span><span><strong>8</strong> مجالات</span></div></div><aside class="lab-hero-card"><span>منهج التحقيق</span><ol><li>ثبّت الوقت والنطاق والأصول المتأثرة</li><li>اجمع الأدلة من أكثر من مصدر</li><li>اكتب فرضيات واختبر ما يدعمها وينفيها</li><li>حدد شدة الحادث والأثر المحتمل</li><li>احتوِ بأقل ضرر وحافظ على الأدلة</li><li>وثق القرار والدروس والتحسينات</li></ol></aside></div></section>
+<section class="section lab-paths"><div class="container"><div class="section-head"><div><span class="kicker">مسارات التدريب</span><h2>تدرّب حسب مجال التحقيق</h2></div></div><div class="lab-path-grid"><article><span>01</span><h3>الهوية والبريد</h3><p>التصيد وPassword Spraying وOAuth والجلسات.</p></article><article><span>02</span><h3>الشبكة والأجهزة</h3><p>DNS Beaconing وPowerShell وRansomware والحركة الجانبية.</p></article><article><span>03</span><h3>السحابة والبيانات</h3><p>التسريب وDLP والتخزين السحابي والوصول المميز.</p></article><article><span>04</span><h3>الويب والبنية الحديثة</h3><p>Web Shell وLinux وContainers وCI/CD.</p></article></div></div></section>
+<section class="section" id="labs"><div class="container"><div class="section-head"><div><span class="kicker">12 SCENARIOS</span><h2>اختر سيناريو التحقيق</h2></div><p>ابحث أو صفِّ حسب المستوى والمجال. تقدمك يُحفظ محليًا في متصفحك فقط.</p></div><div class="lab-progress"><div><span>تقدمك</span><strong id="lab-progress-label">0 من 12</strong></div><div class="lab-progress-track"><span id="lab-progress-bar"></span></div></div><div class="lab-toolbar"><input id="lab-search" type="search" placeholder="ابحث في السيناريو أو المجال..." aria-label="البحث في المختبرات"><select id="lab-level" aria-label="تصفية حسب المستوى"><option value="all">كل المستويات</option><option value="مبتدئ">مبتدئ</option><option value="متوسط">متوسط</option><option value="متقدم">متقدم</option></select><select id="lab-domain" aria-label="تصفية حسب المجال"><option value="all">كل المجالات</option></select><button id="lab-reset" type="button">إعادة ضبط التقدم</button></div><p class="lab-result-count" id="lab-result-count"></p><div class="lab-grid" id="lab-grid"></div></div></section>
+<section class="section lab-workspace-section" id="workspace" hidden><div class="container"><button class="lab-back" id="lab-back" type="button">← العودة للمختبرات</button><article class="lab-workspace"><header><div class="lab-workspace-meta"><span class="kicker" id="lab-code"></span><span id="lab-domain-label"></span></div><h2 id="lab-title"></h2><p id="lab-summary"></p><div class="lab-objective"><strong>هدف المختبر</strong><span id="lab-objective"></span></div></header><div class="lab-section-grid"><section class="lab-panel"><h3>الفرضيات الأولية</h3><ol id="hypothesis-list"></ol></section><section class="lab-panel"><h3>الأدوات المناسبة</h3><div class="lab-chip-list" id="tool-list"></div></section><section class="lab-panel"><h3>MITRE ATT&amp;CK</h3><div class="lab-chip-list" id="mapping-list"></div></section></div><section class="lab-evidence-panel"><div class="lab-panel-heading"><span class="kicker">EVIDENCE</span><h3>الأدلة المتاحة</h3></div><div class="evidence-list" id="evidence-list"></div></section><section class="lab-panel lab-task-panel"><h3>خطة التحقيق خطوة بخطوة</h3><ol class="task-list" id="task-list"></ol></section><section class="decision-card"><span class="kicker">DECISION POINT</span><h3 id="lab-question"></h3><div class="decision-options" id="decision-options"></div><p id="decision-feedback" role="status" hidden></p></section><section class="lab-debrief" id="lab-debrief" hidden><span class="kicker">DEBRIEF</span><h3>ما الذي يجب أن تخرج به؟</h3><ul id="takeaway-list"></ul></section></article></div></section>
+</main><footer class="footer"><div class="container footer-row"><span>Khalid Security Lab · 12 سيناريو</span><a href="/tech-hub-ar.html">العودة للدليل التقني</a></div></footer><script defer src="/security-lab/security-lab-data-1.js?v=39"></script><script defer src="/security-lab/security-lab-data-2.js?v=39"></script><script defer src="/security-lab/security-lab-data-3.js?v=39"></script><script defer src="/security-lab/security-lab.js?v=39"></script></body></html>
