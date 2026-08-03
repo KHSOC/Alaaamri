@@ -24,7 +24,7 @@ jobs:
           set -euo pipefail
           cat .deploy/part-* > /tmp/site-v39.zip.b64
           base64 --decode /tmp/site-v39.zip.b64 > /tmp/site-v39.zip
-          echo "b3c59e8ce6adfd07d05de1578b1ed15d83f7b6ee1c8ba28d2f039f5d1f18ed4a  /tmp/site-v39.zip" | sha256sum --check
+          echo "18f96fb8ccf9525a351067686925f10805d7c719a733e980770a466fc276814e  /tmp/site-v39.zip" | sha256sum --check
           unzip -t /tmp/site-v39.zip
 
       - name: Replace site files
