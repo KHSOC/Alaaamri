@@ -1,5 +1,7 @@
 "use strict";
-(function(){
+(async function(){
+try{
+if(window.WEBSEC_DATA_READY)await window.WEBSEC_DATA_READY;
 const topics=Array.isArray(window.WEBSEC_TOPICS)?window.WEBSEC_TOPICS:[];
 const labels={all:"الكل",Injection:"Injection",Client:"Client-side",Server:"Server-side",Access:"Access & Identity",Config:"Configuration",API:"API Security",Cloud:"Cloud & Containers"};
 const $=id=>document.getElementById(id),grid=$("atlas-grid"),filters=$("atlas-filters"),search=$("atlas-search"),risk=$("atlas-risk"),reviewedOnly=$("atlas-reviewed");let active="all",current=null;
@@ -17,4 +19,11 @@ function openTopic(topic){current=topic;document.querySelector(".atlas-directory
 $("detail-reviewed").addEventListener("click",()=>{if(!current)return;if(reviewed.has(current.id))reviewed.delete(current.id);else reviewed.add(current.id);save();render();});
 $("atlas-back").addEventListener("click",()=>{$("atlas-detail-section").hidden=true;document.querySelector(".atlas-directory").hidden=false;current=null;try{history.replaceState(null,"",location.pathname);}catch{}render();document.querySelector(".atlas-directory").scrollIntoView({behavior:"smooth"});});
 $("atlas-reset").addEventListener("click",()=>{reviewed.clear();save();render();});search.addEventListener("input",render);risk.addEventListener("change",render);reviewedOnly.addEventListener("change",render);renderFilters();updateProgress();render();const initial=topics.find(item=>item.id===location.hash.slice(1));if(initial)openTopic(initial);
+}catch(error){
+  console.error("WebSec Atlas failed to load",error);
+  const count=document.getElementById("atlas-count");
+  const empty=document.getElementById("atlas-empty");
+  if(count)count.textContent="تعذر تحميل البيانات";
+  if(empty){empty.hidden=false;empty.textContent="تعذر تحميل محتوى WebSec Atlas. حدّث الصفحة أو امسح كاش الموقع ثم حاول مجددًا.";}
+}
 })();
