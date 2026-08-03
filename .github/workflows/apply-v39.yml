@@ -1,0 +1,51 @@
+name: Apply site v39
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.deploy/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rebuild v39 archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .deploy/part-* > /tmp/site-v39.zip.b64
+          base64 --decode /tmp/site-v39.zip.b64 > /tmp/site-v39.zip
+          echo "b3c59e8ce6adfd07d05de1578b1ed15d83f7b6ee1c8ba28d2f039f5d1f18ed4a  /tmp/site-v39.zip" | sha256sum --check
+          unzip -t /tmp/site-v39.zip
+
+      - name: Replace site files
+        shell: bash
+        run: |
+          set -euo pipefail
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name '.git' \
+            ! -name '.github' \
+            ! -name '.deploy' \
+            -exec rm -rf {} +
+          unzip -q /tmp/site-v39.zip -d .
+          rm -rf .deploy
+          rm -f .github/workflows/apply-v39.yml
+
+      - name: Commit and push v39
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Khalid Site Deploy"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Deploy v39: expand Security Lab and WebSec Atlas"
+          git push origin HEAD:main
